@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c37de7e9fc1a5a644a520e854df0f72e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dungeonSquare: {fileID: 1706279988610918, guid: 4e083e65916b0774c9342f5bc630e7ac,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
