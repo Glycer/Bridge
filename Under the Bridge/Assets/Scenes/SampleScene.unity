@@ -6851,9 +6851,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeSquare: {fileID: 1706279988610918, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
-  width: 1
-  length: 1
-  height: 1
+  width: 9
+  length: 9
+  height: 9
   gapFrequency: 0.5
   useColumns: 0
 --- !u!4 &1273586777
@@ -9037,7 +9037,7 @@ GameObject:
   - component: {fileID: 1695441911}
   - component: {fileID: 1695441912}
   - component: {fileID: 1695441913}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: GroundHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10248,8 +10248,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1818360608 &1936247298
-PositionConstraint:
+--- !u!1773428102 &1936247298
+ParentConstraint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10258,10 +10258,17 @@ PositionConstraint:
   m_Enabled: 1
   m_Weight: 1
   m_TranslationAtRest: {x: 0, y: 0, z: -10}
-  m_TranslationOffset: {x: 0, y: 0, z: -10}
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffsets:
+  - {x: 0, y: 0, z: -10}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
   m_IsContraintActive: 1
   m_IsLocked: 1
   m_Sources:
@@ -11132,7 +11139,7 @@ GameObject:
   - component: {fileID: 136479646837160149}
   - component: {fileID: 114676020524567677}
   - component: {fileID: 114856124989698445}
-  - component: {fileID: 1626009915887108}
+  - component: {fileID: 1626009915887109}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -11140,25 +11147,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1818360609 &1626009915887108
-RotationConstraint:
+--- !u!114 &1626009915887109
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626009915887107}
   m_Enabled: 1
-  m_Weight: 1
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_RotationOffset: {x: 0, y: 0, z: 0}
-  m_AffectRotationX: 0
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 0
-  m_IsContraintActive: 1
-  m_IsLocked: 1
-  m_Sources:
-  - sourceTransform: {fileID: 4971127621092209}
-    weight: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 022e497c80388fd4895c5a3c44bf7e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
 --- !u!1 &1825750602146509
 GameObject:
   m_ObjectHideFlags: 0
@@ -11189,9 +11190,9 @@ GameObject:
   - component: {fileID: 20620846426661309}
   - component: {fileID: 81181378170176433}
   - component: {fileID: 1025389311}
-  - component: {fileID: 1932975477910276}
-  - component: {fileID: 1932975477910277}
   - component: {fileID: 1932975477910278}
+  - component: {fileID: 1932975477910277}
+  - component: {fileID: 1932975477910276}
   m_Layer: 10
   m_Name: Camera
   m_TagString: MainCamera
@@ -11199,7 +11200,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1183024399 &1932975477910276
+--- !u!114 &1932975477910276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932975477910275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e578e08dba6a44940a3c876e8d160c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+--- !u!1183024399 &1932975477910277
 LookAtConstraint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11216,23 +11230,8 @@ LookAtConstraint:
   m_IsContraintActive: 1
   m_IsLocked: 1
   m_Sources:
-  - sourceTransform: {fileID: 4272076381780483}
+  - sourceTransform: {fileID: 4116254540347167}
     weight: 1
-  - sourceTransform: {fileID: 1863870729}
-    weight: 0
---- !u!114 &1932975477910277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1932975477910275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 022e497c80388fd4895c5a3c44bf7e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
 --- !u!114 &1932975477910278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11240,7 +11239,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932975477910275}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: effa988bd36f49049a6c25028e91304b, type: 3}
   m_Name: 

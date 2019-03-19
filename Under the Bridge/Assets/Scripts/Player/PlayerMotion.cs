@@ -27,7 +27,7 @@ public class PlayerMotion : MonoBehaviour {
             Input.GetAxis(vertical) * runSpeed * Time.deltaTime);
         //transform.Rotate(0, Input.GetAxisRaw(horizontal) * turnSpeed, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJump)
+        if (Input.GetKeyDown(KeyCode.Space) /*&& jumpCount < maxJump*/)
         {
             rigid.velocity = Vector3.zero;
             rigid.AddForce(transform.up * jumpForce);

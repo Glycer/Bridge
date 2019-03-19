@@ -87,12 +87,14 @@ public class MazeManager : MonoBehaviour
             if (levelNum == 0)
             {
                 LinkPair(entranceP, enPort);
+                LinkPair(exitP, levels[levelNum + 1].GetComponent<Maze>().entranceSq.layout.GetComponentInChildren<Portal>());
 
                 //Debug.Log(string.Format("Next: {0} | {1}", levelNum + 1, levels[levelNum + 1].GetComponent<Maze>().entranceSq.layout.name));
             }
             else if (levelNum == levels.Length - 1)
             {
                 LinkPair(exitP, exPort);
+                LinkPair(entranceP, levels[levelNum - 1].GetComponent<Maze>().exitSq.layout.GetComponentInChildren<Portal>());
 
                 //Debug.Log(string.Format("Previous: {0} | {1}", levelNum - 1, levels[levelNum - 1].GetComponent<Maze>().exitSq.layout.name));
             }

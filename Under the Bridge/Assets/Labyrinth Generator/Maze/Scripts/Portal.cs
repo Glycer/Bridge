@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Portal : MonoBehaviour {
 
@@ -26,9 +27,9 @@ public class Portal : MonoBehaviour {
         if (destination != null)
         {
             destination.GetComponent<Portal>().isReceiving = true;
-            other.transform.position = destination.transform.position;
-            other.transform.rotation = destination.transform.rotation;
-            //Debug.Log("Sent to " + destination.name);
+            other.transform.position = destination.position;
+            other.transform.rotation = destination.rotation;
+            //Debug.Log(destination.transform.eulerAngles + " : " + other.transform.eulerAngles);
         }
     }
 
