@@ -7,7 +7,7 @@ public class PlayerMotion : MonoBehaviour {
     public float jumpForce;
     
     public int jumpCount { get; set; }
-    int maxJump = 2;
+    const int MAX_JUMP = 2;
 
     Rigidbody rigid;
 
@@ -27,14 +27,14 @@ public class PlayerMotion : MonoBehaviour {
             Input.GetAxis(vertical) * runSpeed * Time.deltaTime);
         //transform.Rotate(0, Input.GetAxisRaw(horizontal) * turnSpeed, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space) /*&& jumpCount < maxJump*/)
+        if (Input.GetKeyDown(Inputs.jump) /*&& jumpCount < maxJump*/)
         {
             rigid.velocity = Vector3.zero;
             rigid.AddForce(transform.up * jumpForce);
             jumpCount++;
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(Inputs.sprint))
             transform.Translate(0, 0, Input.GetAxis(vertical) * runSpeed * Time.deltaTime);
     }
 }
