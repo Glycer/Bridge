@@ -13,6 +13,13 @@ public class VasilisaSkills : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(Inputs.magic1))
+        {
+            GetComponent<Animator>().SetBool("isPushing", true);
+        }
+        if(Input.GetKeyUp(Inputs.magic1))
+        {
+            GetComponent<Animator>().SetBool("isPushing", false);
+        }
     }
 }

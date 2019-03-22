@@ -9,9 +9,9 @@ public class WyattSkills : MonoBehaviour
     //public static UnityAction DeAim;
 
     public Transform player;
-    public Animator anim;
 
-    GameObject blinkShot;
+    public GameObject pistol;
+    public GameObject blinkShot;
     Rigidbody blinkRigid;
 
     Coroutine blinkShotTimer;
@@ -19,26 +19,27 @@ public class WyattSkills : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        blinkShot = transform.GetChild(0).gameObject;
         blinkRigid = blinkShot.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Watches for ability call
         if (Input.GetKeyDown(Inputs.mobility))
         {
-            if (!blinkShot.activeSelf)
+            if (!blinkShot.activeSelf) // Checks for active shot
             {
+                // Activates and unbinds
                 blinkShot.SetActive(true);
                 blinkShot.transform.parent = null;
 
                 blinkRigid.velocity = Vector3.zero;
-                blinkRigid.AddForce((transform.forward * 10000) + (transform.up * 10));
+                blinkRigid.AddForce((transform.forward * 3000) + (transform.up * 1000));
 
                 blinkShotTimer = StartCoroutine(BlinkShotTimer());
             }
-            else
+            else // Blinks
             {
                 player.position = blinkShot.transform.position;
 
@@ -47,12 +48,14 @@ public class WyattSkills : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(Inputs.aim))
-            anim.SetBool("isAiming", true);
-        else if (Input.GetKeyUp(Inputs.aim))
-            anim.SetBool("isAiming", false);
+        if (Input.GetKeyDown(Inputs.whack) && pistol.activeSelf)
+        {
+            foreach (Collider col in pistol.GetComponent<TargetCollider>().targets)
+                Debug.Log("Hit!");
+        }
     }
 
+    // Shot times out after some time
     IEnumerator BlinkShotTimer()
     {
         yield return new WaitForSeconds(5);
@@ -60,6 +63,7 @@ public class WyattSkills : MonoBehaviour
         BlinkShotDespawn();
     }
 
+    // Resets shot
     void BlinkShotDespawn()
     {
         blinkShot.SetActive(false);

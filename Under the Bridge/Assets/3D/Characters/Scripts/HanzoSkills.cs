@@ -16,7 +16,10 @@ public class HanzoSkills : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(Inputs.whack))
+        {
+            GetComponent<Animator>().Play("SwordSwing");
+        }
     }
 
     private void OnEnable()
