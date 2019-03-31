@@ -9,7 +9,8 @@ public class GroundHit : MonoBehaviour
     void Start()
     {
         player = GetComponentInParent<PlayerMotion>();
-        characterAnim = GetComponentInParent<CharacterAnimControl>();
+        if (GetComponentInParent<CharacterAnimControl>() != null)
+            characterAnim = GetComponentInParent<CharacterAnimControl>();
     }
 
     private void OnTriggerEnter(Collider other)

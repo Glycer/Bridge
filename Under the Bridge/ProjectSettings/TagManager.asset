@@ -22,8 +22,8 @@ TagManager:
   - Friend
   - Enemy
   - PlayerSkill
-  - Targeting
-  - 
+  - PlayerTargeting
+  - EnemyTargeting
   - 
   - 
   - 

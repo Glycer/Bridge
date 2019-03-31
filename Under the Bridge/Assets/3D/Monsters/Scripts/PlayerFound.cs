@@ -4,27 +4,15 @@ using UnityEngine;
 
 public class PlayerFound : MonoBehaviour
 {
-    public bool foundTarget;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        foundTarget = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public Collider target;
 
     void OnTriggerEnter(Collider col)
     {
-        foundTarget = true;
+        target = col;
     }
 
     void OnTriggerExit(Collider col)
     {
-        foundTarget = false;
+        target = null;
     }
 }

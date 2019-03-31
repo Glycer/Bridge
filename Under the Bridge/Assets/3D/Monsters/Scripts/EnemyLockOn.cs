@@ -5,21 +5,24 @@ using UnityEngine;
 public class EnemyLockOn : MonoBehaviour
 {
     public PlayerFound playerScan;
-    public PlayerMotion player;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        StartCoroutine(Scan());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator Scan()
     {
-        if (playerScan.foundTarget == true)
+        while (true)
         {
-            transform.LookAt(player.transform.position);
-            transform.Translate(0, 0, 1);
+            if (playerScan.target != null)
+            {
+                transform.LookAt(playerScan.target.transform.position);
+                transform.Translate(0, 0, .1f);
+            }
+
+            yield return new WaitForSeconds(.1f);
         }
     }
 }
