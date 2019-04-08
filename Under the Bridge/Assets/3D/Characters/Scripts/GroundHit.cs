@@ -16,6 +16,6 @@ public class GroundHit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         player.jumpCount = 0;
-        characterAnim.anim.SetBool("isJumping", false);
+        //characterAnim.anim.SetBool("isJumping", false);
     }
 }

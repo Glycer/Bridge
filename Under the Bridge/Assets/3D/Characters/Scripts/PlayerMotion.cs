@@ -21,7 +21,7 @@ public class PlayerMotion : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rigid = GetComponent<Rigidbody>();
-        animControl = GetComponent<CharacterAnimControl>();
+        //animControl = GetComponent<CharacterAnimControl>();
     }
 	
 	// Update is called once per frame
@@ -36,7 +36,7 @@ public class PlayerMotion : MonoBehaviour {
             rigid.velocity = Vector3.zero;
             rigid.AddForce(transform.up * jumpForce);
 
-            animControl.Jump(!(jumpCount == 0));
+            //animControl.Jump(!(jumpCount == 0));
 
             jumpCount++;
         }
