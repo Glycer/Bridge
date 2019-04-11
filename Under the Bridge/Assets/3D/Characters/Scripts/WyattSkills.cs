@@ -51,7 +51,11 @@ public class WyattSkills : MonoBehaviour
         if (Input.GetKeyDown(Inputs.whack) && pistol.activeSelf)
         {
             foreach (Collider col in pistol.GetComponent<TargetCollider>().targets)
+            {
                 Debug.Log("Hit!");
+                col.gameObject.GetComponent<MonsterStats>().TakeDamage(1);
+            }
+
         }
     }
 
