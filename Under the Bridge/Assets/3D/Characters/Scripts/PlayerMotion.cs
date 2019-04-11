@@ -5,7 +5,7 @@ public class PlayerMotion : MonoBehaviour {
     public Animator anim;
 
     public float runSpeed;
-    public float turnSpeed;
+    //public float turnSpeed;
     public float jumpForce;
     
     public int jumpCount { get; set; }

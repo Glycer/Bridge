@@ -2106,7 +2106,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.94946885, g: 0.63529414, b: 0.98039216, a: 1}
-  m_Intensity: 6
+  m_Intensity: 2
   m_Range: 160
   m_SpotAngle: 80
   m_CookieSize: 10
@@ -2128,7 +2128,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -3674,7 +3674,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.98039216, g: 0.8500823, b: 0.63529414, a: 1}
-  m_Intensity: 6
+  m_Intensity: 2
   m_Range: 160
   m_SpotAngle: 80
   m_CookieSize: 10
@@ -3696,7 +3696,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -8329,7 +8329,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.98039216, g: 0.63529414, b: 0.7942507, a: 1}
-  m_Intensity: 6
+  m_Intensity: 2
   m_Range: 160
   m_SpotAngle: 80
   m_CookieSize: 10
@@ -8351,7 +8351,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -11150,6 +11150,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597471176481807102, guid: d196b1c22a623684297eeac90a5bfce9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597471176481807102, guid: d196b1c22a623684297eeac90a5bfce9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5602371653998521200, guid: d196b1c22a623684297eeac90a5bfce9,
         type: 3}

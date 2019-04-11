@@ -1,0 +1,481 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: VasilisaFaceMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Vasilisa_Rig:Controls
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:L_Leg_IK_System_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:L_Leg_IK_System_Grp/Vasilisa_Rig:L_Foot_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:L_Leg_IK_System_Grp/Vasilisa_Rig:L_Foot_Ctrl_Grp/Vasilisa_Rig:L_Foot_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:L_Leg_IK_System_Grp/Vasilisa_Rig:L_Leg_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:L_Leg_IK_System_Grp/Vasilisa_Rig:L_Leg_PV_Ctrl_Grp/Vasilisa_Rig:L_Leg_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:L_Leg_IK_System_Grp/Vasilisa_Rig:L_Leg_PV_Ctrl_Grp/Vasilisa_Rig:L_Leg_PV_Ctrl_Offset_Grp/Vasilisa_Rig:L_Leg_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:L_Leg_IK_System_Grp/Vasilisa_Rig:L_Leg_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:L_Leg_IK_System_Grp/Vasilisa_Rig:L_Leg_Root_Ctrl_Grp/Vasilisa_Rig:L_Leg_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:R_Leg_IK_System_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:R_Leg_IK_System_Grp/Vasilisa_Rig:R_Foot_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:R_Leg_IK_System_Grp/Vasilisa_Rig:R_Foot_Ctrl_Grp/Vasilisa_Rig:R_Foot_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:R_Leg_IK_System_Grp/Vasilisa_Rig:R_Leg_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:R_Leg_IK_System_Grp/Vasilisa_Rig:R_Leg_PV_Ctrl_Grp/Vasilisa_Rig:R_Leg_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:R_Leg_IK_System_Grp/Vasilisa_Rig:R_Leg_PV_Ctrl_Grp/Vasilisa_Rig:R_Leg_PV_Ctrl_Offset_Grp/Vasilisa_Rig:R_Leg_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:R_Leg_IK_System_Grp/Vasilisa_Rig:R_Leg_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Hip_Ctrl_Grp/Vasilisa_Rig:Hip_Ctrl/Vasilisa_Rig:Legs/Vasilisa_Rig:R_Leg_IK_System_Grp/Vasilisa_Rig:R_Leg_Root_Ctrl_Grp/Vasilisa_Rig:R_Leg_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Middle_IK_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_Ctrl/Vasilisa_Rig:L_Hand_Middle_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_PV_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_PV_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_PV_Ctrl_Offset_Grp/Vasilisa_Rig:L_Hand_Middle_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_Root_Ctrl_Grp/Vasilisa_Rig:L_Hand_Middle_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pinky_IK_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_Ctrl/Vasilisa_Rig:L_Hand_Pinky_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_PV_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_PV_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_PV_Ctrl_Offset_Grp/Vasilisa_Rig:L_Hand_Pinky_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_Root_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pinky_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pointer_IK_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_Ctrl/Vasilisa_Rig:L_Hand_Pointer_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_PV_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_PV_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_PV_Ctrl_Offset_Grp/Vasilisa_Rig:L_Hand_Pointer_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_Root_Ctrl_Grp/Vasilisa_Rig:L_Hand_Pointer_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Thumb_IK_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_Ctrl/Vasilisa_Rig:L_Hand_Thumb_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_PV_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_PV_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_PV_Ctrl_Offset_Grp/Vasilisa_Rig:L_Hand_Thumb_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Ctrl_Grp/Vasilisa_Rig:L_Arm_Ctrl/Vasilisa_Rig:L_Hand_System_Grp/Vasilisa_Rig:L_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_Root_Ctrl_Grp/Vasilisa_Rig:L_Hand_Thumb_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_PV_Ctrl_Grp/Vasilisa_Rig:L_Arm_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_PV_Ctrl_Grp/Vasilisa_Rig:L_Arm_PV_Ctrl_Offset_Grp/Vasilisa_Rig:L_Arm_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:L_Arm_IK_System_Grp/Vasilisa_Rig:L_Arm_Root_Ctrl_Grp/Vasilisa_Rig:L_Arm_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Middle_IK_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_Ctrl/Vasilisa_Rig:R_Hand_Middle_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_PV_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_PV_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_PV_Ctrl_Offset_Grp/Vasilisa_Rig:R_Hand_Middle_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Middle_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_Root_Ctrl_Grp/Vasilisa_Rig:R_Hand_Middle_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pinky_IK_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_Ctrl/Vasilisa_Rig:R_Hand_Pinky_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_PV_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_PV_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_PV_Ctrl_Offset_Grp/Vasilisa_Rig:R_Hand_Pinky_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pinky_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_Root_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pinky_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pointer_IK_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_Ctrl/Vasilisa_Rig:R_Hand_Pointer_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_PV_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_PV_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_PV_Ctrl_Offset_Grp/Vasilisa_Rig:R_Hand_Pointer_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Pointer_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_Root_Ctrl_Grp/Vasilisa_Rig:R_Hand_Pointer_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Thumb_IK_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_Ctrl/Vasilisa_Rig:R_Hand_Thumb_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_PV_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_PV_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_PV_Ctrl_Offset_Grp/Vasilisa_Rig:R_Hand_Thumb_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Ctrl_Grp/Vasilisa_Rig:R_Arm_Ctrl/Vasilisa_Rig:R_Hand_System_Grp/Vasilisa_Rig:R_Hand_Thumb_IK_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_Root_Ctrl_Grp/Vasilisa_Rig:R_Hand_Thumb_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_PV_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_PV_Ctrl_Grp/Vasilisa_Rig:R_Arm_PV_Ctrl_Offset_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_PV_Ctrl_Grp/Vasilisa_Rig:R_Arm_PV_Ctrl_Offset_Grp/Vasilisa_Rig:R_Arm_PV_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Root_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Arms/Vasilisa_Rig:R_Arm_IK_System_Grp/Vasilisa_Rig:R_Arm_Root_Ctrl_Grp/Vasilisa_Rig:R_Arm_Root_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:L_Brow_In_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:L_Brow_In_Ctrl_Grp/Vasilisa_Rig:L_Brow_In_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:L_Brow_Out_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:L_Brow_Out_Ctrl_Grp/Vasilisa_Rig:L_Brow_Out_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:L_Eye_Aim_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:L_Eye_Aim_Ctrl_Grp/Vasilisa_Rig:L_Eye_Aim_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:Mouth_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:Mouth_Ctrl_Grp/Vasilisa_Rig:Mouth_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:R_Brow_In_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:R_Brow_In_Ctrl_Grp/Vasilisa_Rig:R_Brow_In_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:R_Brow_Out_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:R_Brow_Out_Ctrl_Grp/Vasilisa_Rig:R_Brow_Out_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:R_Eye_Aim_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:Transform_Ctrl_Grp/Vasilisa_Rig:Transform_Ctrl/Vasilisa_Rig:COG_Ctrl_Grp/Vasilisa_Rig:COG_Ctrl/Vasilisa_Rig:Spine_01_Ctrl_Grp/Vasilisa_Rig:Spine_01_Ctrl/Vasilisa_Rig:Spine_02_Ctrl_Grp/Vasilisa_Rig:Spine_02_Ctrl/Vasilisa_Rig:Head_Ctrl_Grp/Vasilisa_Rig:Head_Ctrl/Vasilisa_Rig:Face_Ctrl_System/Vasilisa_Rig:R_Eye_Aim_Ctrl_Grp/Vasilisa_Rig:R_Eye_Aim_Ctrl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Controls/Vasilisa_Rig:World
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Blend_Shaped
+    m_Weight: 1
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Blend_Shaped/Vasilisa_Rig:Eye_Balls
+    m_Weight: 1
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Blend_Shaped/Vasilisa_Rig:Eye_Lenses
+    m_Weight: 1
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Blend_Shaped/Vasilisa_Rig:Eye_Pupils
+    m_Weight: 1
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Blend_Shaped/Vasilisa_Rig:Lashes_In
+    m_Weight: 1
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Blend_Shaped/Vasilisa_Rig:Lashes_Out
+    m_Weight: 1
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Blend_Shaped/Vasilisa_Rig:Main
+    m_Weight: 1
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Blend_Shaped/Vasilisa_Rig:Teeth
+    m_Weight: 1
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Blend_Shaped/Vasilisa_Rig:Tongue
+    m_Weight: 1
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Body
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Body/Vasilisa_Rig:Center_Mass
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Body/Vasilisa_Rig:Limbs
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Body/Vasilisa_Rig:Shawl
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Body/Vasilisa_Rig:Skirt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Hair
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Hair/Vasilisa_Rig:Brows_Back
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Hair/Vasilisa_Rig:Brows_Front
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Hair/Vasilisa_Rig:Hair_Bangs_Back
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Hair/Vasilisa_Rig:Hair_Bangs_Front
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Hair/Vasilisa_Rig:Hair_Frill_Back
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Hair/Vasilisa_Rig:Hair_Frill_Front
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Geo/Vasilisa_Rig:Hair/Vasilisa_Rig:Hair_Side
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Hip_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Hip_Jnt/Vasilisa_Rig:L_Leg_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Hip_Jnt/Vasilisa_Rig:L_Leg_Jnt_01/Vasilisa_Rig:L_Leg_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Hip_Jnt/Vasilisa_Rig:L_Leg_Jnt_01/Vasilisa_Rig:L_Leg_Jnt_02/Vasilisa_Rig:L_Leg_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Hip_Jnt/Vasilisa_Rig:R_Leg_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Hip_Jnt/Vasilisa_Rig:R_Leg_Jnt_01/Vasilisa_Rig:R_Leg_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Hip_Jnt/Vasilisa_Rig:R_Leg_Jnt_01/Vasilisa_Rig:R_Leg_Jnt_02/Vasilisa_Rig:R_Leg_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02/Vasilisa_Rig:Head_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02/Vasilisa_Rig:Head_Jnt/Vasilisa_Rig:Eyes
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02/Vasilisa_Rig:Head_Jnt/Vasilisa_Rig:Eyes/Vasilisa_Rig:L_Eye_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02/Vasilisa_Rig:Head_Jnt/Vasilisa_Rig:Eyes/Vasilisa_Rig:R_Eye_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02/Vasilisa_Rig:L_Arm_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02/Vasilisa_Rig:L_Arm_Jnt_01/Vasilisa_Rig:L_Arm_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02/Vasilisa_Rig:L_Arm_Jnt_01/Vasilisa_Rig:L_Arm_Jnt_02/Vasilisa_Rig:L_Arm_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02/Vasilisa_Rig:R_Arm_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02/Vasilisa_Rig:R_Arm_Jnt_01/Vasilisa_Rig:R_Arm_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:COG_Jnt/Vasilisa_Rig:Spine_Jnt_01/Vasilisa_Rig:Spine_Jnt_02/Vasilisa_Rig:R_Arm_Jnt_01/Vasilisa_Rig:R_Arm_Jnt_02/Vasilisa_Rig:R_Arm_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Eyebrows
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Eyebrows/Vasilisa_Rig:L_Brow_Jnt_In
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Eyebrows/Vasilisa_Rig:L_Brow_Jnt_Out
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Eyebrows/Vasilisa_Rig:R_Brow_Jnt_In
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Eyebrows/Vasilisa_Rig:R_Brow_Jnt_Out
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:L_Foot_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:L_Foot_Jnt_01/Vasilisa_Rig:L_Foot_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:L_Foot_Jnt_01/Vasilisa_Rig:L_Foot_Jnt_02/Vasilisa_Rig:L_Foot_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:L_RevIK_Foot_Joints
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:L_RevIK_Foot_Joints/Vasilisa_Rig:L_RevIK_Foot_Heel_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:L_RevIK_Foot_Joints/Vasilisa_Rig:L_RevIK_Foot_Heel_Jnt/Vasilisa_Rig:L_RevIK_Foot_Tip_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:L_RevIK_Foot_Joints/Vasilisa_Rig:L_RevIK_Foot_Heel_Jnt/Vasilisa_Rig:L_RevIK_Foot_Tip_Jnt/Vasilisa_Rig:L_RevIK_Foot_Ball_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:L_RevIK_Foot_Joints/Vasilisa_Rig:L_RevIK_Foot_Heel_Jnt/Vasilisa_Rig:L_RevIK_Foot_Tip_Jnt/Vasilisa_Rig:L_RevIK_Foot_Ball_Jnt/Vasilisa_Rig:L_RevIK_Foot_Ankle_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:L_RevIK_Foot_Joints/Vasilisa_Rig:L_RevIK_Foot_Heel_Jnt/Vasilisa_Rig:L_RevIK_Foot_Tip_Jnt/Vasilisa_Rig:L_RevIK_Foot_Ball_Jnt/Vasilisa_Rig:L_RevIK_Foot_Ankle_Jnt/Vasilisa_Rig:L_Leg_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:R_Foot_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:R_Foot_Jnt_01/Vasilisa_Rig:R_Foot_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:R_Foot_Jnt_01/Vasilisa_Rig:R_Foot_Jnt_02/Vasilisa_Rig:R_Foot_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:R_RevIK_Foot_Joints
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:R_RevIK_Foot_Joints/Vasilisa_Rig:R_RevIK_Foot_Heel_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:R_RevIK_Foot_Joints/Vasilisa_Rig:R_RevIK_Foot_Heel_Jnt/Vasilisa_Rig:R_RevIK_Foot_Tip_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:R_RevIK_Foot_Joints/Vasilisa_Rig:R_RevIK_Foot_Heel_Jnt/Vasilisa_Rig:R_RevIK_Foot_Tip_Jnt/Vasilisa_Rig:R_RevIK_Foot_Ball_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:R_RevIK_Foot_Joints/Vasilisa_Rig:R_RevIK_Foot_Heel_Jnt/Vasilisa_Rig:R_RevIK_Foot_Tip_Jnt/Vasilisa_Rig:R_RevIK_Foot_Ball_Jnt/Vasilisa_Rig:R_RevIK_Foot_Ankle_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Feet/Vasilisa_Rig:R_RevIK_Foot_Joints/Vasilisa_Rig:R_RevIK_Foot_Heel_Jnt/Vasilisa_Rig:R_RevIK_Foot_Tip_Jnt/Vasilisa_Rig:R_RevIK_Foot_Ball_Jnt/Vasilisa_Rig:R_RevIK_Foot_Ankle_Jnt/Vasilisa_Rig:R_Leg_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Arm_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Middle_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Middle_Jnt_01/Vasilisa_Rig:L_Hand_Middle_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Middle_Jnt_01/Vasilisa_Rig:L_Hand_Middle_Jnt_02/Vasilisa_Rig:L_Hand_Middle_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Pinky_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Pinky_Jnt_01/Vasilisa_Rig:L_Hand_Pinky_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Pinky_Jnt_01/Vasilisa_Rig:L_Hand_Pinky_Jnt_02/Vasilisa_Rig:L_Hand_Pinky_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Pointer_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Pointer_Jnt_01/Vasilisa_Rig:L_Hand_Pointer_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Pointer_Jnt_01/Vasilisa_Rig:L_Hand_Pointer_Jnt_02/Vasilisa_Rig:L_Hand_Pointer_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Thumb_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Thumb_Jnt_01/Vasilisa_Rig:L_Hand_Thumb_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:L_Hand_Wrist_Jnt/Vasilisa_Rig:L_Hand_Thumb_Jnt_01/Vasilisa_Rig:L_Hand_Thumb_Jnt_02/Vasilisa_Rig:L_Hand_Thumb_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Arm_IK_Handle
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Middle_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Middle_Jnt_01/Vasilisa_Rig:R_Hand_Middle_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Middle_Jnt_01/Vasilisa_Rig:R_Hand_Middle_Jnt_02/Vasilisa_Rig:R_Hand_Middle_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Pinky_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Pinky_Jnt_01/Vasilisa_Rig:R_Hand_Pinky_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Pinky_Jnt_01/Vasilisa_Rig:R_Hand_Pinky_Jnt_02/Vasilisa_Rig:R_Hand_Pinky_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Pointer_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Pointer_Jnt_01/Vasilisa_Rig:R_Hand_Pointer_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Pointer_Jnt_01/Vasilisa_Rig:R_Hand_Pointer_Jnt_02/Vasilisa_Rig:R_Hand_Pointer_Jnt_03
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Thumb_Jnt_01
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Thumb_Jnt_01/Vasilisa_Rig:R_Hand_Thumb_Jnt_02
+    m_Weight: 0
+  - m_Path: Vasilisa_Rig:Skeleton/Vasilisa_Rig:Hands/Vasilisa_Rig:R_Hand_Wrist_Jnt/Vasilisa_Rig:R_Hand_Thumb_Jnt_01/Vasilisa_Rig:R_Hand_Thumb_Jnt_02/Vasilisa_Rig:R_Hand_Thumb_Jnt_03
+    m_Weight: 0

@@ -13,7 +13,7 @@ public class SwapCharacter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Swap(characters[0]);
+        Swap(characters[1]);
     }
 
     // Update is called once per frame
