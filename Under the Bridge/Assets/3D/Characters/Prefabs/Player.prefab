@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 8562220810057806497}
   - component: {fileID: 8562220810057806510}
   - component: {fileID: 8562220810057806511}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: GroundHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e547f2d3980d55e4898746d65b14420f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 8563269986641878869}
 --- !u!1 &8562859069225530267
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +379,7 @@ GameObject:
   - component: {fileID: 8594125163696676139}
   - component: {fileID: 8595985752778891483}
   - component: {fileID: 8563269986641878867}
+  - component: {fileID: 2719561323450105703}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -477,6 +479,19 @@ MonoBehaviour:
   cam: {fileID: 0}
   speed: 100
   spinSpeed: 1
+--- !u!114 &2719561323450105703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8563269986641878869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4c00d3032d3d642b41aad51e7c5206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1001 &864332071667281139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -552,10 +567,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4171122160840574, guid: 6f78032eb1287f040919723adf89cb48, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4171122160840574, guid: 6f78032eb1287f040919723adf89cb48, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
@@ -617,10 +628,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4171122160840574, guid: f3b8a6c4d7b67584f95ff29ffaaf5365, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4171122160840574, guid: f3b8a6c4d7b67584f95ff29ffaaf5365, type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4171122160840574, guid: f3b8a6c4d7b67584f95ff29ffaaf5365, type: 3}

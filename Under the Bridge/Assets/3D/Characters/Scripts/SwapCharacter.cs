@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class SwapCharacter : MonoBehaviour
 {
-    public GameObject character;
+    public int initCharacterIndex;
 
     public List<GameObject> characters;
+
+    CharacterAnimControl animControl;
 
     KeyCode[] cArray = new KeyCode[] { Inputs.swapIn1, Inputs.swapIn2, Inputs.swapIn3 };
 
     // Start is called before the first frame update
     void Start()
     {
-        Swap(characters[1]);
+        animControl = GetComponent<CharacterAnimControl>();
+
+        Swap(characters[initCharacterIndex]);
     }
 
     // Update is called once per frame
@@ -28,5 +32,7 @@ public class SwapCharacter : MonoBehaviour
     {
         foreach (GameObject buddy in characters)
             buddy.SetActive(buddy == c);
+
+        animControl.enabled = (c == characters[1]);
     }
 }

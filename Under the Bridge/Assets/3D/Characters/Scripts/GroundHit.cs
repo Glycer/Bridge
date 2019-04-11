@@ -2,20 +2,22 @@
 
 public class GroundHit : MonoBehaviour
 {
-    PlayerMotion player;
+    public GameObject player;
+
+    PlayerMotion playerMotion;
     CharacterAnimControl characterAnim;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponentInParent<PlayerMotion>();
-        if (GetComponentInParent<CharacterAnimControl>() != null)
-            characterAnim = GetComponentInParent<CharacterAnimControl>();
+        playerMotion = player.GetComponent<PlayerMotion>();
+        characterAnim = player.GetComponent<CharacterAnimControl>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        player.jumpCount = 0;
-        //characterAnim.anim.SetBool("isJumping", false);
+        playerMotion.jumpCount = 0;
+        if (characterAnim.enabled)
+            characterAnim.anim.SetBool("isJumping", false);
     }
 }

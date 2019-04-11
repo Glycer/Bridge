@@ -21,7 +21,7 @@ public class PlayerMotion : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rigid = GetComponent<Rigidbody>();
-        //animControl = GetComponent<CharacterAnimControl>();
+        animControl = GetComponent<CharacterAnimControl>();
     }
 	
 	// Update is called once per frame
@@ -29,14 +29,14 @@ public class PlayerMotion : MonoBehaviour {
         transform.Translate(Input.GetAxis(strafe) * runSpeed * Time.deltaTime,
             0,
             Input.GetAxis(vertical) * runSpeed * Time.deltaTime);
-        //transform.Rotate(0, Input.GetAxisRaw(horizontal) * turnSpeed, 0);
 
         if (Input.GetKeyDown(Inputs.jump) /*&& jumpCount < MAX_JUMP*/)
         {
             rigid.velocity = Vector3.zero;
             rigid.AddForce(transform.up * jumpForce);
 
-            //animControl.Jump(!(jumpCount == 0));
+            if (animControl.enabled)
+                animControl.Jump(!(jumpCount == 0));
 
             jumpCount++;
         }
