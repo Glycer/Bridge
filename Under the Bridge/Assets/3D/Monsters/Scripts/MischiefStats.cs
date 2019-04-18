@@ -8,4 +8,10 @@ public class MischiefStats : MonsterStats
     {
         hitPoints = 3;
     }
+
+    protected override void Die()
+    {
+        gameObject.SetActive(false);
+        PlayerLoot.AddDeath(5);
+    }
 }

@@ -19,7 +19,7 @@ public class MonsterStats : MonoBehaviour
             Die();
     }
 
-    void Die()
+    protected virtual void Die()
     {
         gameObject.SetActive(false);
     }
