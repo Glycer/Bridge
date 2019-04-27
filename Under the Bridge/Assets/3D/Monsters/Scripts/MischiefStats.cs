@@ -7,6 +7,7 @@ public class MischiefStats : MonsterStats
     void OnEnable()
     {
         hitPoints = 3;
+        moveSpeed = 1;
     }
 
     protected override void Die()

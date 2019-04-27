@@ -18,6 +18,14 @@ public class InventoryDisplay : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    /*void Update ()
+    {
+        if (Input.GetKeyDown(Inputs.inventory))
+            gameObject.SetActive(true);
+        if (Input.GetKeyUp(Inputs.inventory))
+            gameObject.SetActive(false);
+    }*/
+
     void updateDisplay(int newValue)
     {
         text.text = newValue.ToString();

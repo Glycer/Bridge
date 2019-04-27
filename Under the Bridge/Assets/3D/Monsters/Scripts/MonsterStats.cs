@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterStats : MonoBehaviour
 {
     public int hitPoints;
+    public float moveSpeed;
 
     public void Spawn(Vector3 destination)
     {

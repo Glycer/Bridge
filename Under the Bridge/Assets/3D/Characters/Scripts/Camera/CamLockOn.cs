@@ -41,6 +41,7 @@ public class CamLockOn : MonoBehaviour
             ToggleLook(false);
 
         //Delock when target gets out of range
+        //Delock when target dies
     }
 
     void ToggleLook(bool _isLocked)
