@@ -5,29 +5,32 @@ using UnityEngine.UI;
 
 public class InventoryDisplay : MonoBehaviour
 {
-    public int loot;
-    Text text;
+    public Text lightLoot;
+    public Text darkLoot;
+    public Text lifeLoot;
+    public Text deathLoot;
+    public Text fireLoot;
+    public Text waterLoot;
 
-    // Start is called before the first frame update
-    void Start()
+    Dictionary<PlayerLoot.Loot, Text> lootSet;
+
+    private void Start()
     {
-        // TODO: figure out how to access attatched texts
-        /*loot = 0;
-        text = GetComponent<Text>();
-        updateDisplay(loot);*/
-        gameObject.SetActive(false);
+        PlayerLoot.UpdateLoot += UpdateLoot;
+
+         lootSet = new Dictionary<PlayerLoot.Loot, Text>() {
+             { PlayerLoot.Loot.Light, lightLoot },
+             { PlayerLoot.Loot.Dark, darkLoot },
+             { PlayerLoot.Loot.Life, lifeLoot },
+             { PlayerLoot.Loot.Death, deathLoot },
+             { PlayerLoot.Loot.Fire, fireLoot },
+             { PlayerLoot.Loot.Water, waterLoot }
+         };
     }
 
-    /*void Update ()
+    void UpdateLoot(PlayerLoot.Loot loot, int num)
     {
-        if (Input.GetKeyDown(Inputs.inventory))
-            gameObject.SetActive(true);
-        if (Input.GetKeyUp(Inputs.inventory))
-            gameObject.SetActive(false);
-    }*/
-
-    void updateDisplay(int newValue)
-    {
-        text.text = newValue.ToString();
+        PlayerLoot.loots[loot] += num;
+        lootSet[loot].text = PlayerLoot.loots[loot].ToString();
     }
 }

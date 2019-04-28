@@ -13,11 +13,17 @@ public class MonsterStats : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void TakeDamage(int damage)
+    public bool TakeDamage(int damage)
     {
         hitPoints -= damage;
+
         if (hitPoints <= 0)
+        {
             Die();
+            return true;
+        }
+
+        return false;
     }
 
     protected virtual void Die()

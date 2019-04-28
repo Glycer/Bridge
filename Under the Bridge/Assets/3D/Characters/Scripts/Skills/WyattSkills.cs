@@ -53,12 +53,16 @@ public class WyattSkills : MonoBehaviour
 
         if (Input.GetKeyDown(Inputs.whack) && pistol.activeSelf)
         {
-            foreach (Collider col in pistol.GetComponent<TargetCollider>().targets)
-            {
-                Debug.Log("Hit!");
-                col.gameObject.GetComponent<MonsterStats>().TakeDamage(stats.getDamage());
-            }
+            TargetCollider targeter = pistol.GetComponent<TargetCollider>();
 
+            for (int i = 0; i < targeter.targets.Count; i++)
+            {
+                //Debug.Log("Hit!");
+
+                //Deals damage. 'If' statement checks death
+                if (targeter.targets[i].gameObject.GetComponent<MonsterStats>().TakeDamage(stats.getDamage()))
+                    targeter.targets.Remove(targeter.targets[i]);
+            }
         }
     }
 

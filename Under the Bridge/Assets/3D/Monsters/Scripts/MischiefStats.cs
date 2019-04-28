@@ -13,6 +13,6 @@ public class MischiefStats : MonsterStats
     protected override void Die()
     {
         gameObject.SetActive(false);
-        PlayerLoot.AddDeath(5);
+        PlayerLoot.UpdateLoot(PlayerLoot.Loot.Light, 5);
     }
 }

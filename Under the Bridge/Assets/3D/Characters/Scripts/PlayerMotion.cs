@@ -2,8 +2,6 @@
 
 public class PlayerMotion : MonoBehaviour {
 
-    public Animator anim;
-
     public float runSpeed;
     //public float turnSpeed;
     public float jumpForce;
@@ -43,10 +41,5 @@ public class PlayerMotion : MonoBehaviour {
 
         if (Input.GetKey(Inputs.sprint))
             transform.Translate(0, 0, Input.GetAxis(vertical) * runSpeed * Time.deltaTime);
-
-        if (Input.GetKey(Inputs.aim))
-            anim.SetBool("isAiming", true);
-        else if (Input.GetKeyUp(Inputs.aim))
-            anim.SetBool("isAiming", false);
     }
 }
