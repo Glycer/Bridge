@@ -57,7 +57,7 @@ public class CharacterAnimControl : MonoBehaviour
         {
             if (anim.GetBool("isIdling") && Random.Range(0, 5) == 0)
             {
-                anim.SetInteger("idleBreakNum", Random.Range(1, 3));
+                anim.SetInteger("idleBreakNum", Random.Range(1, 2));
                 anim.SetBool("isIdleBreak", true);
             }
 
