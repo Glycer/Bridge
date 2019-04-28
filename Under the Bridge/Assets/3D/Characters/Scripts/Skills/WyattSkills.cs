@@ -10,11 +10,14 @@ public class WyattSkills : MonoBehaviour
 
     public Transform player;
 
+    public WyattStats stats;
+
     public GameObject pistol;
     public GameObject blinkShot;
     Rigidbody blinkRigid;
 
     Coroutine blinkShotTimer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +56,7 @@ public class WyattSkills : MonoBehaviour
             foreach (Collider col in pistol.GetComponent<TargetCollider>().targets)
             {
                 Debug.Log("Hit!");
-                col.gameObject.GetComponent<MonsterStats>().TakeDamage(1);
+                col.gameObject.GetComponent<MonsterStats>().TakeDamage(stats.getDamage());
             }
 
         }

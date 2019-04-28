@@ -5,14 +5,25 @@ using UnityEngine;
 public class EnemyLockOn : MonoBehaviour
 {
     public PlayerFound playerScan;
+    public float moveSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Scan());
+        moveSpeed = GetComponent<MonsterStats>().moveSpeed;
+        //StartCoroutine(Scan());
     }
 
-    IEnumerator Scan()
+    void Update()
+    {
+        if (playerScan.target != null)
+        {
+            transform.LookAt(playerScan.target.transform.position);
+            transform.Translate(0, 0, moveSpeed / 60);
+        }
+    }
+
+    /*IEnumerator Scan()
     {
         while (true)
         {
@@ -24,5 +35,5 @@ public class EnemyLockOn : MonoBehaviour
 
             yield return new WaitForSeconds(.1f);
         }
-    }
+    }*/
 }

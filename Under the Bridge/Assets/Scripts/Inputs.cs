@@ -24,4 +24,6 @@ public static class Inputs
     public static KeyCode magic1 = KeyCode.R;
 
     public static KeyCode mobility = KeyCode.Mouse2;
+
+    public static KeyCode inventory = KeyCode.I;
 }

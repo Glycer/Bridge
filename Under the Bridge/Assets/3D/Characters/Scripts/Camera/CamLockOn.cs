@@ -18,11 +18,14 @@ public class CamLockOn : MonoBehaviour
     ConstraintSource player;
     ConstraintSource target;
 
+    CamPitch camPitch;
+
     int index = 0;
 
     private void Start()
     {
         look = GetComponent<LookAtConstraint>();
+        camPitch = GetComponent<CamPitch>();
 
         player = look.GetSource(0);
         target = look.GetSource(1);
@@ -38,6 +41,7 @@ public class CamLockOn : MonoBehaviour
             ToggleLook(false);
 
         //Delock when target gets out of range
+        //Delock when target dies
     }
 
     void ToggleLook(bool _isLocked)
@@ -49,6 +53,7 @@ public class CamLockOn : MonoBehaviour
         Transform _targeter = target.sourceTransform;
 
         isLockedOn = _isLocked;
+        camPitch.pitchIsLocked = _isLocked;
 
         camControl.enabled = !_isLocked;
 

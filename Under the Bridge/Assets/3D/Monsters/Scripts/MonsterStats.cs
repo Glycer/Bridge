@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterStats : MonoBehaviour
 {
     public int hitPoints;
+    public float moveSpeed;
 
     public void Spawn(Vector3 destination)
     {
@@ -19,7 +20,7 @@ public class MonsterStats : MonoBehaviour
             Die();
     }
 
-    void Die()
+    protected virtual void Die()
     {
         gameObject.SetActive(false);
     }
