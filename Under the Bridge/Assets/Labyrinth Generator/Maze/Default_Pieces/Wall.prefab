@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33972924992480208}
   - component: {fileID: 23454610551751024}
   - component: {fileID: 65385742155376074}
+  - component: {fileID: 1290933846984322698}
   m_Layer: 13
   m_Name: WallGeo
   m_TagString: Untagged
@@ -91,6 +92,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0.5}
+--- !u!114 &1290933846984322698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218419032641940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85c9d844aa11cc4ebc62d3fb4e2a3b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1640895702853906
 GameObject:
   m_ObjectHideFlags: 0

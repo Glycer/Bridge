@@ -7,6 +7,8 @@ public class HanzoSkills : MonoBehaviour
     public PlayerMotion motion;
     float baseRunSpeed;
 
+    Animation[] combo;
+
     // Start is called before the first frame update
     void Awake()
     {

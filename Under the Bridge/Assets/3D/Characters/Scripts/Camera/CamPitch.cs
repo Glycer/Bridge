@@ -5,6 +5,7 @@ using UnityEngine;
 public class CamPitch : MonoBehaviour
 {
     public float speed;
+    public WyattHandgun handgun;
 
     string vertical = Inputs.camVAxis;
 
@@ -26,7 +27,13 @@ public class CamPitch : MonoBehaviour
             else if (lookDownLocked && Input.GetAxis(vertical) > 0)
                 lookDownLocked = false;
             if (!lookDownLocked && !lookUpLocked)
+            {
                 transform.Translate(0, Input.GetAxis(vertical) * speed * Time.deltaTime, 0);
+                if (Input.GetAxis(vertical) != 0)
+                {
+                    handgun.adjustPitch(Input.GetAxis(vertical));
+                }
+            }
         }
     }
 }
