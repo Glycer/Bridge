@@ -11,29 +11,20 @@ public class EnemyLockOn : MonoBehaviour
     void Start()
     {
         moveSpeed = GetComponent<MonsterStats>().moveSpeed;
-        //StartCoroutine(Scan());
+        StartCoroutine(Scan());
     }
 
-    void Update()
-    {
-        if (playerScan.target != null)
-        {
-            transform.LookAt(playerScan.target.transform.position);
-            transform.Translate(0, 0, moveSpeed / 60);
-        }
-    }
-
-    /*IEnumerator Scan()
+    IEnumerator Scan()
     {
         while (true)
         {
             if (playerScan.target != null)
             {
                 transform.LookAt(playerScan.target.transform.position);
-                transform.Translate(0, 0, .1f);
+                transform.Translate(0, 0, moveSpeed / 30);
             }
 
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(1/30f);
         }
-    }*/
+    }
 }

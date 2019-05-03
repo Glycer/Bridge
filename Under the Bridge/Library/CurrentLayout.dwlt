@@ -404,11 +404,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/3D/Characters/Animations
+    - Assets/3D/Characters/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/3D/Characters/Animations
+  - Assets/3D/Characters/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Kirsti\Documents\Unity Projects\Bridge\Under the Bridge
   m_LockTracker:
