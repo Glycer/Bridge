@@ -17,6 +17,9 @@ public class Aim : MonoBehaviour
 
     void SetAim(bool isAiming)
     {
+        if (isAiming)
+            anim.enabled = true;
+
         anim.SetBool("isAiming", isAiming);
         crosshair.gameObject.SetActive(isAiming);
     }
