@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerMotion : MonoBehaviour {
 
     public float runSpeed;
+    public float turnSpeed;
 
     // phasing protection
     bool horizontalMotionLocked;
@@ -31,6 +32,9 @@ public class PlayerMotion : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        transform.Rotate(0, Input.GetAxis(Inputs.playerHAxis) * turnSpeed * Time.deltaTime, 0);
+
         if (!horizontalMotionLocked)
         {
             transform.Translate(Input.GetAxis(strafe) * runSpeed * Time.deltaTime,
