@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: effa988bd36f49049a6c25028e91304b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camControl: {fileID: 0}
+  camControl: {fileID: 3295515365943710022}
   targetCollider: {fileID: 0}
   lockTarget: {fileID: 0}
   playerLook: {fileID: 0}
@@ -162,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5266437660797028518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1361418808607625520}
@@ -213,7 +213,10 @@ MonoBehaviour:
   offset: {fileID: 5266437661153566567}
   cam: {fileID: 5262328694099018199}
   focusTarget: {fileID: 0}
+  playerMotion: {fileID: 0}
+  characterMotion: {fileID: 0}
   crosshair: {fileID: 0}
+  camLook: {fileID: 5264984086977145251}
   pitchIsLocked: 0
 --- !u!114 &2376285340658847952
 MonoBehaviour:
@@ -267,7 +270,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1361418808607625520}
-  - component: {fileID: 3340655480058332146}
   m_Layer: 10
   m_Name: Turn
   m_TagString: Untagged
@@ -290,20 +292,3 @@ Transform:
   m_Father: {fileID: 5266437660797028519}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1818360609 &3340655480058332146
-RotationConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8612232051961399599}
-  m_Enabled: 1
-  m_Weight: 1
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_RotationOffset: {x: 0, y: 0, z: 0}
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 0
-  m_IsLocked: 0
-  m_Sources: []

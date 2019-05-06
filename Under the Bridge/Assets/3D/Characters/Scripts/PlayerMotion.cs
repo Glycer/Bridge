@@ -17,6 +17,7 @@ public class PlayerMotion : MonoBehaviour {
     const int MAX_JUMP = 2;
 
     Rigidbody rigid;
+    CharacterMotion characterMotion;
     CharacterAnimControl animControl;
 
     string vertical = Inputs.playerVAxis;
@@ -26,6 +27,7 @@ public class PlayerMotion : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rigid = GetComponent<Rigidbody>();
+        characterMotion = GetComponent<CharacterMotion>();
         animControl = GetComponent<CharacterAnimControl>();
         horizontalMotionLocked = false;
     }
@@ -33,7 +35,7 @@ public class PlayerMotion : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        transform.Rotate(0, Input.GetAxis(Inputs.playerHAxis) * turnSpeed * Time.deltaTime, 0);
+        Turn(Inputs.playerHAxis);
 
         if (!horizontalMotionLocked)
         {
@@ -58,6 +60,11 @@ public class PlayerMotion : MonoBehaviour {
                 jumpCount++;
             }
         }
+    }
+
+    public void Turn(string axis)
+    {
+        transform.Rotate(0, Input.GetAxis(axis) * turnSpeed * Time.deltaTime, 0);
     }
 
     // Detects collisions to prevent phasing

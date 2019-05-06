@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class CamControl : MonoBehaviour
 {
@@ -11,7 +12,11 @@ public class CamControl : MonoBehaviour
     public Transform cam;
     public Transform focusTarget;
 
+    public PlayerMotion playerMotion;
+    public CharacterMotion characterMotion;
     public GameObject crosshair;
+    
+    public LookAtConstraint camLook;
 
     CamZoom camZoom;
     bool isAiming;
@@ -45,13 +50,19 @@ public class CamControl : MonoBehaviour
     void Update()
     {
         if (isAiming)
-            focusTarget.Translate(Input.GetAxis(Inputs.camHAxis) * -lookSpeed * Time.deltaTime,
-                Input.GetAxis(Inputs.camVAxis) * lookSpeed * Time.deltaTime, 0);
+        {
+            playerMotion.Turn(Inputs.camHAxis);
+            if (!lookDownLocked && !lookUpLocked)
+                turn.RotateAround(turn.position, turn.right, Input.GetAxis(Inputs.camVAxis) * tumbleSpeed * Time.deltaTime);
+            //characterMotion.LookVertical(Inputs.camVAxis);
+            //focusTarget.Translate(0, Input.GetAxis(Inputs.camVAxis) * lookSpeed * Time.deltaTime, 0);
+        }
         else
-            turn.RotateAround(turn.position, turn.up, Input.GetAxis(Inputs.camHAxis) * tumbleSpeed * Time.deltaTime);
-
-        if (!lookDownLocked && !lookUpLocked)
-            turn.RotateAround(turn.position, turn.right, Input.GetAxis(Inputs.camVAxis) * tumbleSpeed * Time.deltaTime);
+        {
+            turn.RotateAround(turn.position, turn.up, -Input.GetAxis(Inputs.camHAxis) * tumbleSpeed * Time.deltaTime);
+            if (!lookDownLocked && !lookUpLocked)
+                turn.RotateAround(turn.position, turn.right, Input.GetAxis(Inputs.camVAxis) * tumbleSpeed * Time.deltaTime);
+        }
 
         if (Input.GetKeyDown(Inputs.aim))
             Aim(true);
@@ -62,7 +73,9 @@ public class CamControl : MonoBehaviour
     void Aim(bool _isAiming)
     {
         isAiming = _isAiming;
+
         crosshair.SetActive(_isAiming);
+        camZoom.ToggleLook(_isAiming);
 
         if (_isAiming)
             camZoom.ZoomTo(aimingPos, focusAimPos);

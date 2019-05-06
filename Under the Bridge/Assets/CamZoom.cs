@@ -8,6 +8,9 @@ public class CamZoom : MonoBehaviour
     
     Coroutine zoom;
     Coroutine shiftFocus;
+    Coroutine resetRot;
+
+    Coroutine lookAt;
 
     private void Start()
     {
@@ -23,8 +26,8 @@ public class CamZoom : MonoBehaviour
         if (zoom != null)
             StopCoroutine(zoom);
 
-        zoom = isLocal ? StartCoroutine(Interpolater.LocalInterpolate(camControl.offset, pos, duration))
-            : StartCoroutine(Interpolater.GlobalInterpolate(camControl.offset, pos, duration));
+        zoom = isLocal ? StartCoroutine(Interpolater.InterpolateLocalTransform(camControl.offset, pos, duration))
+            : StartCoroutine(Interpolater.InterpolateGlobalTransform(camControl.offset, pos, duration));
     }
 
     public void ZoomTo(Vector3 pos, Vector3 targetPos)
@@ -35,9 +38,22 @@ public class CamZoom : MonoBehaviour
             StopCoroutine(zoom);
         if (shiftFocus != null)
             StopCoroutine(shiftFocus);
+        if (resetRot != null)
+            StopCoroutine(resetRot);
 
-        zoom = StartCoroutine(Interpolater.LocalInterpolate(camControl.offset, pos, duration));
-        shiftFocus = StartCoroutine(Interpolater.LocalInterpolate(camControl.focusTarget, targetPos, duration));
+        zoom = StartCoroutine(Interpolater.InterpolateLocalTransform(camControl.offset, pos, duration));
+        shiftFocus = StartCoroutine(Interpolater.InterpolateLocalTransform(camControl.focusTarget, targetPos, duration));
+        resetRot = StartCoroutine(Interpolater.InterpolateLocalRotation(camControl.turn, Quaternion.Euler(Vector3.zero), duration));
+    }
+
+    public void ToggleLook(bool isAiming)
+    {
+        float duration = .2f;
+
+        if (lookAt != null)
+            StopCoroutine(lookAt);
+
+        lookAt = StartCoroutine(Interpolater.InterpolateConstraintWeight(camControl.camLook, isAiming ? 0 : 1, duration));
     }
 
     IEnumerator LoS()
