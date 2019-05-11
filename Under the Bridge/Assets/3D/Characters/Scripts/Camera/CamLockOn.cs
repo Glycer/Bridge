@@ -18,6 +18,9 @@ public class CamLockOn : MonoBehaviour
     ConstraintSource player;
     ConstraintSource target;
 
+    // for postioning the camera for lock on
+    Coroutine orient;
+
     int index = 0;
 
     private void Start()
@@ -45,6 +48,16 @@ public class CamLockOn : MonoBehaviour
     {
         if (index >= targetCollider.targets.Count)
             index = 0;
+
+        if (isLockedOn != _isLocked && _isLocked == true)
+        {
+            float duration = .1f;
+
+            if (orient != null)
+                StopCoroutine(orient);
+
+            orient = StartCoroutine(Interpolater.InterpolateLocalRotation(camControl.turn, Quaternion.Euler(10, 0, 0), duration));
+        }
 
         //The camera aim target object
         Transform _targeter = target.sourceTransform;

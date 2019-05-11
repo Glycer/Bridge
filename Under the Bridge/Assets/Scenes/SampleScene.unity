@@ -853,6 +853,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 203323689}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &217227779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5602371655305941903, guid: d196b1c22a623684297eeac90a5bfce9,
+    type: 3}
+  m_PrefabInstance: {fileID: 454090265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &217227784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217227779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2819a26dceb60a4cafe14c0671a030d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &220097909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,6 +3056,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600887556802779013, guid: d196b1c22a623684297eeac90a5bfce9,
+        type: 3}
+      propertyPath: m_IsContraintActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656678141492484930, guid: d196b1c22a623684297eeac90a5bfce9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656678141492484930, guid: d196b1c22a623684297eeac90a5bfce9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656678141492484930, guid: d196b1c22a623684297eeac90a5bfce9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d196b1c22a623684297eeac90a5bfce9, type: 3}
@@ -6029,6 +6067,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1270fdf207af4734fbb9cf93c8c0f964, type: 3}
+--- !u!4 &952513420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5597471176481807102, guid: d196b1c22a623684297eeac90a5bfce9,
+    type: 3}
+  m_PrefabInstance: {fileID: 454090265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &978942783
 GameObject:
   m_ObjectHideFlags: 0
@@ -7467,6 +7511,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b1f62b5c3d7c545934ce92a765cd3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1250421855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7965886814995800009, guid: d196b1c22a623684297eeac90a5bfce9,
+    type: 3}
+  m_PrefabInstance: {fileID: 454090265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1818360609 &1250421859
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250421855}
+  m_Enabled: 1
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: -11.309964, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 952513420}
+    weight: 1
 --- !u!1 &1259746095
 GameObject:
   m_ObjectHideFlags: 0
@@ -11370,6 +11439,98 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842105393}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1853445834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1853445837}
+  - component: {fileID: 1853445836}
+  - component: {fileID: 1853445835}
+  m_Layer: 0
+  m_Name: Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1853445835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853445834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8b98cbe2e50ef4a8bc381f071ae1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &1853445836
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853445834}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1853445837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853445834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2860129, y: -0.4837855, z: 0.33550608}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1865752006 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7901520859404130501, guid: d196b1c22a623684297eeac90a5bfce9,

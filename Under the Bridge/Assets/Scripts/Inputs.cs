@@ -6,8 +6,10 @@ public static class Inputs
     public static string playerVAxis = "PlayerVertical";
     public static string playerStrafeAxis = "Strafe";
 
-    public static string camHAxis = "CamHorizontal";
-    public static string camVAxis = "CamVertical";
+    public static string camHAxis = "Mouse X";
+    public static string camVAxis = "Mouse Y";
+
+    public static KeyCode centerCam = KeyCode.C;
 
     public static KeyCode lockOn = KeyCode.Return;
     public static KeyCode lockOff = KeyCode.Backspace;
@@ -25,5 +27,6 @@ public static class Inputs
 
     public static KeyCode mobility = KeyCode.Mouse2;
 
+    public static KeyCode menu = KeyCode.LeftControl;
     public static KeyCode inventory = KeyCode.I;
 }
