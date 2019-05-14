@@ -68,14 +68,14 @@ public class PlayerMotion : MonoBehaviour {
     }
 
     // Detects collisions to prevent phasing
-    public void horizontalCollision()
+    public void HorizontalCollision()
     {
         horizontalMotionLocked = true;
         StartCoroutine(horizontalBounceBack());
     }
 
     // Detects vertical collisions to prevent phasing
-    public void verticalCollision()
+    public void VerticalCollision()
     {
         verticalMotionLocked = true;
         StartCoroutine(verticalBounceBack());

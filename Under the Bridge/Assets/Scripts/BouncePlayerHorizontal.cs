@@ -6,6 +6,9 @@ public class BouncePlayerHorizontal : MonoBehaviour
 {
     void OnCollisionEnter(Collision col)
     {
-        col.gameObject.GetComponent<PlayerMotion>().horizontalCollision();
+        if (col.gameObject.layer == 10)
+            col.gameObject.GetComponent<PlayerMotion>().HorizontalCollision();
+        else if (col.gameObject.layer == 15)
+            col.gameObject.GetComponent<EnemyMotion>().HorizontalCollision();
     }
 }

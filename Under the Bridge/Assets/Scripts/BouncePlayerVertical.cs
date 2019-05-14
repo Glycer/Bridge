@@ -6,6 +6,6 @@ public class BouncePlayerVertical : MonoBehaviour
 {
     void OnCollisionEnter(Collision col)
     {
-        col.gameObject.GetComponent<PlayerMotion>().verticalCollision();
+        col.gameObject.GetComponent<PlayerMotion>().VerticalCollision();
     }
 }
