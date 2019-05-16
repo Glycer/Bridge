@@ -3,227 +3,241 @@ guid: 1d2354e0c1520244388e96509015e906
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Arm_Pole_Vector.L
-    100002: Arm_Pole_Vector.L_end
-    100004: COG_Bone
-    100006: Foot_Ball_Bone.L
-    100008: Foot_Ctrl.L
-    100010: Foot_Ctrl.L_end
-    100012: Foot_Toe_Bone.L
-    100014: Foot_Toe_Bone.L_end
-    100016: Forearm_Bone.L
-    100018: Geo
-    100020: Hand_Bone.L
-    100022: Hand_Control.L
-    100024: Hip_Bone
-    100026: Leg_Pole_Vector.L
-    100028: Leg_Pole_Vector.L_end
-    100030: Middle_Bone_01.L
-    100032: Middle_Bone_02.L
-    100034: Middle_Bone_03.L
-    100036: Middle_Bone_03.L_end
-    100038: Middle_Control.L
-    100040: Middle_Control.L_end
-    100042: Middle_Pole_Vector.L
-    100044: Middle_Pole_Vector.L_end
-    100046: Neck_Bone
-    100048: Neck_Bone_end
-    100050: Pinky_Bone_01.L
-    100052: Pinky_Bone_02.L
-    100054: Pinky_Bone_03.L
-    100056: Pinky_Bone_03.L_end
-    100058: Pinky_Control.L
-    100060: Pinky_Control.L_end
-    100062: Pinky_Pole_Vector.L
-    100064: Pinky_Pole_Vector.L_end
-    100066: Pointer_Bone_01.L
-    100068: Pointer_Bone_02.L
-    100070: Pointer_Bone_03.L
-    100072: Pointer_Bone_03.L_end
-    100074: Pointer_Control.L
-    100076: Pointer_Control.L_end
-    100078: Pointer_Pole_Vector.L
-    100080: Pointer_Pole_Vector.L_end
-    100082: Rig
-    100084: Shin_Bone.L
-    100086: Shoulder_Bone.L
-    100088: Spine_Bone_01
-    100090: Thigh_Bone.L
-    100092: Thumb_Bone_01.L
-    100094: Thumb_Bone_02.L
-    100096: Thumb_Bone_03.L
-    100098: Thumb_Bone_03.L_end
-    100100: Thumb_Control.L
-    100102: Thumb_Control.L_end
-    100104: Thumb_Pole_Vector.L
-    100106: Thumb_Pole_Vector.L_end
-    100108: //RootNode
-    100110: Arm_Pole_Vector.R
-    100112: Arm_Pole_Vector.R_end
-    100114: Camera
-    100116: Cloth
-    100118: Foot_Ball_Bone.R
-    100120: Foot_Ctrl.R
-    100122: Foot_Ctrl.R_end
-    100124: Foot_Toe_Bone.R
-    100126: Foot_Toe_Bone.R_end
-    100128: Forearm_Bone.R
-    100130: Hand_Bone.R
-    100132: Hand_Control.R
-    100134: Leg_Pole_Vector.R
-    100136: Leg_Pole_Vector.R_end
-    100138: Middle_Bone_01.R
-    100140: Middle_Bone_02.R
-    100142: Middle_Bone_03.R
-    100144: Middle_Bone_03.R_end
-    100146: Middle_Control.R
-    100148: Middle_Control.R_end
-    100150: Middle_Pole_Vector.R
-    100152: Middle_Pole_Vector.R_end
-    100154: Pinky_Bone_01.R
-    100156: Pinky_Bone_02.R
-    100158: Pinky_Bone_03.R
-    100160: Pinky_Bone_03.R_end
-    100162: Pinky_Control.R
-    100164: Pinky_Control.R_end
-    100166: Pinky_Pole_Vector.R
-    100168: Pinky_Pole_Vector.R_end
-    100170: Pointer_Bone_01.R
-    100172: Pointer_Bone_02.R
-    100174: Pointer_Bone_03.R
-    100176: Pointer_Bone_03.R_end
-    100178: Pointer_Control.R
-    100180: Pointer_Control.R_end
-    100182: Pointer_Pole_Vector.R
-    100184: Pointer_Pole_Vector.R_end
-    100186: Shin_Bone.R
-    100188: Shoulder_Bone.R
-    100190: Sun
-    100192: Thigh_Bone.R
-    100194: Thumb_Bone_01.R
-    100196: Thumb_Bone_02.R
-    100198: Thumb_Bone_03.R
-    100200: Thumb_Bone_03.R_end
-    100202: Thumb_Control.R
-    100204: Thumb_Control.R_end
-    100206: Thumb_Pole_Vector.R
-    100208: Thumb_Pole_Vector.R_end
-    100210: Wyatt
-    400000: Arm_Pole_Vector.L
-    400002: Arm_Pole_Vector.L_end
-    400004: COG_Bone
-    400006: Foot_Ball_Bone.L
-    400008: Foot_Ctrl.L
-    400010: Foot_Ctrl.L_end
-    400012: Foot_Toe_Bone.L
-    400014: Foot_Toe_Bone.L_end
-    400016: Forearm_Bone.L
-    400018: Geo
-    400020: Hand_Bone.L
-    400022: Hand_Control.L
-    400024: Hip_Bone
-    400026: Leg_Pole_Vector.L
-    400028: Leg_Pole_Vector.L_end
-    400030: Middle_Bone_01.L
-    400032: Middle_Bone_02.L
-    400034: Middle_Bone_03.L
-    400036: Middle_Bone_03.L_end
-    400038: Middle_Control.L
-    400040: Middle_Control.L_end
-    400042: Middle_Pole_Vector.L
-    400044: Middle_Pole_Vector.L_end
-    400046: Neck_Bone
-    400048: Neck_Bone_end
-    400050: Pinky_Bone_01.L
-    400052: Pinky_Bone_02.L
-    400054: Pinky_Bone_03.L
-    400056: Pinky_Bone_03.L_end
-    400058: Pinky_Control.L
-    400060: Pinky_Control.L_end
-    400062: Pinky_Pole_Vector.L
-    400064: Pinky_Pole_Vector.L_end
-    400066: Pointer_Bone_01.L
-    400068: Pointer_Bone_02.L
-    400070: Pointer_Bone_03.L
-    400072: Pointer_Bone_03.L_end
-    400074: Pointer_Control.L
-    400076: Pointer_Control.L_end
-    400078: Pointer_Pole_Vector.L
-    400080: Pointer_Pole_Vector.L_end
-    400082: Rig
-    400084: Shin_Bone.L
-    400086: Shoulder_Bone.L
-    400088: Spine_Bone_01
-    400090: Thigh_Bone.L
-    400092: Thumb_Bone_01.L
-    400094: Thumb_Bone_02.L
-    400096: Thumb_Bone_03.L
-    400098: Thumb_Bone_03.L_end
-    400100: Thumb_Control.L
-    400102: Thumb_Control.L_end
-    400104: Thumb_Pole_Vector.L
-    400106: Thumb_Pole_Vector.L_end
-    400108: //RootNode
-    400110: Arm_Pole_Vector.R
-    400112: Arm_Pole_Vector.R_end
-    400114: Camera
-    400116: Cloth
-    400118: Foot_Ball_Bone.R
-    400120: Foot_Ctrl.R
-    400122: Foot_Ctrl.R_end
-    400124: Foot_Toe_Bone.R
-    400126: Foot_Toe_Bone.R_end
-    400128: Forearm_Bone.R
-    400130: Hand_Bone.R
-    400132: Hand_Control.R
-    400134: Leg_Pole_Vector.R
-    400136: Leg_Pole_Vector.R_end
-    400138: Middle_Bone_01.R
-    400140: Middle_Bone_02.R
-    400142: Middle_Bone_03.R
-    400144: Middle_Bone_03.R_end
-    400146: Middle_Control.R
-    400148: Middle_Control.R_end
-    400150: Middle_Pole_Vector.R
-    400152: Middle_Pole_Vector.R_end
-    400154: Pinky_Bone_01.R
-    400156: Pinky_Bone_02.R
-    400158: Pinky_Bone_03.R
-    400160: Pinky_Bone_03.R_end
-    400162: Pinky_Control.R
-    400164: Pinky_Control.R_end
-    400166: Pinky_Pole_Vector.R
-    400168: Pinky_Pole_Vector.R_end
-    400170: Pointer_Bone_01.R
-    400172: Pointer_Bone_02.R
-    400174: Pointer_Bone_03.R
-    400176: Pointer_Bone_03.R_end
-    400178: Pointer_Control.R
-    400180: Pointer_Control.R_end
-    400182: Pointer_Pole_Vector.R
-    400184: Pointer_Pole_Vector.R_end
-    400186: Shin_Bone.R
-    400188: Shoulder_Bone.R
-    400190: Sun
-    400192: Thigh_Bone.R
-    400194: Thumb_Bone_01.R
-    400196: Thumb_Bone_02.R
-    400198: Thumb_Bone_03.R
-    400200: Thumb_Bone_03.R_end
-    400202: Thumb_Control.R
-    400204: Thumb_Control.R_end
-    400206: Thumb_Pole_Vector.R
-    400208: Thumb_Pole_Vector.R_end
-    400210: Wyatt
+    100000: ArmPV.L
+    100002: ArmPV.L_end
+    100004: ArmPV.R
+    100006: ArmPV.R_end
+    100008: Cloth
+    100010: COGBone
+    100012: FingerMiddleBone01.L
+    100014: FingerMiddleBone01.R
+    100016: FingerMiddleBone02.L
+    100018: FingerMiddleBone02.R
+    100020: FingerMiddleBone03.L
+    100022: FingerMiddleBone03.L_end
+    100024: FingerMiddleBone03.R
+    100026: FingerMiddleBone03.R_end
+    100028: FingerMiddleCtrl.L
+    100030: FingerMiddleCtrl.L_end
+    100032: FingerMiddleCtrl.R
+    100034: FingerMiddleCtrl.R_end
+    100036: FingerMiddlePV.L
+    100038: FingerMiddlePV.L_end
+    100040: FingerMiddlePV.R
+    100042: FingerMiddlePV.R_end
+    100044: FingerPinkyBone01.L
+    100046: FingerPinkyBone01.R
+    100048: FingerPinkyBone02.L
+    100050: FingerPinkyBone02.R
+    100052: FingerPinkyBone03.L
+    100054: FingerPinkyBone03.L_end
+    100056: FingerPinkyBone03.R
+    100058: FingerPinkyBone03.R_end
+    100060: FingerPinkyCtrl.L
+    100062: FingerPinkyCtrl.L_end
+    100064: FingerPinkyCtrl.R
+    100066: FingerPinkyCtrl.R_end
+    100068: FingerPinkyPV.L
+    100070: FingerPinkyPV.L_end
+    100072: FingerPinkyPV.R
+    100074: FingerPinkyPV.R_end
+    100076: FingerPointerBone01.L
+    100078: FingerPointerBone01.R
+    100080: FingerPointerBone02.L
+    100082: FingerPointerBone02.R
+    100084: FingerPointerBone03.L
+    100086: FingerPointerBone03.L_end
+    100088: FingerPointerBone03.R
+    100090: FingerPointerBone03.R_end
+    100092: FingerPointerCtrl.L
+    100094: FingerPointerCtrl.L_end
+    100096: FingerPointerCtrl.R
+    100098: FingerPointerCtrl.R_end
+    100100: FingerPointerPV.L
+    100102: FingerPointerPV.L_end
+    100104: FingerPointerPV.R
+    100106: FingerPointerPV.R_end
+    100108: FingerThumbBone01.L
+    100110: FingerThumbBone01.R
+    100112: FingerThumbBone02.L
+    100114: FingerThumbBone02.R
+    100116: FingerThumbBone03.L
+    100118: FingerThumbBone03.L_end
+    100120: FingerThumbBone03.R
+    100122: FingerThumbBone03.R_end
+    100124: FingerThumbCtrl.L
+    100126: FingerThumbCtrl.L_end
+    100128: FingerThumbCtrl.R
+    100130: FingerThumbCtrl.R_end
+    100132: FingerThumbPV.L
+    100134: FingerThumbPV.L_end
+    100136: FingerThumbPV.R
+    100138: FingerThumbPV.R_end
+    100140: FootBone01.L
+    100142: FootBone01.R
+    100144: FootBone02.L
+    100146: FootBone02.L_end
+    100148: FootBone02.R
+    100150: FootBone02.R_end
+    100152: FootCtrl.L
+    100154: FootCtrl.L_end
+    100156: FootCtrl.R
+    100158: FootCtrl.R_end
+    100160: ForearmBone.L
+    100162: ForearmBone.L_end
+    100164: ForearmBone.R
+    100166: ForearmBone.R_end
+    100168: Geo
+    100170: HandBone.L
+    100172: HandBone.R
+    100174: HandCtrl.L
+    100176: HandCtrl.R
+    100178: HeadBone
+    100180: HeadBone_end
+    100182: HipBone
+    100184: LegPV.L
+    100186: LegPV.L_end
+    100188: LegPV.R
+    100190: LegPV.R_end
+    100192: NeckBone
+    100194: Rig
+    100196: ShinBone.L
+    100198: ShinBone.R
+    100200: ShoulderBone.L
+    100202: ShoulderBone.R
+    100204: SkirtBone.L
+    100206: SkirtBone.L_end
+    100208: SkirtBone.R
+    100210: SkirtBone.R_end
+    100212: SpineBone01
+    100214: SpineBone02
+    100216: ThighBone.L
+    100218: ThighBone.R
+    100220: TransformBone
+    100222: //RootNode
+    100224: Wyatt
+    400000: ArmPV.L
+    400002: ArmPV.L_end
+    400004: ArmPV.R
+    400006: ArmPV.R_end
+    400008: Cloth
+    400010: COGBone
+    400012: FingerMiddleBone01.L
+    400014: FingerMiddleBone01.R
+    400016: FingerMiddleBone02.L
+    400018: FingerMiddleBone02.R
+    400020: FingerMiddleBone03.L
+    400022: FingerMiddleBone03.L_end
+    400024: FingerMiddleBone03.R
+    400026: FingerMiddleBone03.R_end
+    400028: FingerMiddleCtrl.L
+    400030: FingerMiddleCtrl.L_end
+    400032: FingerMiddleCtrl.R
+    400034: FingerMiddleCtrl.R_end
+    400036: FingerMiddlePV.L
+    400038: FingerMiddlePV.L_end
+    400040: FingerMiddlePV.R
+    400042: FingerMiddlePV.R_end
+    400044: FingerPinkyBone01.L
+    400046: FingerPinkyBone01.R
+    400048: FingerPinkyBone02.L
+    400050: FingerPinkyBone02.R
+    400052: FingerPinkyBone03.L
+    400054: FingerPinkyBone03.L_end
+    400056: FingerPinkyBone03.R
+    400058: FingerPinkyBone03.R_end
+    400060: FingerPinkyCtrl.L
+    400062: FingerPinkyCtrl.L_end
+    400064: FingerPinkyCtrl.R
+    400066: FingerPinkyCtrl.R_end
+    400068: FingerPinkyPV.L
+    400070: FingerPinkyPV.L_end
+    400072: FingerPinkyPV.R
+    400074: FingerPinkyPV.R_end
+    400076: FingerPointerBone01.L
+    400078: FingerPointerBone01.R
+    400080: FingerPointerBone02.L
+    400082: FingerPointerBone02.R
+    400084: FingerPointerBone03.L
+    400086: FingerPointerBone03.L_end
+    400088: FingerPointerBone03.R
+    400090: FingerPointerBone03.R_end
+    400092: FingerPointerCtrl.L
+    400094: FingerPointerCtrl.L_end
+    400096: FingerPointerCtrl.R
+    400098: FingerPointerCtrl.R_end
+    400100: FingerPointerPV.L
+    400102: FingerPointerPV.L_end
+    400104: FingerPointerPV.R
+    400106: FingerPointerPV.R_end
+    400108: FingerThumbBone01.L
+    400110: FingerThumbBone01.R
+    400112: FingerThumbBone02.L
+    400114: FingerThumbBone02.R
+    400116: FingerThumbBone03.L
+    400118: FingerThumbBone03.L_end
+    400120: FingerThumbBone03.R
+    400122: FingerThumbBone03.R_end
+    400124: FingerThumbCtrl.L
+    400126: FingerThumbCtrl.L_end
+    400128: FingerThumbCtrl.R
+    400130: FingerThumbCtrl.R_end
+    400132: FingerThumbPV.L
+    400134: FingerThumbPV.L_end
+    400136: FingerThumbPV.R
+    400138: FingerThumbPV.R_end
+    400140: FootBone01.L
+    400142: FootBone01.R
+    400144: FootBone02.L
+    400146: FootBone02.L_end
+    400148: FootBone02.R
+    400150: FootBone02.R_end
+    400152: FootCtrl.L
+    400154: FootCtrl.L_end
+    400156: FootCtrl.R
+    400158: FootCtrl.R_end
+    400160: ForearmBone.L
+    400162: ForearmBone.L_end
+    400164: ForearmBone.R
+    400166: ForearmBone.R_end
+    400168: Geo
+    400170: HandBone.L
+    400172: HandBone.R
+    400174: HandCtrl.L
+    400176: HandCtrl.R
+    400178: HeadBone
+    400180: HeadBone_end
+    400182: HipBone
+    400184: LegPV.L
+    400186: LegPV.L_end
+    400188: LegPV.R
+    400190: LegPV.R_end
+    400192: NeckBone
+    400194: Rig
+    400196: ShinBone.L
+    400198: ShinBone.R
+    400200: ShoulderBone.L
+    400202: ShoulderBone.R
+    400204: SkirtBone.L
+    400206: SkirtBone.L_end
+    400208: SkirtBone.R
+    400210: SkirtBone.R_end
+    400212: SpineBone01
+    400214: SpineBone02
+    400216: ThighBone.L
+    400218: ThighBone.R
+    400220: TransformBone
+    400222: Wyatt
+    400224: //RootNode
     2100000: Head
     2100002: Body
-    2300000: Geo
-    2300002: Cloth
-    3300000: Geo
-    3300002: Cloth
     4300000: Geo
     4300002: Cloth
+    7400000: Idle
     9500000: //RootNode
+    13700000: Cloth
+    13700002: Geo
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -244,14 +258,42 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Rig|RigAction
+      firstFrame: 0
+      lastFrame: 95
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -261,8 +303,8 @@ ModelImporter:
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -290,914 +332,8 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
-    human:
-    - boneName: Rig
-      humanName: Hips
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Thigh_Bone.L
-      humanName: LeftUpperLeg
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Thigh_Bone.R
-      humanName: RightUpperLeg
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Shin_Bone.L
-      humanName: LeftLowerLeg
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Shin_Bone.R
-      humanName: RightLowerLeg
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Foot_Ball_Bone.L
-      humanName: LeftFoot
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Foot_Ball_Bone.R
-      humanName: RightFoot
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: COG_Bone
-      humanName: Spine
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Spine_Bone_01
-      humanName: Chest
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Neck_Bone
-      humanName: Neck
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Neck_Bone_end
-      humanName: Head
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Shoulder_Bone.L
-      humanName: LeftUpperArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Shoulder_Bone.R
-      humanName: RightUpperArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Forearm_Bone.L
-      humanName: LeftLowerArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Forearm_Bone.R
-      humanName: RightLowerArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Hand_Bone.L
-      humanName: LeftHand
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Hand_Bone.R
-      humanName: RightHand
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Foot_Toe_Bone.L
-      humanName: LeftToes
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Foot_Toe_Bone.R
-      humanName: RightToes
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Thumb_Bone_01.L
-      humanName: Left Thumb Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Thumb_Bone_02.L
-      humanName: Left Thumb Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Thumb_Bone_03.L
-      humanName: Left Thumb Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pointer_Bone_01.L
-      humanName: Left Index Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pointer_Bone_02.L
-      humanName: Left Index Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pointer_Bone_03.L
-      humanName: Left Index Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Middle_Bone_01.L
-      humanName: Left Middle Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Middle_Bone_02.L
-      humanName: Left Middle Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Middle_Bone_03.L
-      humanName: Left Middle Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pinky_Bone_01.L
-      humanName: Left Ring Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pinky_Bone_02.L
-      humanName: Left Ring Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pinky_Bone_03.L
-      humanName: Left Ring Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pinky_Pole_Vector.L
-      humanName: Left Little Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pinky_Pole_Vector.L_end
-      humanName: Left Little Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Thumb_Bone_01.R
-      humanName: Right Thumb Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Thumb_Bone_02.R
-      humanName: Right Thumb Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Thumb_Bone_03.R
-      humanName: Right Thumb Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pointer_Bone_01.R
-      humanName: Right Index Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pointer_Bone_02.R
-      humanName: Right Index Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pointer_Bone_03.R
-      humanName: Right Index Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Middle_Bone_01.R
-      humanName: Right Middle Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Middle_Bone_02.R
-      humanName: Right Middle Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Middle_Bone_03.R
-      humanName: Right Middle Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pinky_Bone_01.R
-      humanName: Right Ring Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pinky_Bone_02.R
-      humanName: Right Ring Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pinky_Bone_03.R
-      humanName: Right Ring Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pinky_Pole_Vector.R
-      humanName: Right Little Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Pinky_Pole_Vector.R_end
-      humanName: Right Little Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    skeleton:
-    - name: Wyatt(Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Sun
-      parentName: Wyatt(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Camera
-      parentName: Wyatt(Clone)
-      position: {x: -0.4295242, y: 0.6560075, z: 0.5617876}
-      rotation: {x: 0.17232637, y: 0.8612739, z: -0.09378652, w: -0.4687377}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Wyatt
-      parentName: Wyatt(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Rig
-      parentName: Wyatt
-      position: {x: -0, y: 3.7252902e-11, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: COG_Bone
-      parentName: Rig
-      position: {x: -0.0000000011920929, y: 0.0006158939, z: 0.27718067}
-      rotation: {x: 0.75145185, y: -0.0000000786529, z: -0.00000010003143, w: 0.65978795}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Spine_Bone_01
-      parentName: COG_Bone
-      position: {x: 1.847411e-15, y: 0.05865405, z: 0.000000001192093}
-      rotation: {x: -0.101593696, y: 0.00000012155319, z: 0.000000016123396, w: 0.994826}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Shoulder_Bone.L
-      parentName: Spine_Bone_01
-      position: {x: -0.026182622, y: 0.047565628, z: -0.002994616}
-      rotation: {x: -0.6882436, y: 0.69323325, z: 0.14485577, w: 0.15736975}
-      scale: {x: 0.99999994, y: 1.0000002, z: 1}
-    - name: Forearm_Bone.L
-      parentName: Shoulder_Bone.L
-      position: {x: -0.000000025629996, y: 0.063733004, z: 0.00000002026558}
-      rotation: {x: -0.010972349, y: 0.010946673, z: 0.0038728355, w: 0.9998724}
-      scale: {x: 0.99999976, y: 1, z: 0.9999998}
-    - name: Hand_Bone.L
-      parentName: Forearm_Bone.L
-      position: {x: 0.00000004376786, y: 0.085370064, z: -0.000000002201143}
-      rotation: {x: 0.10304672, y: -0.6451306, z: -0.0037237983, w: 0.7570826}
-      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
-    - name: Thumb_Bone_01.L
-      parentName: Hand_Bone.L
-      position: {x: -0.023019923, y: 0.025303526, z: 0.0048569897}
-      rotation: {x: 0.08133032, y: 0.036840852, z: 0.56816113, w: 0.8180593}
-      scale: {x: 1, y: 1.0000004, z: 1.0000002}
-    - name: Thumb_Bone_02.L
-      parentName: Thumb_Bone_01.L
-      position: {x: 0.0000000166893, y: 0.02498473, z: -0.000000023692845}
-      rotation: {x: -0.010733576, y: 0.033618823, z: -0.015343353, w: 0.9992593}
-      scale: {x: 0.9999999, y: 1, z: 1.0000002}
-    - name: Thumb_Bone_03.L
-      parentName: Thumb_Bone_02.L
-      position: {x: -0.000000023841856, y: 0.011533556, z: -0.000000084489585}
-      rotation: {x: 0.0048132804, y: -0.019840553, z: -0.0009929596, w: 0.9997911}
-      scale: {x: 0.9999997, y: 1, z: 1.0000004}
-    - name: Thumb_Bone_03.L_end
-      parentName: Thumb_Bone_03.L
-      position: {x: -0, y: 0.0155395735, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pointer_Bone_01.L
-      parentName: Hand_Bone.L
-      position: {x: -0.022843732, y: 0.048895244, z: 0.0013874131}
-      rotation: {x: -0.0963972, y: 0.7623102, z: -0.018757217, w: 0.6397178}
-      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000002}
-    - name: Pointer_Bone_02.L
-      parentName: Pointer_Bone_01.L
-      position: {x: 0.0000000372708, y: 0.033297643, z: -0.000000038385696}
-      rotation: {x: 0.00000035156688, y: -0.0000005087304, z: 0.000004773193, w: 1}
-      scale: {x: 0.9999999, y: 1, z: 0.99999976}
-    - name: Pointer_Bone_03.L
-      parentName: Pointer_Bone_02.L
-      position: {x: 0.00000005755166, y: 0.01895227, z: -0.0000000748079}
-      rotation: {x: 0.00023091641, y: -0.0002759969, z: -0.0055192765, w: 0.99998474}
-      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999998}
-    - name: Pointer_Bone_03.L_end
-      parentName: Pointer_Bone_03.L
-      position: {x: -0, y: 0.019779762, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Middle_Bone_01.L
-      parentName: Hand_Bone.L
-      position: {x: -0.0053535006, y: 0.051163357, z: -0.0014729501}
-      rotation: {x: -0.059110124, y: 0.98763484, z: -0.08552897, w: -0.117338166}
-      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000002}
-    - name: Middle_Bone_02.L
-      parentName: Middle_Bone_01.L
-      position: {x: 3.5390257e-10, y: 0.036040116, z: -0.000000046829225}
-      rotation: {x: 0.000004225104, y: 0.0000005073356, z: 0.0000005292531, w: 1}
-      scale: {x: 1, y: 1.0000002, z: 1.0000004}
-    - name: Middle_Bone_03.L
-      parentName: Middle_Bone_02.L
-      position: {x: -0.0000000010337681, y: 0.021935632, z: -0.000000008311763}
-      rotation: {x: 0.0042101997, y: -0.0042154766, z: 0.0004513453, w: 0.9999822}
-      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
-    - name: Middle_Bone_03.L_end
-      parentName: Middle_Bone_03.L
-      position: {x: -0, y: 0.019992905, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pinky_Bone_01.L
-      parentName: Hand_Bone.L
-      position: {x: 0.010819482, y: 0.052830175, z: -0.0039273296}
-      rotation: {x: -0.0737939, y: 0.9802886, z: -0.06140313, w: 0.1726797}
-      scale: {x: 0.9999999, y: 1.0000007, z: 1.0000005}
-    - name: Pinky_Bone_02.L
-      parentName: Pinky_Bone_01.L
-      position: {x: -0.000000028610229, y: 0.020122027, z: 0.000000032782555}
-      rotation: {x: -0.000059573144, y: -0.00000030690714, z: 0.000033385702, w: 1}
-      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000002}
-    - name: Pinky_Bone_03.L
-      parentName: Pinky_Bone_02.L
-      position: {x: -0.000000021457671, y: 0.012791342, z: 0.000000017881392}
-      rotation: {x: 0.0030914494, y: -0.00323753, z: -0.0017370858, w: 0.9999885}
-      scale: {x: 1, y: 0.9999999, z: 0.99999964}
-    - name: Pinky_Bone_03.L_end
-      parentName: Pinky_Bone_03.L
-      position: {x: -0, y: 0.010958131, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pointer_Pole_Vector.L
-      parentName: Hand_Bone.L
-      position: {x: -0.01564845, y: 0.057014816, z: 0.044596113}
-      rotation: {x: -0.0826416, y: 0.08261944, z: 0.056820575, w: 0.991522}
-      scale: {x: 1, y: 0.9999998, z: 1}
-    - name: Pointer_Pole_Vector.L_end
-      parentName: Pointer_Pole_Vector.L
-      position: {x: -0, y: 0.033297647, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Middle_Pole_Vector.L
-      parentName: Hand_Bone.L
-      position: {x: 0.0018417974, y: 0.059282918, z: 0.041735828}
-      rotation: {x: -0.0857953, y: 0.08623202, z: 0.0617719, w: 0.99065}
-      scale: {x: 1, y: 0.9999999, z: 1}
-    - name: Middle_Pole_Vector.L_end
-      parentName: Middle_Pole_Vector.L
-      position: {x: -0, y: 0.0360401, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pinky_Pole_Vector.L
-      parentName: Hand_Bone.L
-      position: {x: 0.018014774, y: 0.060949758, z: 0.03928145}
-      rotation: {x: -0.07962791, y: 0.07989841, z: 0.056515574, w: 0.9920089}
-      scale: {x: 0.99999994, y: 1, z: 1}
-    - name: Pinky_Pole_Vector.L_end
-      parentName: Pinky_Pole_Vector.L
-      position: {x: -0, y: 0.020122051, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Thumb_Pole_Vector.L
-      parentName: Hand_Bone.L
-      position: {x: -0.035427686, y: -0.012078351, z: 0.013947837}
-      rotation: {x: 0.10706594, y: -0.0016906391, z: 0.5641597, w: 0.8186928}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Thumb_Pole_Vector.L_end
-      parentName: Thumb_Pole_Vector.L
-      position: {x: -0, y: 0.024984753, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Neck_Bone
-      parentName: Spine_Bone_01
-      position: {x: -6.8402384e-10, y: 0.06299239, z: 0.0051703784}
-      rotation: {x: 0.08912717, y: -0.000000028191563, z: -0.000000031076915, w: 0.99602026}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Neck_Bone_end
-      parentName: Neck_Bone
-      position: {x: -0, y: 0.020109575, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Arm_Pole_Vector.L
-      parentName: Spine_Bone_01
-      position: {x: -0.08989846, y: 0.056416556, z: -0.103692584}
-      rotation: {x: -0.481211, y: 0.48120952, z: 0.51810956, w: 0.51810795}
-      scale: {x: 0.99999994, y: 1, z: 1}
-    - name: Arm_Pole_Vector.L_end
-      parentName: Arm_Pole_Vector.L
-      position: {x: -0, y: 0.024370078, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Hand_Control.L
-      parentName: Spine_Bone_01
-      position: {x: -0.17526853, y: 0.04899749, z: -0.0033671914}
-      rotation: {x: -0.41558233, y: 0.44793534, z: 0.4822831, w: 0.62773263}
-      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
-    - name: Pointer_Control.L
-      parentName: Hand_Control.L
-      position: {x: -0.031727564, y: 0.119498014, z: -0.009769561}
-      rotation: {x: -0.08675422, y: 0.086754106, z: 0.0597901, w: 0.99064255}
-      scale: {x: 1, y: 1, z: 0.99999994}
-    - name: Pointer_Control.L_end
-      parentName: Pointer_Control.L
-      position: {x: -0, y: 0.012648201, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Middle_Control.L
-      parentName: Hand_Control.L
-      position: {x: -0.016040951, y: 0.12741669, z: -0.0137297325}
-      rotation: {x: -0.08675432, y: 0.08675407, z: 0.059790187, w: 0.9906425}
-      scale: {x: 0.9999999, y: 0.9999998, z: 0.99999994}
-    - name: Middle_Control.L_end
-      parentName: Middle_Control.L
-      position: {x: -0, y: 0.012648201, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pinky_Control.L
-      parentName: Hand_Control.L
-      position: {x: 0.0053915, y: 0.09588059, z: -0.01039961}
-      rotation: {x: -0.08675432, y: 0.08675407, z: 0.059790187, w: 0.9906425}
-      scale: {x: 0.9999999, y: 0.9999998, z: 0.99999994}
-    - name: Pinky_Control.L_end
-      parentName: Pinky_Control.L
-      position: {x: -0, y: 0.012648201, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Thumb_Control.L
-      parentName: Hand_Control.L
-      position: {x: -0.070855565, y: 0.04389331, z: 0.013534087}
-      rotation: {x: -0.023525272, y: 0.120412394, z: 0.602776, w: 0.7884216}
-      scale: {x: 0.99999994, y: 1, z: 1}
-    - name: Thumb_Control.L_end
-      parentName: Thumb_Control.L
-      position: {x: -0, y: 0.010921666, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Shoulder_Bone.R
-      parentName: Spine_Bone_01
-      position: {x: 0.026182622, y: 0.047565628, z: -0.0029946156}
-      rotation: {x: 0.69948715, y: 0.7020714, z: -0.098854825, w: 0.08967249}
-      scale: {x: 0.9999998, y: 1.0000002, z: 1.0000001}
-    - name: Forearm_Bone.R
-      parentName: Shoulder_Bone.R
-      position: {x: -0.000000020368024, y: 0.063733, z: 0.000000035725535}
-      rotation: {x: -0.010967068, y: -0.010946701, z: -0.00387097, w: 0.99987245}
-      scale: {x: 0.99999964, y: 1, z: 0.9999999}
-    - name: Hand_Bone.R
-      parentName: Forearm_Bone.R
-      position: {x: -0.000000022534959, y: 0.08537005, z: -0.0000000036950882}
-      rotation: {x: 0.09519617, y: 0.8654956, z: -0.030017242, w: 0.49087065}
-      scale: {x: 0.9999997, y: 1, z: 1.0000002}
-    - name: Thumb_Bone_01.R
-      parentName: Hand_Bone.R
-      position: {x: 0.023019927, y: 0.025303513, z: 0.004856921}
-      rotation: {x: 0.5571832, y: 0.7901539, z: -0.07609779, w: 0.24374752}
-      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
-    - name: Thumb_Bone_02.R
-      parentName: Thumb_Bone_01.R
-      position: {x: 0.000000044107438, y: 0.024984729, z: -0.000000028014183}
-      rotation: {x: -0.010738632, y: -0.033618912, z: 0.015352924, w: 0.9992591}
-      scale: {x: 0.9999994, y: 1, z: 0.99999976}
-    - name: Thumb_Bone_03.R
-      parentName: Thumb_Bone_02.R
-      position: {x: 0.000000014305114, y: 0.011533577, z: 0.000000023841856}
-      rotation: {x: 0.0048124446, y: 0.019840546, z: 0.0009989042, w: 0.9997911}
-      scale: {x: 0.9999998, y: 0.99999976, z: 1.0000004}
-    - name: Thumb_Bone_03.R_end
-      parentName: Thumb_Bone_03.R
-      position: {x: -0, y: 0.0155395735, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pointer_Bone_01.R
-      parentName: Hand_Bone.R
-      position: {x: 0.022843732, y: 0.04889521, z: 0.0013873484}
-      rotation: {x: -0.020821119, y: 0.6396698, z: -0.09865545, w: 0.762008}
-      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000002}
-    - name: Pointer_Bone_02.R
-      parentName: Pointer_Bone_01.R
-      position: {x: -4.468893e-10, y: 0.033297654, z: 0.000000001256194}
-      rotation: {x: 0.000002077933, y: 0.0000005085293, z: 0.000035496236, w: 1}
-      scale: {x: 1, y: 1, z: 0.9999999}
-    - name: Pointer_Bone_03.R
-      parentName: Pointer_Bone_02.R
-      position: {x: -0.000000023009706, y: 0.018952291, z: 0.000000037170647}
-      rotation: {x: 0.00023469023, y: 0.00027599558, z: 0.005608634, w: 0.9999842}
-      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
-    - name: Pointer_Bone_03.R_end
-      parentName: Pointer_Bone_03.R
-      position: {x: -0, y: 0.019779762, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Middle_Bone_01.R
-      parentName: Hand_Bone.R
-      position: {x: 0.005353494, y: 0.051163334, z: -0.0014729785}
-      rotation: {x: 0.06435284, y: 0.9929467, z: -0.081764184, w: 0.0568352}
-      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
-    - name: Middle_Bone_02.R
-      parentName: Middle_Bone_01.R
-      position: {x: 1.6763806e-10, y: 0.036040075, z: 0.000000047010253}
-      rotation: {x: 0.0000006835979, y: -0.0000005042115, z: -0.00000013323732, w: 1}
-      scale: {x: 1, y: 1.0000002, z: 1.0000002}
-    - name: Middle_Bone_03.R
-      parentName: Middle_Bone_02.R
-      position: {x: 5.727634e-10, y: 0.021935634, z: 0.00000001365086}
-      rotation: {x: 0.0042020488, y: 0.0042154794, z: -0.00045047255, w: 0.9999822}
-      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000002}
-    - name: Middle_Bone_03.R_end
-      parentName: Middle_Bone_03.R
-      position: {x: -0, y: 0.019992905, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pinky_Bone_01.R
-      parentName: Hand_Bone.R
-      position: {x: -0.01081949, y: 0.052830152, z: -0.003927398}
-      rotation: {x: 0.03230865, y: 0.9353364, z: -0.09026372, w: 0.34052083}
-      scale: {x: 0.9999998, y: 1.0000002, z: 1.0000004}
-    - name: Pinky_Bone_02.R
-      parentName: Pinky_Bone_01.R
-      position: {x: 0.000000011539086, y: 0.02012207, z: 0.000000012814998}
-      rotation: {x: 0.00004290742, y: 0.0000002916015, z: 0.000023749133, w: 1}
-      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000002}
-    - name: Pinky_Bone_03.R
-      parentName: Pinky_Bone_02.R
-      position: {x: -0.0000000100489705, y: 0.012791339, z: -0.00000004261732}
-      rotation: {x: 0.0033327872, y: 0.003237538, z: 0.0018726765, w: 0.9999875}
-      scale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
-    - name: Pinky_Bone_03.R_end
-      parentName: Pinky_Bone_03.R
-      position: {x: -0, y: 0.010958131, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pointer_Pole_Vector.R
-      parentName: Hand_Bone.R
-      position: {x: 0.015648438, y: 0.05701483, z: 0.04459608}
-      rotation: {x: -0.0826416, y: -0.08261945, z: -0.056820575, w: 0.991522}
-      scale: {x: 1.0000001, y: 0.9999999, z: 1}
-    - name: Pointer_Pole_Vector.R_end
-      parentName: Pointer_Pole_Vector.R
-      position: {x: -0, y: 0.033297647, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Middle_Pole_Vector.R
-      parentName: Hand_Bone.R
-      position: {x: -0.0018417987, y: 0.059282932, z: 0.041735757}
-      rotation: {x: -0.0857953, y: -0.08623202, z: -0.061771892, w: 0.99065}
-      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
-    - name: Middle_Pole_Vector.R_end
-      parentName: Middle_Pole_Vector.R
-      position: {x: -0, y: 0.0360401, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pinky_Pole_Vector.R
-      parentName: Hand_Bone.R
-      position: {x: -0.01801478, y: 0.06094977, z: 0.039281372}
-      rotation: {x: -0.07962791, y: -0.07989842, z: -0.05651557, w: 0.9920089}
-      scale: {x: 0.99999994, y: 1, z: 1}
-    - name: Pinky_Pole_Vector.R_end
-      parentName: Pinky_Pole_Vector.R
-      position: {x: -0, y: 0.020122051, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Thumb_Pole_Vector.R
-      parentName: Hand_Bone.R
-      position: {x: 0.035427682, y: -0.012078347, z: 0.013947765}
-      rotation: {x: 0.10706596, y: 0.001690615, z: -0.5641597, w: 0.8186928}
-      scale: {x: 1.0000001, y: 1, z: 1}
-    - name: Thumb_Pole_Vector.R_end
-      parentName: Thumb_Pole_Vector.R
-      position: {x: -0, y: 0.024984753, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Arm_Pole_Vector.R
-      parentName: Spine_Bone_01
-      position: {x: 0.08989846, y: 0.056416564, z: -0.103692584}
-      rotation: {x: -0.48121092, y: -0.4812096, z: -0.51810956, w: 0.518108}
-      scale: {x: 0.99999994, y: 1, z: 1}
-    - name: Arm_Pole_Vector.R_end
-      parentName: Arm_Pole_Vector.R
-      position: {x: -0, y: 0.024370078, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Hand_Control.R
-      parentName: Spine_Bone_01
-      position: {x: 0.17526853, y: 0.048997495, z: -0.0033671935}
-      rotation: {x: -0.41558224, y: -0.4479353, z: -0.48228306, w: 0.62773275}
-      scale: {x: 1, y: 1, z: 0.9999999}
-    - name: Pointer_Control.R
-      parentName: Hand_Control.R
-      position: {x: 0.031727567, y: 0.11949803, z: -0.009769535}
-      rotation: {x: -0.086754136, y: -0.086754136, z: -0.059790205, w: 0.99064255}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pointer_Control.R_end
-      parentName: Pointer_Control.R
-      position: {x: -0, y: 0.012648201, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Middle_Control.R
-      parentName: Hand_Control.R
-      position: {x: 0.016040968, y: 0.1274167, z: -0.013729709}
-      rotation: {x: -0.08675418, y: -0.086754136, z: -0.059790157, w: 0.99064255}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Middle_Control.R_end
-      parentName: Middle_Control.R
-      position: {x: -0, y: 0.012648201, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Pinky_Control.R
-      parentName: Hand_Control.R
-      position: {x: -0.0053914892, y: 0.09588061, z: -0.010399625}
-      rotation: {x: -0.0867542, y: -0.08675414, z: -0.059790242, w: 0.99064255}
-      scale: {x: 1, y: 1.0000001, z: 1.0000001}
-    - name: Pinky_Control.R_end
-      parentName: Pinky_Control.R
-      position: {x: -0, y: 0.012648201, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Thumb_Control.R
-      parentName: Hand_Control.R
-      position: {x: 0.07085557, y: 0.04389332, z: 0.013534124}
-      rotation: {x: -0.023525184, y: -0.1204125, z: -0.602776, w: 0.7884215}
-      scale: {x: 1, y: 1.0000001, z: 1}
-    - name: Thumb_Control.R_end
-      parentName: Thumb_Control.R
-      position: {x: -0, y: 0.010921666, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Hip_Bone
-      parentName: Rig
-      position: {x: -0.0000000011920929, y: 0.0006158939, z: 0.27718067}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Thigh_Bone.L
-      parentName: Hip_Bone
-      position: {x: -0.025517244, y: 0.026284426, z: 0.009678553}
-      rotation: {x: -0.12825173, y: 0.86358887, z: -0.03329147, w: -0.48647448}
-      scale: {x: 1, y: 1, z: 0.9999999}
-    - name: Shin_Bone.L
-      parentName: Thigh_Bone.L
-      position: {x: 0.0000000047683715, y: 0.1114085, z: -0.000000013113022}
-      rotation: {x: -0.048416246, y: 0.064430565, z: -0.06486391, w: 0.9946343}
-      scale: {x: 1.0000002, y: 1.0000006, z: 0.9999997}
-    - name: Foot_Ball_Bone.L
-      parentName: Shin_Bone.L
-      position: {x: 0.000000005960464, y: 0.10232518, z: 0.0000000011920929}
-      rotation: {x: -0.39559102, y: 0.7180073, z: 0.39910495, w: 0.410717}
-      scale: {x: 1.0000005, y: 0.99999964, z: 0.9999997}
-    - name: Foot_Toe_Bone.L
-      parentName: Foot_Ball_Bone.L
-      position: {x: 0.000000007990748, y: 0.038823266, z: 5.2154064e-10}
-      rotation: {x: -0.10688448, y: 0.05412069, z: -0.018342424, w: 0.9926279}
-      scale: {x: 1, y: 1.0000001, z: 1}
-    - name: Foot_Toe_Bone.L_end
-      parentName: Foot_Toe_Bone.L
-      position: {x: -0, y: 0.027553007, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Foot_Ctrl.L
-      parentName: Hip_Bone
-      position: {x: -0.07674125, y: 0.23079552, z: 0.0402507}
-      rotation: {x: -0.45654792, y: 0.005862441, z: -0.005862441, w: 0.8896602}
-      scale: {x: 1, y: 1, z: 0.99999994}
-    - name: Foot_Ctrl.L_end
-      parentName: Foot_Ctrl.L
-      position: {x: -0, y: 0.03882349, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Leg_Pole_Vector.L
-      parentName: Hip_Bone
-      position: {x: -0.059821803, y: 0.13051552, z: -0.112014994}
-      rotation: {x: 1, y: 1.9106855e-15, z: 0.00000004371139, w: -0.00000004371139}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Leg_Pole_Vector.L_end
-      parentName: Leg_Pole_Vector.L
-      position: {x: -0, y: 0.02671774, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Thigh_Bone.R
-      parentName: Hip_Bone
-      position: {x: 0.025517244, y: 0.026284426, z: 0.009678553}
-      rotation: {x: 0.041709974, y: 0.8996173, z: 0.10730902, w: -0.42122898}
-      scale: {x: 1, y: 1, z: 0.99999994}
-    - name: Shin_Bone.R
-      parentName: Thigh_Bone.R
-      position: {x: 0.0000000010430813, y: 0.111408524, z: -0.000000015497207}
-      rotation: {x: -0.048416242, y: -0.0644306, z: 0.064863905, w: 0.9946343}
-      scale: {x: 1.0000002, y: 1.0000007, z: 0.99999976}
-    - name: Foot_Ball_Bone.R
-      parentName: Shin_Bone.R
-      position: {x: 0.000000004172325, y: 0.102325164, z: 0}
-      rotation: {x: -0.047890756, y: 0.7553717, z: 0.5257055, w: 0.38827032}
-      scale: {x: 1, y: 0.99999976, z: 0.9999996}
-    - name: Foot_Toe_Bone.R
-      parentName: Foot_Ball_Bone.R
-      position: {x: 1.1641532e-10, y: 0.038823273, z: -0.000000001490116}
-      rotation: {x: -0.106884465, y: -0.054120693, z: 0.01834242, w: 0.9926279}
-      scale: {x: 1.0000001, y: 1, z: 1.0000001}
-    - name: Foot_Toe_Bone.R_end
-      parentName: Foot_Toe_Bone.R
-      position: {x: -0, y: 0.027553007, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Foot_Ctrl.R
-      parentName: Hip_Bone
-      position: {x: 0.07674125, y: 0.23079552, z: 0.0402507}
-      rotation: {x: -0.45654792, y: -0.005862441, z: 0.005862441, w: 0.8896602}
-      scale: {x: 1, y: 1, z: 0.99999994}
-    - name: Foot_Ctrl.R_end
-      parentName: Foot_Ctrl.R
-      position: {x: -0, y: 0.03882349, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Leg_Pole_Vector.R
-      parentName: Hip_Bone
-      position: {x: 0.059821803, y: 0.13051552, z: -0.112014994}
-      rotation: {x: 1, y: 1.9106855e-15, z: 0.00000004371139, w: -0.00000004371139}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Leg_Pole_Vector.R_end
-      parentName: Leg_Pole_Vector.R
-      position: {x: -0, y: 0.02671774, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Geo
-      parentName: Wyatt
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Cloth
-      parentName: Geo
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
+    human: []
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -1207,10 +343,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
