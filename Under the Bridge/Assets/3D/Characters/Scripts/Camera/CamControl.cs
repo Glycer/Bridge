@@ -34,6 +34,7 @@ public class CamControl : MonoBehaviour
 
     private void Start()
     {
+
         camZoom = GetComponent<CamZoom>();
 
         basePos = offset.localPosition;

@@ -6,8 +6,8 @@ public static class Inputs
     public static string playerVAxis = "PlayerVertical";
     public static string playerStrafeAxis = "Strafe";
 
-    public static string camHAxis = "Mouse X";
-    public static string camVAxis = "Mouse Y";
+    public static string camHAxis = "CamHorizontal"; /*"Mouse X";*/
+    public static string camVAxis = "CamVertical"; /*"Mouse Y";*/
 
     public static KeyCode centerCam = KeyCode.C;
 

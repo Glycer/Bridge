@@ -7,9 +7,9 @@ public class CursorControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
-
+    /*
     void Update()
     {
         if (Input.GetKeyDown(Inputs.menu))
@@ -20,4 +20,5 @@ public class CursorControl : MonoBehaviour
             CursorLockMode.Locked;
         }
     }
+    */
 }
