@@ -24,7 +24,7 @@ public class EnemyLockOn : MonoBehaviour
                 foundPlayer = true;
                 if (!motion.isPursuing)
                 {
-                    motion.Move();
+                    motion.Pursue();
                 }
             }
             else if (foundPlayer == true)
