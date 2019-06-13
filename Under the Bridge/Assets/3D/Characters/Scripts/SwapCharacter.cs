@@ -34,6 +34,7 @@ public class SwapCharacter : MonoBehaviour
         foreach (GameObject buddy in characters)
             buddy.SetActive(buddy == c);
 
-        animControl.enabled = (c == characters[1]);
+        animControl.anim = c.GetComponent<Animator>();
+        animControl.enabled = (c != characters[2]);
     }
 }

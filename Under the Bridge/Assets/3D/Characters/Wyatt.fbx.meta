@@ -74,48 +74,54 @@ ModelImporter:
     100136: FingerThumbPV.R
     100138: FingerThumbPV.R_end
     100140: FootBone01.L
-    100142: FootBone01.R
-    100144: FootBone02.L
-    100146: FootBone02.L_end
-    100148: FootBone02.R
-    100150: FootBone02.R_end
-    100152: FootCtrl.L
-    100154: FootCtrl.L_end
-    100156: FootCtrl.R
-    100158: FootCtrl.R_end
-    100160: ForearmBone.L
-    100162: ForearmBone.L_end
-    100164: ForearmBone.R
-    100166: ForearmBone.R_end
-    100168: Geo
-    100170: HandBone.L
-    100172: HandBone.R
-    100174: HandCtrl.L
-    100176: HandCtrl.R
-    100178: HeadBone
-    100180: HeadBone_end
-    100182: HipBone
-    100184: LegPV.L
-    100186: LegPV.L_end
-    100188: LegPV.R
-    100190: LegPV.R_end
-    100192: NeckBone
-    100194: Rig
-    100196: ShinBone.L
-    100198: ShinBone.R
-    100200: ShoulderBone.L
-    100202: ShoulderBone.R
-    100204: SkirtBone.L
-    100206: SkirtBone.L_end
-    100208: SkirtBone.R
-    100210: SkirtBone.R_end
-    100212: SpineBone01
-    100214: SpineBone02
-    100216: ThighBone.L
-    100218: ThighBone.R
-    100220: TransformBone
-    100222: //RootNode
-    100224: Wyatt
+    100142: FootBone01.L_end
+    100144: FootBone01.R
+    100146: FootBone01.R_end
+    100148: FootBone02.L
+    100150: FootBone02.L_end
+    100152: FootBone02.R
+    100154: FootBone02.R_end
+    100156: FootCtrl01.L
+    100158: FootCtrl01.R
+    100160: FootCtrl02.L
+    100162: FootCtrl02.R
+    100164: FootCtrl03.L
+    100166: FootCtrl03.R
+    100168: ForearmBone.L
+    100170: ForearmBone.L_end
+    100172: ForearmBone.R
+    100174: ForearmBone.R_end
+    100176: Geo
+    100178: HandBone.L
+    100180: HandBone.R
+    100182: HandCtrl.L
+    100184: HandCtrl.R
+    100186: HeadBone
+    100188: HeadBone_end
+    100190: HipBone
+    100192: LegPV.L
+    100194: LegPV.L_end
+    100196: LegPV.R
+    100198: LegPV.R_end
+    100200: NeckBone
+    100202: Rig
+    100204: ShinBone.L
+    100206: ShinBone.L_end
+    100208: ShinBone.R
+    100210: ShinBone.R_end
+    100212: ShoulderBone.L
+    100214: ShoulderBone.R
+    100216: SkirtBone.L
+    100218: SkirtBone.L_end
+    100220: SkirtBone.R
+    100222: SkirtBone.R_end
+    100224: SpineBone01
+    100226: SpineBone02
+    100228: ThighBone.L
+    100230: ThighBone.R
+    100232: TransformBone
+    100234: //RootNode
+    100236: Wyatt
     400000: ArmPV.L
     400002: ArmPV.L_end
     400004: ArmPV.R
@@ -187,53 +193,64 @@ ModelImporter:
     400136: FingerThumbPV.R
     400138: FingerThumbPV.R_end
     400140: FootBone01.L
-    400142: FootBone01.R
-    400144: FootBone02.L
-    400146: FootBone02.L_end
-    400148: FootBone02.R
-    400150: FootBone02.R_end
-    400152: FootCtrl.L
-    400154: FootCtrl.L_end
-    400156: FootCtrl.R
-    400158: FootCtrl.R_end
-    400160: ForearmBone.L
-    400162: ForearmBone.L_end
-    400164: ForearmBone.R
-    400166: ForearmBone.R_end
-    400168: Geo
-    400170: HandBone.L
-    400172: HandBone.R
-    400174: HandCtrl.L
-    400176: HandCtrl.R
-    400178: HeadBone
-    400180: HeadBone_end
-    400182: HipBone
-    400184: LegPV.L
-    400186: LegPV.L_end
-    400188: LegPV.R
-    400190: LegPV.R_end
-    400192: NeckBone
-    400194: Rig
-    400196: ShinBone.L
-    400198: ShinBone.R
-    400200: ShoulderBone.L
-    400202: ShoulderBone.R
-    400204: SkirtBone.L
-    400206: SkirtBone.L_end
-    400208: SkirtBone.R
-    400210: SkirtBone.R_end
-    400212: SpineBone01
-    400214: SpineBone02
-    400216: ThighBone.L
-    400218: ThighBone.R
-    400220: TransformBone
-    400222: Wyatt
-    400224: //RootNode
+    400142: FootBone01.L_end
+    400144: FootBone01.R
+    400146: FootBone01.R_end
+    400148: FootBone02.L
+    400150: FootBone02.L_end
+    400152: FootBone02.R
+    400154: FootBone02.R_end
+    400156: FootCtrl01.L
+    400158: FootCtrl01.R
+    400160: FootCtrl02.L
+    400162: FootCtrl02.R
+    400164: FootCtrl03.L
+    400166: FootCtrl03.R
+    400168: ForearmBone.L
+    400170: ForearmBone.L_end
+    400172: ForearmBone.R
+    400174: ForearmBone.R_end
+    400176: Geo
+    400178: HandBone.L
+    400180: HandBone.R
+    400182: HandCtrl.L
+    400184: HandCtrl.R
+    400186: HeadBone
+    400188: HeadBone_end
+    400190: HipBone
+    400192: LegPV.L
+    400194: LegPV.L_end
+    400196: LegPV.R
+    400198: LegPV.R_end
+    400200: NeckBone
+    400202: Rig
+    400204: ShinBone.L
+    400206: ShinBone.L_end
+    400208: ShinBone.R
+    400210: ShinBone.R_end
+    400212: ShoulderBone.L
+    400214: ShoulderBone.R
+    400216: SkirtBone.L
+    400218: SkirtBone.L_end
+    400220: SkirtBone.R
+    400222: SkirtBone.R_end
+    400224: SpineBone01
+    400226: SpineBone02
+    400228: ThighBone.L
+    400230: ThighBone.R
+    400232: TransformBone
+    400234: //RootNode
+    400236: Wyatt
     2100000: Head
     2100002: Body
     4300000: Geo
     4300002: Cloth
     7400000: Idle
+    7400002: Walk
+    7400004: Run
+    7400006: JumpLift
+    7400008: JumpHang
+    7400010: JumpLand
     9500000: //RootNode
     13700000: Cloth
     13700002: Geo
@@ -278,6 +295,146 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Rig|RigAction
+      firstFrame: 99
+      lastFrame: 123
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Rig|RigAction
+      firstFrame: 139
+      lastFrame: 155
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpLift
+      takeName: Rig|RigAction
+      firstFrame: 169
+      lastFrame: 183
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpHang
+      takeName: Rig|RigAction
+      firstFrame: 183
+      lastFrame: 231
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpLand
+      takeName: Rig|RigAction
+      firstFrame: 231
+      lastFrame: 243
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
