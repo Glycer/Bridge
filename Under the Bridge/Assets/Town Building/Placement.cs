@@ -8,6 +8,8 @@ public class Placement : MonoBehaviour {
     public const int PLACEABLE_MASK = 1 << 11;
     public const float RANGE = 100;
 
+    public UIManager UI;
+
     public Camera playerCam;
     public GameObject placeeGhost;
     public GameObject placee;
@@ -70,6 +72,12 @@ public class Placement : MonoBehaviour {
         }
     }
 
+    /*public void SetPlacee(GameObject toBePlacee)
+    {
+        placee = toBePlacee;
+        placeeGhost = TownObjects.GetGhost(toBePlacee);
+    }*/
+
     public void Place()
     {
         Instantiate(placee, ghost.transform.position, ghost.transform.rotation);
@@ -81,6 +89,8 @@ public class Placement : MonoBehaviour {
     {
         if (!isClearing)
         {
+            UI.ToggleClear();
+
             if (placer != null)
                 DeActivatePlacer();
 
@@ -92,6 +102,7 @@ public class Placement : MonoBehaviour {
 
     void DeActivateClearer()
     {
+        UI.ToggleClear();
         isClearing = false;
     }
     #endregion

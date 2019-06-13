@@ -27,6 +27,7 @@ public static class Inputs
 
     public static KeyCode mobility = KeyCode.Mouse2;
 
+    public static KeyCode townView = KeyCode.T;
     public static KeyCode menu = KeyCode.LeftControl;
     public static KeyCode inventory = KeyCode.I;
 }

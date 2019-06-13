@@ -15,33 +15,38 @@ public class EnemyMotion : MonoBehaviour
     Coroutine bounce;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         moveSpeed = GetComponent<MonsterStats>().moveSpeed;
         turnSpeed = GetComponent<MonsterStats>().turnSpeed;
         patrol = StartCoroutine(Patrol());
     }
 
-    public void Move()
+    // Starts pursuing the player and fights
+    public void Pursue()
     {
         isPursuing = true;
         StopCoroutine(patrol);
-        StopCoroutine(move);
-        StopCoroutine(turn);
+        if (move != null)
+            StopCoroutine(move);
+        if (turn != null)
+            StopCoroutine(turn);
         move = StartCoroutine(ForwardMotion());
-        Debug.Log("Moving");
         turn = StartCoroutine(LookRotation(playerDirection.transform.rotation));
     }
 
+    // Lost the player
     public void Halt()
     {
-        StopCoroutine(move);
-        StopCoroutine(turn);
+        if (move != null)
+            StopCoroutine(move);
+        if (turn != null)
+            StopCoroutine(turn);
         isPursuing = false;
-        new WaitForSeconds(3);
         patrol = StartCoroutine(Patrol());
     }
 
+    // Random walk
     IEnumerator Patrol()
     {
         while (true)
@@ -56,7 +61,7 @@ public class EnemyMotion : MonoBehaviour
         }
     }
 
-    // primary pursuing motion function
+    // Moves enemy forward
     IEnumerator ForwardMotion()
     {
         while (true)
@@ -67,12 +72,14 @@ public class EnemyMotion : MonoBehaviour
         }
     }
 
+    // Turns enemy
     IEnumerator LookRotation(Quaternion toGo)
     {
         while (true)
         {
             TurnAround(0.1f, toGo);
 
+            toGo = playerDirection.transform.rotation;
             yield return new WaitForSeconds(0.1f);
         }
     }
