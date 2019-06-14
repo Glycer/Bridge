@@ -10,15 +10,19 @@ public class Buildings : MonoBehaviour
     public Text text;
     static List<string> buildingBlueprints;
     static Dictionary<string, int> storedBuildings;
+    static Dictionary<string, GameObject> buildings;
+    static Dictionary<string, GameObject> buildingGhosts;
 
     void Start()
     {
         buildingBlueprints = new List<string>();
         storedBuildings = new Dictionary<string, int>();
+        buildings = new Dictionary<string, GameObject>();
+        buildingGhosts = new Dictionary<string, GameObject>();
     }
 
     // Adds blueprint to list of blueprints
-    public void addBlueprint(string newBlueprint)
+    public void AddBlueprint(string newBlueprint, GameObject realObject, GameObject ghost)
     {
         // Redundancy avoidance
         foreach (string blueprint in buildingBlueprints)
@@ -28,7 +32,11 @@ public class Buildings : MonoBehaviour
                 return;
             }
         }
-        addBuildingButton(newBlueprint);
+        // Stores prefabs
+        buildings.Add(newBlueprint, realObject);
+        buildingGhosts.Add(newBlueprint, ghost);
+
+        AddBuildingButton(newBlueprint);
 
         buildingBlueprints.Add(newBlueprint);
 
@@ -37,12 +45,22 @@ public class Buildings : MonoBehaviour
         buildingBlueprints.Sort();
     }
 
-    void addBuilding(string newBuilding)
+    public GameObject GetBuilding(string realObject)
+    {
+        return buildings[realObject];
+    }
+
+    public GameObject GetGhost(string ghostObject)
+    {
+        return buildingGhosts[ghostObject];
+    }
+
+    void AddBuilding(string newBuilding)
     {
         storedBuildings[newBuilding] = storedBuildings[newBuilding] + 1;
     }
 
-    void addBuildingButton(string newBuilding)
+    void AddBuildingButton(string newBuilding)
     {
         text.text = newBuilding;
         if (buildingBlueprints.Count == 0)

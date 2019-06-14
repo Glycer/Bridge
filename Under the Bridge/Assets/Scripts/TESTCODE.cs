@@ -5,31 +5,33 @@ using UnityEngine;
 public class TESTCODE : MonoBehaviour
 {
     public Buildings buildings;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public GameObject house;
+    public GameObject bigHouse;
+    public GameObject factory;
+    public GameObject trainingCenter;
+    public GameObject houseGhost;
+    public GameObject bigHouseGhost;
+    public GameObject factoryGhost;
+    public GameObject trainingCenterGhost;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            buildings.addBlueprint("House");
+            buildings.AddBlueprint("House", house, houseGhost);
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            buildings.addBlueprint("Big house");
+            buildings.AddBlueprint("Big house", bigHouse, bigHouseGhost);
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            buildings.addBlueprint("Factory");
+            buildings.AddBlueprint("Factory", factory, factoryGhost);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            buildings.addBlueprint("Training center");
+            buildings.AddBlueprint("Training center", trainingCenter, trainingCenterGhost);
         }
     }
 }

@@ -36,12 +36,6 @@ public class TownObjects : MonoBehaviour {
         };
     }
 
-    /*public GameObject GetGhost(GameObject realObject)
-    {
-        // get the ghost appropriate
-        return null;
-    }*/
-
     public void AddBuilding(GameObject building)
     {
         buildings.Add(building);
@@ -49,7 +43,7 @@ public class TownObjects : MonoBehaviour {
 
     public void SetPlacee(ObjectType type, int index)
     {
-        placement.placee = mainLists[type][index];
-        placement.placeeGhost = ghostLists[type][index];
+        //placement.placee = mainLists[type][index];
+        //placement.placeeGhost = ghostLists[type][index];
     }
 }

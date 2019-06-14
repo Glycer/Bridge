@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Placement : MonoBehaviour {
 
@@ -10,9 +11,11 @@ public class Placement : MonoBehaviour {
 
     public UIManager UI;
 
+    public Buildings buildings;
+
     public Camera playerCam;
-    public GameObject placeeGhost;
-    public GameObject placee;
+    GameObject placeeGhost;
+    GameObject placee;
 
     GameObject ghost;
 
@@ -31,10 +34,16 @@ public class Placement : MonoBehaviour {
     }
 
     #region Placing
-    public void TogglePlacer()
+    public void TogglePlacer(Text objectName)
     {
         if (!isPlacing)
         {
+            // Sets the prefabs
+            placee = buildings.GetBuilding(objectName.text);
+            placeeGhost = buildings.GetGhost(objectName.text);
+            // Closes placeables
+            UI.DeactivatePlaceables();
+
             if (isClearing)
                 DeActivateClearer();
 
@@ -47,7 +56,7 @@ public class Placement : MonoBehaviour {
             DeActivatePlacer();
     }
 
-    void DeActivatePlacer()
+    public void DeActivatePlacer()
     {
         if (placer != null)
             StopCoroutine(placer);
@@ -72,12 +81,6 @@ public class Placement : MonoBehaviour {
         }
     }
 
-    /*public void SetPlacee(GameObject toBePlacee)
-    {
-        placee = toBePlacee;
-        placeeGhost = TownObjects.GetGhost(toBePlacee);
-    }*/
-
     public void Place()
     {
         Instantiate(placee, ghost.transform.position, ghost.transform.rotation);
@@ -89,8 +92,6 @@ public class Placement : MonoBehaviour {
     {
         if (!isClearing)
         {
-            UI.ToggleClear();
-
             if (placer != null)
                 DeActivatePlacer();
 
@@ -102,7 +103,6 @@ public class Placement : MonoBehaviour {
 
     void DeActivateClearer()
     {
-        UI.ToggleClear();
         isClearing = false;
     }
     #endregion

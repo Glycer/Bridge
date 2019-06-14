@@ -8,8 +8,12 @@ public class UIManager : MonoBehaviour
     public GameObject inventoryDisplay;
     public GameObject townUI;
     public GameObject placeables;
-    public Text placeButton;
-    public Text clearButton;
+    public GameObject placeButton;
+    public GameObject clearButton;
+    public GameObject backButton;
+    public Text placeButtonText;
+    public Text clearButtonText;
+    public Placement placement;
 
     // Start is called before the first frame update
     void Start()
@@ -29,11 +33,29 @@ public class UIManager : MonoBehaviour
     public void TogglePlaceables()
     {
         placeables.SetActive(!placeables.activeSelf);
-        placeButton.text = (!placeables.activeSelf ? "Place" : "Back");
+        placeButtonText.text = (!placeables.activeSelf ? "Place" : "Back");
+        clearButton.SetActive(!clearButton.activeSelf);
+
+    }
+
+    public void DeactivatePlaceables()
+    {
+        placeables.SetActive(false);
+        backButton.SetActive(true);
+    }
+
+    public void ActivatePlaceables()
+    {
+        placeables.SetActive(true);
+        backButton.SetActive(false);
+        placement.DeActivatePlacer();
     }
 
     public void ToggleClear()
     {
-        clearButton.text = (clearButton.text == "Clear" ? "Back" : "Clear");
+        placement.ToggleClearer();
+        placeButton.SetActive(!placeButton.activeSelf);
+        clearButtonText.text = (clearButtonText.text == "Clear" ? "Back" : "Clear");
+        
     }
 }
