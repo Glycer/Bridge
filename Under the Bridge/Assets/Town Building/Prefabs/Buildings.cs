@@ -25,9 +25,9 @@ public class Buildings : MonoBehaviour
     public void AddBlueprint(string newBlueprint, GameObject realObject, GameObject ghost)
     {
         // Redundancy avoidance
-        foreach (string blueprint in buildingBlueprints)
+        for (int i = 0; i < buildingBlueprints.Count; i++)
         {
-            if (newBlueprint == blueprint)
+            if (newBlueprint == buildingBlueprints[i])
             {
                 return;
             }
