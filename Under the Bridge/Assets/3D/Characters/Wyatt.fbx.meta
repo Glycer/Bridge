@@ -285,9 +285,9 @@ ModelImporter:
     clipAnimations:
     - serializedVersion: 16
       name: Idle
-      takeName: Rig|RigAction
-      firstFrame: 0
-      lastFrame: 95
+      takeName: Rig|BaseAnim
+      firstFrame: 2
+      lastFrame: 96
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -295,7 +295,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -313,9 +313,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Walk
-      takeName: Rig|RigAction
-      firstFrame: 99
-      lastFrame: 123
+      takeName: Rig|BaseAnim
+      firstFrame: 101
+      lastFrame: 124
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -341,9 +341,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Run
-      takeName: Rig|RigAction
-      firstFrame: 139
-      lastFrame: 155
+      takeName: Rig|BaseAnim
+      firstFrame: 140
+      lastFrame: 156
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -351,7 +351,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -369,9 +369,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: JumpLift
-      takeName: Rig|RigAction
-      firstFrame: 169
-      lastFrame: 183
+      takeName: Rig|BaseAnim
+      firstFrame: 170
+      lastFrame: 180
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -397,9 +397,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: JumpHang
-      takeName: Rig|RigAction
-      firstFrame: 183
-      lastFrame: 231
+      takeName: Rig|BaseAnim
+      firstFrame: 181
+      lastFrame: 228
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -425,9 +425,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: JumpLand
-      takeName: Rig|RigAction
-      firstFrame: 231
-      lastFrame: 243
+      takeName: Rig|BaseAnim
+      firstFrame: 228
+      lastFrame: 236
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
