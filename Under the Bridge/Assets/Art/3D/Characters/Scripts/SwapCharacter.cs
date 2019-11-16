@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class SwapCharacter : MonoBehaviour
 {
+    public static GameObject activeChar;
+
     public int initCharacterIndex;
 
     public List<GameObject> characters;
@@ -34,6 +36,7 @@ public class SwapCharacter : MonoBehaviour
         foreach (GameObject buddy in characters)
             buddy.SetActive(buddy == c);
 
+        activeChar = c;
         animControl.anim = c.GetComponent<Animator>();
         animControl.enabled = (c != characters[2]);
     }
