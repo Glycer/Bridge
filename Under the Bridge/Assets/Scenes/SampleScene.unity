@@ -6473,6 +6473,26 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.015756497, y: 0.00951137, z: -0.000000014901161}
     m_Extent: {x: 0.017374901, y: 0.039654918, z: 0.030967604}
   m_DirtyAABB: 0
+--- !u!1 &861571278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 363391420722460385, guid: e711dd70045507a4495498603c1c0a9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 363391419122327458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &861571279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861571278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9dbdfcc588da144823c717eac9e176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 835273259732232715, guid: 9fe0a9aabe479fc408caaf7a19af5d67,
+    type: 3}
 --- !u!1 &878788683
 GameObject:
   m_ObjectHideFlags: 0
