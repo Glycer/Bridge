@@ -11,7 +11,7 @@ public static class MazeSurveyLogic
             { 5, new int[] {0,0,-1} }
         };
 
-    static Dictionary<int, int> adjDirectionFlips = new Dictionary<int, int> { { 0, 2 }, { 1, 3 }, { 2, 0 }, { 3, 1 }, { 4, 5 }, { 5, 4 } };
+    public static Dictionary<int, int> adjDirectionFlips = new Dictionary<int, int> { { 0, 2 }, { 1, 3 }, { 2, 0 }, { 3, 1 }, { 4, 5 }, { 5, 4 } };
     
     public static void Survey(int rowIndex, int colIndex, int layIndex, MazeSquare[,,] grid)
     {

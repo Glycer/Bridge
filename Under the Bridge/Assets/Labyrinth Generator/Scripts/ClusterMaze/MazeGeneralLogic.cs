@@ -70,9 +70,6 @@ public static class MazeGeneralLogic
         List<int> indices = new List<int>();
         List<MazeSquare> openAdjacents = new List<MazeSquare>();
 
-        //Only use up and down if the maze has more than 1 layer
-        //int adjSize = (squares.GetLength(2) > 1) ? square.adjacents.Length : 4;
-
         for (int i = 0; i < CORNERS; i++) {
             if (square.adjacents[i] == null) {
                 openAdjacents.Add(square.adjacents[i]);
@@ -85,20 +82,11 @@ public static class MazeGeneralLogic
         outletSq = tempSq;
 
         //Replace wall with outlet
-        Object.Destroy(square.layout.transform.GetChild(indices[rand]).GetChild(0).gameObject);
-        outlet = Object.Instantiate(outlet, square.layout.transform.GetChild(indices[rand]));
+        Transform wall = square.layout.transform.GetChild(indices[rand]);
+        Object.Destroy(wall.GetChild(0).gameObject);
+        outlet = Object.Instantiate(outlet, wall);
         ZeroOut(outlet);
         outletSq.layout = outlet;
-
-        //Add columns
-        if (useColumns) {
-            Transform t = square.layout.transform;
-            GameObject col = Object.Instantiate(prefabs.column, t.GetChild(indices[rand]));
-            ZeroOut(col);
-            col = (indices[rand] < 3) ? Object.Instantiate(prefabs.column, t.GetChild(indices[rand] + 1)) :
-                Object.Instantiate(prefabs.column, t.GetChild(0));
-            ZeroOut(col);
-        }
 
         if (vacancyList.Count > 1)
             vacancyList.RemoveAt(outletIndex);
@@ -112,15 +100,25 @@ public static class MazeGeneralLogic
         Transform[] corners = new Transform[CORNERS];
         for (int i = 0; i < corners.Length; i++)
             corners[i] = output.transform.GetChild(i);
-
+        
         for (int i = 0; i < CORNERS; i++)
         {
             MazeSquare next = adjacents[i];
             MazeSquare previous = (i > 0) ? adjacents[i - 1] : adjacents[CORNERS - 1];
             GameObject edgePrefab = prefabs.wall;
 
-            if (next != null && previous != null && useColumns)
+            //Columns. If two adjacent sides have MazeSquares, put a column on the corner.
+            if (useColumns && next != null && previous != null)
+            {
+                //Prevent duplication. Maze construction goes west to east and south to north, so check west adjacent square
+                //  and south adjacent square for where they could already have columns.
+                if (i == 0 && previous.adjacents[0] != null)
+                    continue;
+                else if (i > 1 && next.adjacents[i - 1] != null)
+                    continue;
+
                 edgePrefab = prefabs.column;
+            }
             else if (next != null)
                 continue;
 

@@ -22,7 +22,7 @@ public static class ProjectilePool
     {
         for (int i = 0; i < projectile.ttl; i++)
             yield return new WaitForSeconds(1);
-
+        
         projectile.Deactivate();
     }
 }

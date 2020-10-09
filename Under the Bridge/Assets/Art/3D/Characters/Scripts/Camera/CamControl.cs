@@ -60,7 +60,7 @@ public class CamControl : MonoBehaviour
         }
         else
         {
-            turn.RotateAround(turn.position, turn.up, -Input.GetAxis(Inputs.camHAxis) * tumbleSpeed * Time.deltaTime);
+            turn.RotateAround(turn.position, Vector3.up, -Input.GetAxis(Inputs.camHAxis) * tumbleSpeed * Time.deltaTime);
             if (!lookDownLocked && !lookUpLocked)
                 turn.RotateAround(turn.position, turn.right, Input.GetAxis(Inputs.camVAxis) * tumbleSpeed * Time.deltaTime);
         }

@@ -24,6 +24,7 @@ public class Projectile : MonoBehaviour
 
     public void Deactivate()
     {
-        Destroy(gameObject);
+        if (this != null)
+            Destroy(gameObject);
     }
 }
