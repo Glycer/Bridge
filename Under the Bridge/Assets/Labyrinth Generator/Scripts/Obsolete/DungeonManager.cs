@@ -1,22 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DungeonManager : MonoBehaviour {
 
     public GameObject[] levels;
 
-    public GameObject entrance;
-    public GameObject exit;
-
-    Portal enPort;
-    Portal exPort;
+    public Portal entrance;
+    public Portal exit;
 
     private void Start()
     {
-        enPort = entrance.GetComponent<Portal>();
-        exPort = exit.GetComponent<Portal>();
-
         foreach (GameObject level in levels)
             if (level.GetComponent<Maze>() != null)
                 level.GetComponent<Maze>().GenerateGrid();
@@ -30,8 +22,8 @@ public class DungeonManager : MonoBehaviour {
         Portal nextP;
 
         if (levels.Length == 1) {
-            LinkPair(enPort, levels[0].GetComponent<Maze>().entranceSq.layout.GetComponentInChildren<Portal>());
-            LinkPair(exPort, levels[0].GetComponent<Maze>().exitSq.layout.GetComponentInChildren<Portal>());
+            MazeGeneralLogic.LinkPortalPair(entrance, levels[0].GetComponent<Maze>().entranceSq.layout.GetComponentInChildren<Portal>());
+            MazeGeneralLogic.LinkPortalPair(exit, levels[0].GetComponent<Maze>().exitSq.layout.GetComponentInChildren<Portal>());
         }
         else
             for (int i = 0; i < levels.Length; i++) {
@@ -39,25 +31,19 @@ public class DungeonManager : MonoBehaviour {
                 Portal exitP = levels[i].GetComponent<Maze>().exitSq.layout.GetComponentInChildren<Portal>();
 
                 if (i == 0) {
-                    LinkPair(entranceP, enPort);
+                    MazeGeneralLogic.LinkPortalPair(entranceP, entrance);
                     continue;
                 }
                 else if (i == levels.Length - 1) {
-                    LinkPair(exitP, exPort);
+                    MazeGeneralLogic.LinkPortalPair(exitP, exit);
                     break;
                 }
 
                 previousP = levels[i - 1].GetComponent<Maze>().exitSq.layout.GetComponentInChildren<Portal>();
-                LinkPair(entranceP, previousP);
+                MazeGeneralLogic.LinkPortalPair(entranceP, previousP);
 
                 nextP = levels[i + 1].GetComponent<Maze>().entranceSq.layout.GetComponentInChildren<Portal>();
-                LinkPair(exitP, nextP);
+                MazeGeneralLogic.LinkPortalPair(exitP, nextP);
             }
-    }
-
-    void LinkPair(Portal portal1, Portal portal2)
-    {
-        portal1.destination = portal2.transform;
-        portal2.destination = portal1.transform;
     }
 }

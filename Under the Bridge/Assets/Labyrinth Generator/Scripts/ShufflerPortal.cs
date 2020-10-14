@@ -18,5 +18,6 @@ public class ShufflerPortal : MonoBehaviour
     void Shuffle(Collider dummy)
     {
         manager.ReloadLevel(maze.LevelNum);
+        portal.SetCams(portal.connectedLevel);
     }
 }

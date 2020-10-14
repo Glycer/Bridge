@@ -134,6 +134,12 @@ public static class MazeGeneralLogic
         return output;
     }
 
+    public static void LinkPortalPair(Portal portal1, Portal portal2)
+    {
+        portal1.destination = portal2;
+        portal2.destination = portal1;
+    }
+
     public static void ZeroOut(GameObject obj)
     {
         obj.transform.localPosition = Vector3.zero;

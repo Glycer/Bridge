@@ -2,32 +2,23 @@
 
 public class MazeManager : MonoBehaviour
 {
-    public GameObject[] levels;
+    public Maze[] levels;
+    public PortalCams portalCams;
 
-    public GameObject entrance;
-    public GameObject exit;
-
-    Portal enPort;
-    Portal exPort;
+    public Portal entrance;
+    public Portal exit;
 
     private void Start()
     {
-        enPort = entrance.GetComponentInChildren<Portal>();
-        exPort = exit.GetComponentInChildren<Portal>();
-
         for (int i = 0; i < levels.Length; i++)
         {
-            Maze maze;
-
-            if (levels[i].GetComponentInChildren<Maze>() != null)
-            {
-                maze = levels[i].GetComponentInChildren<Maze>();
-                maze.GenerateGrid();
-                maze.LevelNum = i;
-            }
+            Maze maze = levels[i];
+            maze.GenerateGrid();
+            maze.LevelNum = i;
         }
 
         LinkPortals();
+        LinkCams();
     }
 
     public void LinkPortals()
@@ -37,68 +28,92 @@ public class MazeManager : MonoBehaviour
 
         if (levels.Length == 1)
         {
-            LinkPair(enPort, levels[0].GetComponentInChildren<Maze>().entranceSq.layout.GetComponentInChildren<Portal>());
-            LinkPair(exPort, levels[0].GetComponentInChildren<Maze>().exitSq.layout.GetComponentInChildren<Portal>());
+            MazeGeneralLogic.LinkPortalPair(entrance, levels[0].entranceSq.layout.GetComponentInChildren<Portal>());
+            MazeGeneralLogic.LinkPortalPair(exit, levels[0].exitSq.layout.GetComponentInChildren<Portal>());
         }
         else
             for (int i = 0; i < levels.Length; i++)
             {
-                Portal entranceP = levels[i].GetComponentInChildren<Maze>().entranceSq.layout.GetComponentInChildren<Portal>();
-                Portal exitP = levels[i].GetComponentInChildren<Maze>().exitSq.layout.GetComponentInChildren<Portal>();
+                Portal entranceP = levels[i].entranceSq.layout.GetComponentInChildren<Portal>();
+                Portal exitP = levels[i].exitSq.layout.GetComponentInChildren<Portal>();
 
+                //Portal linking
                 if (i == 0)
                 {
-                    LinkPair(entranceP, enPort);
+                    MazeGeneralLogic.LinkPortalPair(entranceP, entrance);
                     continue;
                 }
                 else if (i == levels.Length - 1)
                 {
-                    LinkPair(exitP, exPort);
+                    MazeGeneralLogic.LinkPortalPair(exitP, exit);
                     break;
                 }
 
-                previousP = levels[i - 1].GetComponentInChildren<Maze>().exitSq.layout.GetComponentInChildren<Portal>();
-                LinkPair(entranceP, previousP);
+                previousP = levels[i - 1].exitSq.layout.GetComponentInChildren<Portal>();
+                MazeGeneralLogic.LinkPortalPair(entranceP, previousP);
 
-                nextP = levels[i + 1].GetComponentInChildren<Maze>().entranceSq.layout.GetComponentInChildren<Portal>();
-                LinkPair(exitP, nextP);
+                nextP = levels[i + 1].entranceSq.layout.GetComponentInChildren<Portal>();
+                MazeGeneralLogic.LinkPortalPair(exitP, nextP);
             }
     }
 
-    void LinkPair(Portal portal1, Portal portal2)
+    public void LinkCams()
     {
-        portal1.destination = portal2.transform;
-        portal2.destination = portal1.transform;
+        entrance.connectedLevel = levels[0];
+        entrance.SetCams += portalCams.SetCams;
+
+        exit.connectedLevel = levels[levels.Length - 1];
+        exit.SetCams += portalCams.SetCams;
+
+        for (int i = 0; i < levels.Length; i++)
+            LoadCams(i);
     }
 
     public void ReloadLevel(int levelNum)
     {
-        Maze maze = levels[levelNum].GetComponentInChildren<Maze>();
-        Portal entranceP;
-        Portal exitP;
+        Maze maze = levels[levelNum];
 
         maze.GenerateGrid();
 
         if (maze.entranceSq.layout != null && maze.exitSq.layout != null)
         {
-            entranceP = maze.entranceSq.layout.GetComponentInChildren<Portal>();
-            exitP = maze.exitSq.layout.GetComponentInChildren<Portal>();
+            Portal entranceP = maze.entranceSq.layout.GetComponentInChildren<Portal>();
+            Portal exitP = maze.exitSq.layout.GetComponentInChildren<Portal>();
 
             if (levelNum == 0)
             {
-                LinkPair(entranceP, enPort);
-                LinkPair(exitP, levels[levelNum + 1].GetComponentInChildren<Maze>().entranceSq.layout.GetComponentInChildren<Portal>());
+                MazeGeneralLogic.LinkPortalPair(entranceP, entrance);
+                MazeGeneralLogic.LinkPortalPair(exitP, levels[levelNum + 1].entranceSq.layout.GetComponentInChildren<Portal>());
             }
             else if (levelNum == levels.Length - 1)
             {
-                LinkPair(exitP, exPort);
-                LinkPair(entranceP, levels[levelNum - 1].GetComponentInChildren<Maze>().exitSq.layout.GetComponentInChildren<Portal>());
+                MazeGeneralLogic.LinkPortalPair(exitP, exit);
+                MazeGeneralLogic.LinkPortalPair(entranceP, levels[levelNum - 1].exitSq.layout.GetComponentInChildren<Portal>());
             }
             else
             {
-                LinkPair(entranceP, levels[levelNum - 1].GetComponentInChildren<Maze>().exitSq.layout.GetComponentInChildren<Portal>());
-                LinkPair(exitP, levels[levelNum + 1].GetComponentInChildren<Maze>().entranceSq.layout.GetComponentInChildren<Portal>());
+                MazeGeneralLogic.LinkPortalPair(entranceP, levels[levelNum - 1].exitSq.layout.GetComponentInChildren<Portal>());
+                MazeGeneralLogic.LinkPortalPair(exitP, levels[levelNum + 1].entranceSq.layout.GetComponentInChildren<Portal>());
             }
+
+            LoadCams(levelNum);
+        }
+    }
+
+    void LoadCams(int levelNum)
+    {
+        Maze maze = levels[levelNum];
+
+        if (maze.entranceSq.layout != null && maze.exitSq.layout != null)
+        {
+            Portal entranceP = maze.entranceSq.layout.GetComponentInChildren<Portal>();
+            Portal exitP = maze.exitSq.layout.GetComponentInChildren<Portal>();
+
+            entranceP.SetCams += portalCams.SetCams;
+            exitP.SetCams += portalCams.SetCams;
+
+            entranceP.connectedLevel = levelNum == 0 ? null : levels[levelNum - 1];
+            exitP.connectedLevel = levelNum == levels.Length - 1 ? null : levels[levelNum + 1];
         }
     }
 }
