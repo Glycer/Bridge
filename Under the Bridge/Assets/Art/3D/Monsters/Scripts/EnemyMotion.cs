@@ -7,17 +7,17 @@ public class EnemyMotion : MonoBehaviour
     public bool isPursuing;
     public EnemyLockOn playerDirection;
 
-    float moveSpeed;
+    protected float moveSpeed;
     int turnSpeed;
 
     Coroutine look;
-    Coroutine move;
-    Coroutine turn;
-    Coroutine patrol;
+    protected Coroutine move;
+    protected Coroutine turn;
+    protected Coroutine patrol;
     Coroutine bounce;
 
-    MonsterAnimControl animControl;
-    MonsterStats stats;
+    protected MonsterAnimControl animControl;
+    protected MonsterStats stats;
 
     // Start is called before the first frame update
     void OnEnable()
@@ -29,8 +29,8 @@ public class EnemyMotion : MonoBehaviour
         patrol = StartCoroutine(Patrol());
     }
 
-    // Starts pursuing the player and fights
-    public void Pursue()
+    // Starts pursuing the player and fights, used by moveset scripts
+    public virtual void Pursue()
     {
         isPursuing = true;
         StopCoroutine(patrol);
@@ -48,7 +48,7 @@ public class EnemyMotion : MonoBehaviour
     }
 
     // Lost the player
-    public void Halt()
+    public virtual void Halt()
     {
         moveSpeed = stats.walkSpeed;
 
@@ -62,7 +62,7 @@ public class EnemyMotion : MonoBehaviour
     }
 
     // Random walk
-    IEnumerator Patrol()
+    protected IEnumerator Patrol()
     {
         while (true)
         {
@@ -79,7 +79,7 @@ public class EnemyMotion : MonoBehaviour
     }
 
     // Moves enemy forward
-    IEnumerator ForwardMotion()
+    protected IEnumerator ForwardMotion()
     {
         while (true)
         {
@@ -90,7 +90,7 @@ public class EnemyMotion : MonoBehaviour
     }
 
     // Turns enemy
-    IEnumerator LookRotation(Quaternion toGo)
+    protected IEnumerator LookRotation(Quaternion toGo)
     {
         while (true)
         {

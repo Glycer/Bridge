@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyLockOn : MonoBehaviour
 {
     public PlayerFound playerScan;
+    public PlayerFound playerInterest;
     public EnemyMotion motion;
     bool foundPlayer = false;
 
@@ -18,7 +19,7 @@ public class EnemyLockOn : MonoBehaviour
     {
         while (true)
         {
-            if (playerScan.target != null)
+            if (playerScan.target != null && foundPlayer == false)
             {
                 transform.LookAt(playerScan.target.transform.position);
                 foundPlayer = true;
@@ -27,7 +28,11 @@ public class EnemyLockOn : MonoBehaviour
                     motion.Pursue();
                 }
             }
-            else if (foundPlayer == true)
+            else if (foundPlayer == true && playerInterest.target != null)
+            {
+                transform.LookAt(playerInterest.target.transform.position);
+            }
+            else if (foundPlayer == true && playerInterest.target == null)
             {
                 foundPlayer = false;
                 motion.Halt();
