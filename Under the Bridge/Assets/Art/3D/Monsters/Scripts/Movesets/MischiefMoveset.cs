@@ -34,10 +34,10 @@ public class MischiefMoveset : EnemyMotion
 
         while (true)
         {
-            if (timeCounter <= 0 && Vector3.Distance(playerDirection.playerInterest.target.transform.position, transform.position) < 4)
+            if (timeCounter <= 0 && playerDirection.playerInterest.target != null && Vector3.Distance(playerDirection.playerInterest.target.transform.position, transform.position) < 4)
             {
                 // pick random move depending on power of monster
-                attack = StartCoroutine(Leap());
+                specificAttack = StartCoroutine(Leap());
                 timeCounter = Random.Range(2, 5);
             }
 
@@ -48,9 +48,10 @@ public class MischiefMoveset : EnemyMotion
 
     IEnumerator Leap()
     {
+        Vector3 forward = (transform.forward / 6) + new Vector3(0, 0.1f, 0);
         for (int i = 0; i < 20; i++)
         {
-            transform.Translate(0, 0.1f, 0.2f);
+            transform.position += forward;
             yield return new WaitForSeconds(0.02f);
         }
     }
@@ -65,6 +66,8 @@ public class MischiefMoveset : EnemyMotion
             StopCoroutine(turn);
         if (attack != null)
             StopCoroutine(attack);
+        if (specificAttack != null)
+            StopCoroutine(specificAttack);
 
         isPursuing = false;
         patrol = StartCoroutine(Patrol());
