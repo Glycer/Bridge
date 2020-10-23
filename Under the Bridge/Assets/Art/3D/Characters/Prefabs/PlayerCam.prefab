@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5262328694099018199}
   - component: {fileID: 5287058470935831323}
   - component: {fileID: 5203433481292923159}
-  - component: {fileID: 5266437659898490969}
   - component: {fileID: 5264984086977145248}
   - component: {fileID: 5264984086977145251}
   m_Layer: 0
@@ -86,19 +85,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5264984086977145253}
   m_Enabled: 1
---- !u!135 &5266437659898490969
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5264984086977145253}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5264984086977145248
 MonoBehaviour:
   m_ObjectHideFlags: 0
