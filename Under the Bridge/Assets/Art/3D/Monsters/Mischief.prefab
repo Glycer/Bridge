@@ -41,11 +41,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4440021976816116}
   - component: {fileID: 4277148030621604358}
-  - component: {fileID: 2491022576431345875}
+  - component: {fileID: 7160151885601359939}
   - component: {fileID: 6053863461590831412}
   - component: {fileID: -3863935463785051117}
   - component: {fileID: 5190258081770999104}
   - component: {fileID: 4945722866165777556}
+  - component: {fileID: 6778633944299577137}
   m_Layer: 15
   m_Name: Mischief
   m_TagString: Untagged
@@ -84,7 +85,7 @@ CapsuleCollider:
   m_Height: 0.5
   m_Direction: 2
   m_Center: {x: 0, y: 0.14499998, z: -0.02}
---- !u!114 &2491022576431345875
+--- !u!114 &7160151885601359939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,12 +94,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1996370441403858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caaea8cf72bb8f546ac7f746d26b6a4e, type: 3}
+  m_Script: {fileID: 11500000, guid: d3ce9e9b98282ed4486f351b0592ddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 0
-  moveSpeed: 0
-  turnSpeed: 0
+  hitPoints: 3
+  walkSpeed: 0.6
+  runSpeed: 1
+  turnSpeed: 1
+  lootType: 0
+  lootNum: 5
 --- !u!114 &6053863461590831412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,8 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630e7e86c8b3c484cbf8cf41925fa742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  turnSpeed: 0
   isPursuing: 0
   playerDirection: {fileID: 6053863461590831412}
 --- !u!54 &5190258081770999104
@@ -164,6 +166,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6778633944299577137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996370441403858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e671e1ffbbacdb4e824eae81cfdf383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &381490209274972866
 GameObject:
   m_ObjectHideFlags: 0

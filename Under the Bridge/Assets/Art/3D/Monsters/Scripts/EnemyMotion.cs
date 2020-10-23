@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class EnemyMotion : MonoBehaviour
 {
-    public float moveSpeed;
-    public int turnSpeed;
     public bool isPursuing;
     public EnemyLockOn playerDirection;
+
+    float moveSpeed;
+    int turnSpeed;
+
     Coroutine look;
     Coroutine move;
     Coroutine turn;
     Coroutine patrol;
     Coroutine bounce;
 
+    MonsterAnimControl animControl;
+    MonsterStats stats;
+
     // Start is called before the first frame update
     void OnEnable()
     {
-        moveSpeed = GetComponent<MonsterStats>().moveSpeed;
-        turnSpeed = GetComponent<MonsterStats>().turnSpeed;
+        animControl = GetComponent<MonsterAnimControl>();
+        stats = GetComponent<MonsterStats>();
+        moveSpeed = stats.walkSpeed;
+        turnSpeed = stats.turnSpeed;
         patrol = StartCoroutine(Patrol());
     }
 
@@ -27,21 +34,29 @@ public class EnemyMotion : MonoBehaviour
     {
         isPursuing = true;
         StopCoroutine(patrol);
+
         if (move != null)
             StopCoroutine(move);
         if (turn != null)
             StopCoroutine(turn);
+
         move = StartCoroutine(ForwardMotion());
         turn = StartCoroutine(LookRotation(playerDirection.transform.rotation));
+
+        moveSpeed = stats.runSpeed;
+        animControl.ToggleState("isRunning");
     }
 
     // Lost the player
     public void Halt()
     {
+        moveSpeed = stats.walkSpeed;
+
         if (move != null)
             StopCoroutine(move);
         if (turn != null)
             StopCoroutine(turn);
+
         isPursuing = false;
         patrol = StartCoroutine(Patrol());
     }
@@ -51,12 +66,14 @@ public class EnemyMotion : MonoBehaviour
     {
         while (true)
         {
-            turn = StartCoroutine(LookRotation(Quaternion.Euler(0, Random.Range(0, 360), Random.Range(0, 360))));
+            turn = StartCoroutine(LookRotation(Quaternion.Euler(0, Random.Range(0, 360), 0)));
             yield return new WaitForSeconds(Random.Range(1, 1.5f));
             StopCoroutine(turn);
             move = StartCoroutine(ForwardMotion());
+            animControl.ToggleState("isWalking");
             yield return new WaitForSeconds(Random.Range(2, 4));
             StopCoroutine(move);
+            animControl.ToggleState("isIdle");
             yield return new WaitForSeconds(Random.Range(3, 5));
         }
     }
@@ -91,7 +108,7 @@ public class EnemyMotion : MonoBehaviour
         if (look != null)
             StopCoroutine(look);
 
-        look = StartCoroutine(Interpolater.InterpolateLocalRotation(this.transform, toLook, duration));
+        look = StartCoroutine(Interpolater.InterpolateLocalRotation(transform, toLook, duration));
     }
 
     public void HorizontalCollision()

@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 5434899023518470965}
   - component: {fileID: 5434899023519470069}
   m_Layer: 13
-  m_Name: ExitGep
+  m_Name: ExitGeo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,10 +312,11 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2eb37fd9ce6667c4b96a5ff389349224, type: 2}
   - {fileID: 2100000, guid: 89655b3d733da23448c22b4bd27bcfd4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -324,6 +325,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -378,9 +380,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300006, guid: cddd3a2ce9c8e8848b38ae2af7240701, type: 3}
 --- !u!65 &1188928596162434388
 BoxCollider:
@@ -432,11 +434,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4687815852218892}
     m_Modifications:
+    - target: {fileID: 1058262657093518, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250167981361954, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261503141061414, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 1706279988610918, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
       propertyPath: m_Name
       value: MazeSquare
       objectReference: {fileID: 0}
     - target: {fileID: 1706279988610918, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743129175508592, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795930474242374, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900158568624746, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
@@ -483,30 +509,6 @@ PrefabInstance:
     - target: {fileID: 4999101338599758, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1058262657093518, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1900158568624746, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1743129175508592, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1250167981361954, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795930474242374, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1261503141061414, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
-      propertyPath: m_Layer
-      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
@@ -559,6 +561,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2014792182841630880}
     m_Modifications:
+    - target: {fileID: 1218419032641940, guid: 530427f2d20f4c94c972ab10be74b5a0, type: 3}
+      propertyPath: m_Name
+      value: PortalGeo
+      objectReference: {fileID: 0}
     - target: {fileID: 1640895702853906, guid: 530427f2d20f4c94c972ab10be74b5a0, type: 3}
       propertyPath: m_Name
       value: Wall
@@ -606,10 +612,6 @@ PrefabInstance:
     - target: {fileID: 4841122133577536, guid: 530427f2d20f4c94c972ab10be74b5a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1218419032641940, guid: 530427f2d20f4c94c972ab10be74b5a0, type: 3}
-      propertyPath: m_Name
-      value: PortalGeo
       objectReference: {fileID: 0}
     - target: {fileID: 23454610551751024, guid: 530427f2d20f4c94c972ab10be74b5a0,
         type: 3}

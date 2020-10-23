@@ -5,8 +5,12 @@ using UnityEngine;
 public class MonsterStats : MonoBehaviour
 {
     public int hitPoints;
-    public float moveSpeed;
+    public float walkSpeed;
+    public float runSpeed;
     public int turnSpeed;
+
+    public PlayerLoot.Loot lootType;
+    public int lootNum;
 
     public void Spawn(Vector3 destination)
     {
@@ -28,8 +32,9 @@ public class MonsterStats : MonoBehaviour
         return false;
     }
 
-    protected virtual void Die()
+    void Die()
     {
         gameObject.SetActive(false);
+        PlayerLoot.UpdateLoot(lootType, lootNum);
     }
 }
