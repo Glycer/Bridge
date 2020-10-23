@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379263527669544}
-  m_LocalRotation: {x: 0, y: 0.9914449, z: 0.13052624, w: 0}
-  m_LocalPosition: {x: -0, y: 1.939, z: 0.454}
-  m_LocalScale: {x: 8, y: 8, z: 7}
+  m_LocalRotation: {x: 0, y: 0.9848078, z: 0.17364825, w: 0}
+  m_LocalPosition: {x: -0, y: 1.85, z: 0.75}
+  m_LocalScale: {x: 8, y: 8, z: 7.5}
   m_Children:
   - {fileID: 4277148028963433387}
   m_Father: {fileID: 4277148029071637946}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -15, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: -20, y: 180, z: 0}
 --- !u!1 &1996370441403858
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6053863461590831412}
   - component: {fileID: -3863935463785051117}
   - component: {fileID: 5190258081770999104}
+  - component: {fileID: 4945722866165777556}
   m_Layer: 15
   m_Name: Mischief
   m_TagString: Untagged
@@ -144,6 +145,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!95 &4945722866165777556
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996370441403858}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 63c8083e7ba0c9b4fa753339df69f5b9, type: 3}
+  m_Controller: {fileID: 9100000, guid: ccc48189ed481294f8f4f4c124075b0b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &381490209274972866
 GameObject:
   m_ObjectHideFlags: 0

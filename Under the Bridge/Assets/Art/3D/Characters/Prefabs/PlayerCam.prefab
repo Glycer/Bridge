@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5266437659898490969}
   - component: {fileID: 5264984086977145248}
   - component: {fileID: 5264984086977145251}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -47,9 +47,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -147,7 +148,7 @@ GameObject:
   - component: {fileID: 5266437660797028516}
   - component: {fileID: 3295515365943710022}
   - component: {fileID: 2376285340658847952}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: PlayerCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5266437661153566567}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1361418808607625520}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Turn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

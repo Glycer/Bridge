@@ -1,35 +1,83 @@
 fileFormatVersion: 2
 guid: 03afe366a761f714bbcde635181a17bd
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armature
-    100002: //RootNode
-    100004: Crane
-    100006: TransformBone
-    100008: TransformBone_end
-    100010: Wing.L
-    100012: Wing.L_end
-    100014: Wing.R
-    100016: Wing.R_end
-    400000: Armature
-    400002: //RootNode
-    400004: Crane
-    400006: TransformBone
-    400008: TransformBone_end
-    400010: Wing.L
-    400012: Wing.L_end
-    400014: Wing.R
-    400016: Wing.R_end
-    2100000: No Name
-    4300000: Crane
-    7400000: Fly
-    7400002: Idle
-    9500000: //RootNode
-    13700000: Crane
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: Crane
+  - first:
+      1: 100006
+    second: TransformBone
+  - first:
+      1: 100008
+    second: TransformBone_end
+  - first:
+      1: 100010
+    second: Wing.L
+  - first:
+      1: 100012
+    second: Wing.L_end
+  - first:
+      1: 100014
+    second: Wing.R
+  - first:
+      1: 100016
+    second: Wing.R_end
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: Crane
+  - first:
+      4: 400006
+    second: TransformBone
+  - first:
+      4: 400008
+    second: TransformBone_end
+  - first:
+      4: 400010
+    second: Wing.L
+  - first:
+      4: 400012
+    second: Wing.L_end
+  - first:
+      4: 400014
+    second: Wing.R
+  - first:
+      4: 400016
+    second: Wing.R_end
+  - first:
+      21: 2100000
+    second: No Name
+  - first:
+      43: 4300000
+    second: Crane
+  - first:
+      74: 7400000
+    second: Fly
+  - first:
+      74: 7400002
+    second: Idle
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Crane
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -58,6 +106,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Fly
       takeName: Armature|Fly
+      internalID: 0
       firstFrame: 1
       lastFrame: 7
       wrapMode: 0
@@ -86,6 +135,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Armature|Idle
+      internalID: 0
       firstFrame: 2
       lastFrame: 73
       wrapMode: 0
@@ -118,25 +168,28 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -145,10 +198,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -158,13 +211,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
