@@ -6,6 +6,7 @@ public class MischiefMoveset : EnemyMotion
 {
     Coroutine attack;
     Coroutine specificAttack;
+    public AreaOfEffect aoe;
 
     public override void Pursue()
     {
@@ -36,9 +37,13 @@ public class MischiefMoveset : EnemyMotion
         {
             if (timeCounter <= 0 && playerDirection.playerInterest.target != null && Vector3.Distance(playerDirection.playerInterest.target.transform.position, transform.position) < 4)
             {
-                // pick random move depending on power of monster
-                specificAttack = StartCoroutine(Leap());
-                timeCounter = Random.Range(2, 5);
+                int randomInt = Random.Range(0, 2);
+                // pick random move
+                if (randomInt == 0)
+                    specificAttack = StartCoroutine(Leap(Vector3.Distance(playerDirection.playerInterest.target.transform.position, transform.position)));
+                else if (randomInt == 1)
+                    specificAttack = StartCoroutine(Pounce(Vector3.Distance(playerDirection.playerInterest.target.transform.position, transform.position)));
+                timeCounter = Random.Range(2, 5) + randomInt;
             }
 
             yield return new WaitForSeconds(0.2f);
@@ -46,14 +51,33 @@ public class MischiefMoveset : EnemyMotion
         }
     }
 
-    IEnumerator Leap()
+    IEnumerator Leap(float distance)
     {
-        Vector3 forward = (transform.forward / 6) + new Vector3(0, 0.1f, 0);
+        Vector3 forward = (transform.forward * distance / 24) + new Vector3(0, 0.1f, 0);
         for (int i = 0; i < 20; i++)
         {
             transform.position += forward;
             yield return new WaitForSeconds(0.02f);
         }
+    }
+    IEnumerator Pounce(float distance)
+    {
+        if (move != null)
+            StopCoroutine(move);
+        if (turn != null)
+            StopCoroutine(turn);
+
+        yield return new WaitForSeconds(1);
+        Vector3 forward = (transform.forward * distance / 10) + new Vector3(0, 0.1f, 0);
+        for (int i = 0; i < 10; i++)
+        {
+            transform.position += forward;
+            yield return new WaitForSeconds(0.02f);
+        }
+        aoe.Attack();
+        yield return new WaitForSeconds(1.5f);
+        move = StartCoroutine(ForwardMotion());
+        turn = StartCoroutine(LookRotation(playerDirection.transform.rotation));
     }
 
     public override void Halt()

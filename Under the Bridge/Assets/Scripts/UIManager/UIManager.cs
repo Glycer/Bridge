@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public GameObject inventoryDisplay;
+    public StatusBars statusBars;
     public GameObject townUI;
     public GameObject placeables;
     public GameObject placeButton;
@@ -28,6 +29,12 @@ public class UIManager : MonoBehaviour
             inventoryDisplay.SetActive(!inventoryDisplay.activeSelf);
         if (Input.GetKeyDown(Inputs.townView))
             townUI.SetActive(!townUI.activeSelf);
+    }
+
+    // Used when health or mana is used or gained
+    public void AdjustStatus(int statusIndex, float percentage)
+    {
+        statusBars.AdjustBar(statusIndex, percentage);
     }
 
     public void TogglePlaceables()

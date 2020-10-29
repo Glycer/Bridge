@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class Stab : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public PlayerFound player;
+    public MonsterStats stats;
 
     void OnTriggerEnter(Collider col)
     {
+        player.target.GetComponent<PlayerStats>().TakeDamage(stats.strength);
         Debug.Log("You have been hit.");
     }
 }

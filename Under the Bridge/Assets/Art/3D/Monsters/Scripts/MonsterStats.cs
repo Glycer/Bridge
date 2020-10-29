@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterStats : MonoBehaviour
 {
     public int hitPoints;
+    public int strength;
     public float walkSpeed;
     public float runSpeed;
     public int turnSpeed;
