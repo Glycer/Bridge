@@ -2,35 +2,85 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HanzoSkills : MonoBehaviour
+public class HanzoSkills : PlayerSkills
 {
-    public PlayerMotion motion;
-    float baseRunSpeed;
+    Coroutine dodge;
 
-    Animation[] combo;
+    // TODO: Combos should likely be made private once runtime customization is implemented
+    public HanzoAttack[] combo;
+    public HanzoAttack[] alternateCombo;
+    int currComboIndex;
+    public bool queueReady;
+    public bool comboExpired;
+    HanzoAttack currAttack;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        baseRunSpeed = motion.runSpeed;
+        currComboIndex = 0;
+        currAttack = null;
+        abilities = new Ability[4];
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Whack(bool keyDown)
     {
-        if (Input.GetKeyDown(Inputs.whack))
+        if (keyDown && (currComboIndex >= combo.Length || combo[currComboIndex] == null || comboExpired))
         {
-            GetComponent<Animator>().Play("SwordSwing");
+            currAttack = null;
+            currComboIndex = 0;
+        }
+        if (keyDown && queueReady)
+        {
+            if (currAttack != null)
+                currAttack.StopTimer();
+            currAttack = combo[currComboIndex];
+            combo[currComboIndex].Swing();
+            currComboIndex++;
         }
     }
-
-    private void OnEnable()
+    protected override void Secondary(bool keyDown)
     {
-        motion.runSpeed *= 2;
+        if (keyDown && (currComboIndex >= alternateCombo.Length || alternateCombo[currComboIndex] == null || comboExpired))
+        {
+            currAttack = null;
+            currComboIndex = 0;
+        }
+        if (keyDown && queueReady)
+        {
+            if (currAttack != null)
+                currAttack.StopTimer();
+            currAttack = alternateCombo[currComboIndex];
+            alternateCombo[currComboIndex].Swing();
+            currComboIndex++;
+        }
+    }
+    protected override void Defense(bool keyDown)
+    {
+        if (keyDown && motion.motionLocked == false)
+        {
+            dodging = true;
+            motion.motionLocked = true;
+            dodge = StartCoroutine(Dodge());
+        }
     }
 
     private void OnDisable()
     {
-        motion.runSpeed = baseRunSpeed;
+        dodging = false;
+        motion.motionLocked = false;
+        dodge = null;
+    }
+
+    IEnumerator Dodge()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            motion.transform.Translate(0, 0, 0.6f);
+            yield return new WaitForSeconds(0.01f);
+        }
+        dodging = false;
+        // Brief vulnerability period if dodge is poorly timed
+        yield return new WaitForSeconds(0.2f);
+        motion.motionLocked = false;
     }
 }

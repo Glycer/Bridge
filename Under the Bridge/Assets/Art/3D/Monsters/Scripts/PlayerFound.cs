@@ -8,11 +8,13 @@ public class PlayerFound : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        target = col;
+        if (col.gameObject.GetComponent<PlayerMotion>() != null)
+            target = col;
     }
 
     void OnTriggerExit(Collider col)
     {
+        if (target != null && col == target)
         target = null;
     }
 }

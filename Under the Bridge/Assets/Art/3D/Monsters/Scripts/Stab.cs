@@ -9,7 +9,7 @@ public class Stab : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        player.target.GetComponent<PlayerStats>().TakeDamage(stats.strength);
+        PlayerStats.TakeDamage(stats.strength);
         Debug.Log("You have been hit.");
     }
 }

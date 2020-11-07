@@ -3,12 +3,16 @@ using UnityEngine;
 
 public class PlayerMotion : MonoBehaviour {
 
+    public float currSpeed;
+    public float walkSpeed;
     public float runSpeed;
     public float turnSpeed;
 
     // phasing protection
     bool horizontalMotionLocked;
     bool verticalMotionLocked;
+    // dodge lock
+    public bool motionLocked;
 
     //public float turnSpeed;
     public float jumpForce;
@@ -24,40 +28,45 @@ public class PlayerMotion : MonoBehaviour {
     string horizontal = Inputs.playerHAxis;
     string strafe = Inputs.playerStrafeAxis;
 
+    public UIManager UI;
+
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        PlayerStats.UI = UI;
         rigid = GetComponent<Rigidbody>();
         characterMotion = GetComponent<CharacterMotion>();
         animControl = GetComponent<CharacterAnimControl>();
         horizontalMotionLocked = false;
+        currSpeed = walkSpeed;
     }
 
     // Update is called once per frame
-    void Update() {
-
-        Turn(Inputs.playerHAxis);
-
-        if (!horizontalMotionLocked)
+    void Update()
+    {
+        if (!motionLocked)
         {
-            transform.Translate(Input.GetAxis(strafe) * runSpeed * Time.deltaTime,
-                0,
-                Input.GetAxis(vertical) * runSpeed * Time.deltaTime);
+            Turn(Inputs.playerHAxis);
 
-            if (Input.GetKey(Inputs.sprint))
-                transform.Translate(0, 0, Input.GetAxis(vertical) * runSpeed * Time.deltaTime);
-        }
-
-        if (!verticalMotionLocked)
-        {
-            if (Input.GetKeyDown(Inputs.jump) /*&& jumpCount < MAX_JUMP*/)
+            if (!horizontalMotionLocked)
             {
-                rigid.velocity = Vector3.zero;
-                rigid.AddForce(transform.up * jumpForce);
+                transform.Translate(Input.GetAxis(strafe) * currSpeed * Time.deltaTime,
+                    0,
+                    Input.GetAxis(vertical) * currSpeed * Time.deltaTime);
+            }
 
-                if (animControl.enabled)
-                    animControl.Jump(!(jumpCount == 0));
+            if (!verticalMotionLocked)
+            {
+                if (Input.GetKeyDown(Inputs.jump) /*&& jumpCount < MAX_JUMP*/)
+                {
+                    rigid.velocity = Vector3.zero;
+                    rigid.AddForce(transform.up * jumpForce);
 
-                jumpCount++;
+                    if (animControl.enabled)
+                        animControl.Jump(!(jumpCount == 0));
+
+                    jumpCount++;
+                }
             }
         }
     }
@@ -86,9 +95,9 @@ public class PlayerMotion : MonoBehaviour {
     {
         for (int i = 0; i < 5; i++)
         {
-            transform.Translate(Input.GetAxis(strafe) * runSpeed * Time.deltaTime * -1,
+            transform.Translate(Input.GetAxis(strafe) * currSpeed * Time.deltaTime * -1,
             0,
-            Input.GetAxis(vertical) * runSpeed * Time.deltaTime * -1);
+            Input.GetAxis(vertical) * currSpeed * Time.deltaTime * -1);
             yield return new WaitForSeconds(.01f);
         }
         horizontalMotionLocked = false;

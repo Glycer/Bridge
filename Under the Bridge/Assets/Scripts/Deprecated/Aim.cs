@@ -6,16 +6,7 @@ public class Aim : MonoBehaviour
     public Animator anim;
     public Image crosshair;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKey(Inputs.aim))
-            SetAim(true);
-        else if (Input.GetKeyUp(Inputs.aim))
-            SetAim(false);
-    }
-
-    void SetAim(bool isAiming)
+    public void SetAim(bool isAiming)
     {
         if (isAiming)
             anim.enabled = true;

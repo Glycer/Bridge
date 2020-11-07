@@ -19,7 +19,7 @@ public class CamControl : MonoBehaviour
     public LookAtConstraint camLook;
 
     CamZoom camZoom;
-    bool isAiming;
+    public bool isAiming;
 
     public bool pitchIsLocked = false;
     bool lookUpLocked = false;
@@ -64,14 +64,9 @@ public class CamControl : MonoBehaviour
             if (!lookDownLocked && !lookUpLocked)
                 turn.RotateAround(turn.position, turn.right, Input.GetAxis(Inputs.camVAxis) * tumbleSpeed * Time.deltaTime);
         }
-
-        if (Input.GetKeyDown(Inputs.aim))
-            Aim(true);
-        else if (Input.GetKeyUp(Inputs.aim))
-            Aim(false);
     }
 
-    void Aim(bool _isAiming)
+    public void Aim(bool _isAiming)
     {
         isAiming = _isAiming;
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class TargetCollider : MonoBehaviour
 {
     public List<Collider> targets = new List<Collider>();
-
+    
     void OnTriggerEnter(Collider col)
     {
         targets.Add(col);
@@ -14,5 +14,10 @@ public class TargetCollider : MonoBehaviour
     void OnTriggerExit(Collider col)
     {
         targets.Remove(col);
+    }
+
+    void OnDisable()
+    {
+        targets.Clear();
     }
 }

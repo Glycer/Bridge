@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class AreaOfEffect : MonoBehaviour
 {
-    PlayerStats player;
+    PlayerMotion player;
     public int strength;
 
     void OnTriggerEnter(Collider col)
     {
-        player = col.gameObject.GetComponent<PlayerStats>();
+        player = col.gameObject.GetComponent<PlayerMotion>();
     }
     void OnTriggerExit(Collider col)
     {
@@ -19,6 +19,6 @@ public class AreaOfEffect : MonoBehaviour
     public void Attack()
     {
         if (player != null)
-            player.TakeDamage(strength);
+            PlayerStats.TakeDamage(strength);
     }
 }

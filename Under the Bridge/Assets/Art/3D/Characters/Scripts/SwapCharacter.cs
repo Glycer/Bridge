@@ -11,6 +11,9 @@ public class SwapCharacter : MonoBehaviour
 
     public List<GameObject> characters;
 
+    // Disengage aim when swap
+    public CamControl cameraAim;
+
     CharacterAnimControl animControl;
 
     KeyCode[] cArray = new KeyCode[] { Inputs.swapIn1, Inputs.swapIn2, Inputs.swapIn3 };
@@ -21,6 +24,7 @@ public class SwapCharacter : MonoBehaviour
         animControl = GetComponent<CharacterAnimControl>();
 
         Swap(characters[initCharacterIndex]);
+        animControl.enabled = true;
     }
 
     // Update is called once per frame

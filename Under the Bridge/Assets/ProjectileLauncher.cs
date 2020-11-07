@@ -7,10 +7,10 @@ public class ProjectileLauncher : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(BLARGH());
+        //StartCoroutine(BLARGH());
     }
 
-    public void Launch(Vector3 position, Vector3 direction)
+    public void Launch(Vector3 position, Vector3 direction, bool tracking = false, GameObject targetDirection = null)
     {
         GameObject shot = Instantiate(projectile);
 
@@ -20,15 +20,18 @@ public class ProjectileLauncher : MonoBehaviour
         _projectile.transform.eulerAngles = direction;
         _projectile.Activate();
 
-        _projectile.GetComponent<Rigidbody>().AddForce(0, 0, _projectile.speed);
+        if (!tracking)
+            _projectile.GetComponent<Rigidbody>().AddForce(0, 0, _projectile.speed);
+        else
+            _projectile.StartTracking(targetDirection);
     }
 
-    IEnumerator BLARGH()
+    /*IEnumerator BLARGH()
     {
         while (true)
         {
             Launch(transform.position, transform.eulerAngles);
             yield return new WaitForSeconds(1);
         }
-    }
+    }*/
 }

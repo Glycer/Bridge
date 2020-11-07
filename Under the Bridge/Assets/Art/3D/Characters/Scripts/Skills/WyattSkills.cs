@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class WyattSkills : MonoBehaviour
+public class WyattSkills : PlayerSkills
 {
     //public static UnityAction Aim;
     //public static UnityAction DeAim;
@@ -12,46 +12,23 @@ public class WyattSkills : MonoBehaviour
 
     public WyattStats stats;
 
+    public CamControl aim;
+
     public GameObject pistol;
-    public GameObject blinkShot;
-    Rigidbody blinkRigid;
 
-    Coroutine blinkShotTimer;
-
-
+    // TODO: Temp code used until runtime ability setting is implemented
+    public Ability blinkShot;
     // Start is called before the first frame update
     void Start()
     {
-        blinkRigid = blinkShot.GetComponent<Rigidbody>();
+        abilities = new Ability[4];
+        abilities[0] = blinkShot;
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Whack(bool keyDown)
     {
-        // Watches for ability call
-        if (Input.GetKeyDown(Inputs.mobility))
-        {
-            if (!blinkShot.activeSelf) // Checks for active shot
-            {
-                // Activates and unbinds
-                blinkShot.SetActive(true);
-                blinkShot.transform.parent = null;
-
-                blinkRigid.velocity = Vector3.zero;
-                blinkRigid.AddForce((transform.forward * 3000) + (transform.up * 1000));
-
-                blinkShotTimer = StartCoroutine(BlinkShotTimer());
-            }
-            else // Blinks
-            {
-                player.position = blinkShot.transform.position;
-
-                BlinkShotDespawn();
-                StopCoroutine(blinkShotTimer);
-            }
-        }
-
-        if (Input.GetKeyDown(Inputs.whack) && pistol.activeSelf)
+        // TODO: Add functionality for multiple weapons
+        if (pistol.activeSelf)
         {
             TargetCollider targeter = pistol.GetComponent<TargetCollider>();
 
@@ -60,25 +37,36 @@ public class WyattSkills : MonoBehaviour
                 //Debug.Log("Hit!");
 
                 //Deals damage. 'If' statement checks death
+                if (targeter.targets[i].gameObject.GetComponent<MonsterStats>() != null)
+                    PlayerStats.AddMana(2, 10);
                 if (targeter.targets[i].gameObject.GetComponent<MonsterStats>().TakeDamage(stats.getDamage()))
                     targeter.targets.Remove(targeter.targets[i]);
             }
         }
     }
-
-    // Shot times out after some time
-    IEnumerator BlinkShotTimer()
+    protected override void Secondary(bool keyDown)
     {
-        yield return new WaitForSeconds(5);
-
-        BlinkShotDespawn();
+        if (Input.GetKeyDown(Inputs.secondary))
+            aim.Aim(true);
+        if (Input.GetKeyUp(Inputs.secondary))
+            aim.Aim(false);
+    }
+    protected override void Defense(bool keyDown)
+    {
+        defending = keyDown;
+        // TODO: currently is a placeholder for cover animation
+        if (keyDown)
+            transform.localScale /= 2;
+        else
+            transform.localScale *= 2;
     }
 
-    // Resets shot
-    void BlinkShotDespawn()
+    private void OnDisable()
     {
-        blinkShot.SetActive(false);
-        blinkShot.transform.parent = transform;
-        blinkShot.transform.SetPositionAndRotation(transform.position, transform.rotation);
+        if (aim.isAiming)
+            aim.Aim(false);
+        if (Input.GetKey(Inputs.defense))
+            transform.localScale *= 2;
+        defending = false;
     }
 }

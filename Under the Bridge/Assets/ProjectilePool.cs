@@ -20,8 +20,7 @@ public static class ProjectilePool
 
     public static IEnumerator Live(Projectile projectile)
     {
-        for (int i = 0; i < projectile.ttl; i++)
-            yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(projectile.ttl);
         
         projectile.Deactivate();
     }

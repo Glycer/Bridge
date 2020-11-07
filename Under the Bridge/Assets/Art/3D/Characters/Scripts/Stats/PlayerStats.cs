@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public UIManager UI;
+    public static UIManager UI;
 
     public static int playerStrength = 1;
     static int playerMaxHealth = 100;
@@ -27,7 +27,7 @@ public class PlayerStats : MonoBehaviour
     }
 
     // Use negative to heal
-    public void TakeDamage(int damage)
+    static public void TakeDamage(int damage)
     {
         playerHealth -= damage;
         if (playerHealth > playerMaxHealth)
@@ -37,7 +37,7 @@ public class PlayerStats : MonoBehaviour
         UI.AdjustStatus(0, playerHealth / playerMaxHealth);
     }
     // 0 is blood, 1 is water, 2 is light, use negative amount to subtract
-    public void AddMana(int manaIndex, int amount)
+    static public void AddMana(int manaIndex, int amount)
     {
         playerMana[manaIndex] += amount;
         if (playerMana[manaIndex] > playerMaxMana[manaIndex])
