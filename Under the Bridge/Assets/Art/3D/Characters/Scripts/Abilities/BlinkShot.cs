@@ -35,6 +35,8 @@ public class BlinkShot : Ability
 
             BlinkShotDespawn();
             StopCoroutine(blinkShotTimer);
+
+            PlayerStats.SpendMana(manaCost);
         }
     }
 

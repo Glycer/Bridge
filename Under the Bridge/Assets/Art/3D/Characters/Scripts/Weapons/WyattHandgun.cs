@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WyattHandgun : MonoBehaviour
+public class WyattHandgun : Weapon
 {
     // placeholder
     public void adjustPitch(float adjustValue)

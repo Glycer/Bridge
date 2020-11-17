@@ -7,8 +7,11 @@ public class HanzoAttack : MonoBehaviour
     public int strength;
     public int manaFill;
     public float swingDuration;
+    public bool queueReady;
 
     Coroutine timer;
+    HanzoAttack queuedAttack;
+    const float WAIT_FOR_ATTACK = 0.3f;
     public HanzoSkills skills;
 
     // TODO: Likely temporary
@@ -21,6 +24,7 @@ public class HanzoAttack : MonoBehaviour
     {
         swingAnimation.AddClip(swingAnimationClip, clipName);
         swingDuration = swingAnimationClip.length;
+        queuedAttack = null;
     }
 
     public void Swing()
@@ -28,7 +32,7 @@ public class HanzoAttack : MonoBehaviour
         HanzoWeapon.currStrength = strength;
         HanzoWeapon.currManaFill = manaFill;
 
-        skills.queueReady = false;
+        skills.awaitingAttack = false;
         skills.comboExpired = false;
         if (timer != null)
             StopCoroutine(timer);
@@ -43,9 +47,27 @@ public class HanzoAttack : MonoBehaviour
     }
     IEnumerator SwingTimer()
     {
-        yield return new WaitForSeconds(swingDuration);
-        skills.queueReady = true;
-        yield return new WaitForSeconds(1);
-        skills.comboExpired = true;
+        yield return new WaitForSeconds(swingDuration - WAIT_FOR_ATTACK);
+        queueReady = true;
+        yield return new WaitForSeconds(WAIT_FOR_ATTACK);
+        // Terminates timer if an attack is queued
+        queueReady = false;
+        if (queuedAttack != null)
+        {
+            queuedAttack.Swing();
+            queuedAttack = null;
+        }
+        else
+        {
+            skills.awaitingAttack = true;
+
+            yield return new WaitForSeconds(1);
+            skills.comboExpired = true;
+        }
+    }
+
+    public void QueueSwing(HanzoAttack toQueue)
+    {
+        queuedAttack = toQueue;
     }
 }

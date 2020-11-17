@@ -38,7 +38,11 @@ public class SwapCharacter : MonoBehaviour
     void Swap(GameObject c)
     {
         foreach (GameObject buddy in characters)
+        {
             buddy.SetActive(buddy == c);
+            if (buddy == c)
+                buddy.GetComponent<PlayerSkills>().EnableChar();
+        }
 
         activeChar = c;
         animControl.anim = c.GetComponent<Animator>();

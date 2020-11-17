@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5266437660797028518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1361418808607625520}
@@ -204,6 +204,7 @@ MonoBehaviour:
   characterMotion: {fileID: 0}
   crosshair: {fileID: 0}
   camLook: {fileID: 5264984086977145251}
+  isAiming: 0
   pitchIsLocked: 0
 --- !u!114 &2376285340658847952
 MonoBehaviour:

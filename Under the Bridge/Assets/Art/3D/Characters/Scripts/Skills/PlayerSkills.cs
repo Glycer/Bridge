@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PlayerSkills : MonoBehaviour
 {
+    public Weapon[] weapons;
+    protected int currActiveWeaponIndex;
     public PlayerMotion motion;
+    public UIManager UI;
+    public GameObject HUD;
     public bool defending;
     public bool dodging;
 
@@ -51,7 +55,7 @@ public class PlayerSkills : MonoBehaviour
     }
     void Ability(int abilityIndex, bool keyDown)
     {
-        if (abilities[abilityIndex] != null)
+        if (abilities[abilityIndex] != null && PlayerStats.CheckMana(abilities[abilityIndex].manaCost))
             abilities[abilityIndex].UseAbility(keyDown);
     }
 
@@ -61,5 +65,18 @@ public class PlayerSkills : MonoBehaviour
             motion.currSpeed = motion.runSpeed;
         else
             motion.currSpeed = motion.walkSpeed;
+    }
+
+    public void EnableChar()
+    {
+        for (int i = 0; i < abilities.Length; i++)
+        {
+            if (abilities[i] != null)
+                UI.AdjustAbilityDisplay(i, abilities[i]);
+            else
+                UI.AdjustAbilityDisplay(i, null);
+        }
+        if (HUD != null)
+            HUD.SetActive(true);
     }
 }

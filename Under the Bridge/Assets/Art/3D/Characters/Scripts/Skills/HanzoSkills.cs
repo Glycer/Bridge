@@ -10,12 +10,12 @@ public class HanzoSkills : PlayerSkills
     public HanzoAttack[] combo;
     public HanzoAttack[] alternateCombo;
     int currComboIndex;
-    public bool queueReady;
+    public bool awaitingAttack;
     public bool comboExpired;
     HanzoAttack currAttack;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         currComboIndex = 0;
         currAttack = null;
@@ -24,34 +24,46 @@ public class HanzoSkills : PlayerSkills
 
     protected override void Whack(bool keyDown)
     {
-        if (keyDown && (currComboIndex >= combo.Length || combo[currComboIndex] == null || comboExpired))
+        if (keyDown)
         {
-            currAttack = null;
-            currComboIndex = 0;
-        }
-        if (keyDown && queueReady)
-        {
-            if (currAttack != null)
-                currAttack.StopTimer();
-            currAttack = combo[currComboIndex];
-            combo[currComboIndex].Swing();
-            currComboIndex++;
+            if (currComboIndex >= combo.Length || combo[currComboIndex] == null || comboExpired)
+                currComboIndex = 0;
+            if (combo[currComboIndex] != null && currAttack != null && currAttack.queueReady)
+            {
+                currAttack.QueueSwing(combo[currComboIndex]);
+                currAttack = combo[currComboIndex];
+                currComboIndex++;
+            }
+            if (awaitingAttack)
+            {
+                if (currAttack != null)
+                    currAttack.StopTimer();
+                currAttack = combo[currComboIndex];
+                combo[currComboIndex].Swing();
+                currComboIndex++;
+            }
         }
     }
     protected override void Secondary(bool keyDown)
     {
-        if (keyDown && (currComboIndex >= alternateCombo.Length || alternateCombo[currComboIndex] == null || comboExpired))
+        if (keyDown)
         {
-            currAttack = null;
-            currComboIndex = 0;
-        }
-        if (keyDown && queueReady)
-        {
-            if (currAttack != null)
-                currAttack.StopTimer();
-            currAttack = alternateCombo[currComboIndex];
-            alternateCombo[currComboIndex].Swing();
-            currComboIndex++;
+            if (currComboIndex >= alternateCombo.Length || alternateCombo[currComboIndex] == null || comboExpired)
+                currComboIndex = 0;
+            if (alternateCombo[currComboIndex] != null && currAttack != null && currAttack.queueReady)
+            {
+                currAttack.QueueSwing(alternateCombo[currComboIndex]);
+                currAttack = alternateCombo[currComboIndex];
+                currComboIndex++;
+            }
+            if (awaitingAttack)
+            {
+                if (currAttack != null)
+                    currAttack.StopTimer();
+                currAttack = alternateCombo[currComboIndex];
+                alternateCombo[currComboIndex].Swing();
+                currComboIndex++;
+            }
         }
     }
     protected override void Defense(bool keyDown)
@@ -69,13 +81,28 @@ public class HanzoSkills : PlayerSkills
         dodging = false;
         motion.motionLocked = false;
         dodge = null;
+        awaitingAttack = true;
+        comboExpired = false;
+        currComboIndex = 0;
+        currAttack = null;
     }
 
     IEnumerator Dodge()
     {
+        Vector3 direction = new Vector3(0, 0, 0);
+        if (Input.GetAxis(Inputs.playerStrafeAxis) < 0)
+            direction += new Vector3(-0.6f, 0, 0);
+        else if (Input.GetAxis(Inputs.playerStrafeAxis) > 0)
+            direction += new Vector3(0.6f, 0, 0);
+        else if (Input.GetAxis(Inputs.playerVAxis) < 0)
+            direction += new Vector3(0, 0, -0.6f);
+        else
+            direction += new Vector3(0, 0, 0.6f);
+
+
         for (int i = 0; i < 5; i++)
         {
-            motion.transform.Translate(0, 0, 0.6f);
+            motion.transform.Translate(direction);
             yield return new WaitForSeconds(0.01f);
         }
         dodging = false;

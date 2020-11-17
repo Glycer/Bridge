@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class VasilisaSkills : PlayerSkills
 {
-    public VasilisaWeapon[] weapons;
-    int currActiveWeaponIndex;
-
     // TODO: Temp code used until runtime ability setting is implemented
     public Ability waterPush;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         currActiveWeaponIndex = 0;
         abilities = new Ability[4];

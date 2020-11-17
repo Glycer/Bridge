@@ -31,7 +31,7 @@ public class PlayerMotion : MonoBehaviour {
     public UIManager UI;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         PlayerStats.UI = UI;
         rigid = GetComponent<Rigidbody>();

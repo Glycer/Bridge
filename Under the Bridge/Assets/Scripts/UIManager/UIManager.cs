@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public GameObject inventoryDisplay;
     public StatusBars statusBars;
+    public Image[] abilities;
     public GameObject townUI;
     public GameObject placeables;
     public GameObject placeButton;
@@ -35,6 +36,17 @@ public class UIManager : MonoBehaviour
     public void AdjustStatus(int statusIndex, float percentage)
     {
         statusBars.AdjustBar(statusIndex, percentage);
+    }
+    public void AdjustAbilityDisplay(int abilityIndex, Ability ability)
+    {
+        if (ability != null)
+        {
+            if (!abilities[abilityIndex].gameObject.activeSelf)
+                abilities[abilityIndex].gameObject.SetActive(true);
+            abilities[abilityIndex].sprite = ability.abilityImage;
+        }
+        else
+            abilities[abilityIndex].gameObject.SetActive(false);
     }
 
     public void TogglePlaceables()

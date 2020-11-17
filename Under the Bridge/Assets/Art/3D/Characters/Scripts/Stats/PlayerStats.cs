@@ -46,4 +46,20 @@ public class PlayerStats : MonoBehaviour
             playerMana[manaIndex] = 0;
         UI.AdjustStatus(manaIndex + 1, playerMana[manaIndex] / playerMaxMana[manaIndex]);
     }
+    static public bool CheckMana(int[] manaCost)
+    {
+        if (playerMana[0] - manaCost[0] >= 0 && playerMana[1] - manaCost[1] >= 0 && playerMana[2] - manaCost[2] >= 0)
+            return true;
+        else
+            return false;
+    }
+    static public void SpendMana(int[] manaCost)
+    {
+        playerMana[0] -= manaCost[0];
+        playerMana[1] -= manaCost[1];
+        playerMana[2] -= manaCost[2];
+        UI.AdjustStatus(1, playerMana[0] / playerMaxMana[0]);
+        UI.AdjustStatus(2, playerMana[1] / playerMaxMana[1]);
+        UI.AdjustStatus(3, playerMana[2] / playerMaxMana[2]);
+    }
 }

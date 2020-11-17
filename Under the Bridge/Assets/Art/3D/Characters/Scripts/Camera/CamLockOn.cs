@@ -40,8 +40,13 @@ public class CamLockOn : MonoBehaviour
         if (Input.GetKeyDown(Inputs.lockOff))
             ToggleLook(false);
 
-        //Delock when target gets out of range
-        //Delock when target dies
+        // Delock when target gets out of range
+        if (lockTarget != null && !targetCollider.targets.Contains(lockTarget.GetComponent<Collider>()))
+            ToggleLook(false);
+
+        // Delock when target dies
+        if (lockTarget != null && !lockTarget.gameObject.activeSelf)
+            ToggleLook(false);
     }
 
     void ToggleLook(bool _isLocked)
@@ -78,7 +83,10 @@ public class CamLockOn : MonoBehaviour
         if (targetCollider.targets.Count == 0)
             return;
 
-        lockTarget = targetCollider.targets[index].transform;
+        if (_isLocked)
+            lockTarget = targetCollider.targets[index].transform;
+        else
+            lockTarget = null;
 
         _targeter.parent = _isLocked ? lockTarget : player.sourceTransform;
         _targeter.localPosition = Vector3.zero;
