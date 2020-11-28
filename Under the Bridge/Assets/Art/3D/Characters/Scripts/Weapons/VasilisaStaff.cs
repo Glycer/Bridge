@@ -11,16 +11,17 @@ public class VasilisaStaff : Weapon
 
     public bool attackLocked;
 
+    void OnEnable()
+    {
+        attackLocked = false;
+    }
+
     public override void Primary()
     {
         if (!attackLocked)
         {
             // Add a branch for lock on
-            for (int i = 0; i < enemiesInProjectileRange.targets.Count; i++)
-            {
-                if (!enemiesInProjectileRange.targets[i].gameObject.activeSelf)
-                    enemiesInProjectileRange.targets.Remove(enemiesInProjectileRange.targets[i]);
-            }
+            enemiesInProjectileRange.RefreshList();
             if (enemiesInProjectileRange.targets.Count != 0)
             {
                 GameObject enemy = enemiesInProjectileRange.targets[Random.Range(0, enemiesInProjectileRange.targets.Count)].gameObject;

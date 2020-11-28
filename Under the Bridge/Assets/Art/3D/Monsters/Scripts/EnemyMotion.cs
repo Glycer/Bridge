@@ -62,7 +62,7 @@ public class EnemyMotion : MonoBehaviour
     }
 
     // Random walk
-    protected IEnumerator Patrol()
+    protected virtual IEnumerator Patrol()
     {
         while (true)
         {

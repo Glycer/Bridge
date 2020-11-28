@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WyattStats : PlayerStats
 {
-    public int getDamage()
+    public int GetDamage()
     {
         return playerStrength;
     }

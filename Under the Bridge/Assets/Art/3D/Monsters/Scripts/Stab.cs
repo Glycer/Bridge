@@ -10,6 +10,5 @@ public class Stab : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         PlayerStats.TakeDamage(stats.strength);
-        Debug.Log("You have been hit.");
     }
 }

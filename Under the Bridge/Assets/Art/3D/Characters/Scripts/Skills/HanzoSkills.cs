@@ -14,12 +14,19 @@ public class HanzoSkills : PlayerSkills
     public bool comboExpired;
     HanzoAttack currAttack;
 
+    // TODO: Temp code used until runtime ability setting is implemented
+    public Ability vampiricStrike;
+    public Ability vampireBite;
+
     // Start is called before the first frame update
     void Awake()
     {
         currComboIndex = 0;
         currAttack = null;
+        currActiveWeaponIndex = 0;
         abilities = new Ability[4];
+        abilities[0] = vampiricStrike;
+        abilities[1] = vampireBite;
     }
 
     protected override void Whack(bool keyDown)
@@ -85,6 +92,8 @@ public class HanzoSkills : PlayerSkills
         comboExpired = false;
         currComboIndex = 0;
         currAttack = null;
+        if (HUD != null)
+            HUD.SetActive(false);
     }
 
     IEnumerator Dodge()

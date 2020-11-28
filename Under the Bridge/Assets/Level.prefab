@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeSquare: {fileID: 1706279988610918, guid: 4e083e65916b0774c9342f5bc630e7ac, type: 3}
-  spawns: {fileID: 6366065912388991200}
+  spawns: {fileID: 8715104842416963445}
   width: 1
   length: 1
   height: 1
@@ -110,7 +110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6366065912388991207}
-  - component: {fileID: 6366065912388991200}
+  - component: {fileID: 8715104842416963445}
   m_Layer: 13
   m_Name: Monsters
   m_TagString: Untagged
@@ -132,7 +132,7 @@ Transform:
   m_Father: {fileID: 6366065910846303976}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6366065912388991200
+--- !u!114 &8715104842416963445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ce4c03cfd47be49b02589693219d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterType: {fileID: 7519885986868708613, guid: 17d5ecb551bdf874baef87aed62e666e,
-    type: 3}
-  monstersNum: 0
+  monsterType: []
+  numMonsters: 
   monsters: []

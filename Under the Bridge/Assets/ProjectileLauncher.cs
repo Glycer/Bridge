@@ -21,7 +21,7 @@ public class ProjectileLauncher : MonoBehaviour
         _projectile.Activate();
 
         if (!tracking)
-            _projectile.GetComponent<Rigidbody>().AddForce(0, 0, _projectile.speed);
+            _projectile.GetComponent<Rigidbody>().AddForce(_projectile.transform.forward * 100);
         else
             _projectile.StartTracking(targetDirection);
     }

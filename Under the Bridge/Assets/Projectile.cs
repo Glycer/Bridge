@@ -12,13 +12,23 @@ public class Projectile : MonoBehaviour
     public float rotationSpeed;
     public Transform targetDirection;
 
+    // Used for explosive shots
+    public AreaOfEffect aoe;
+    public GameObject visibleExplosion;
+
     Coroutine life;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<PlayerMotion>())
+        if (collision.gameObject.GetComponent<PlayerMotion>() && aoe == null)
             PlayerStats.TakeDamage(strength);
-        Deactivate();
+        if (aoe != null)
+        {
+            StartCoroutine(Explosion());
+            aoe.Attack();
+        }
+        else
+            Deactivate();
     }
 
     public void Activate()
@@ -48,5 +58,12 @@ public class Projectile : MonoBehaviour
             transform.Translate(0, 0, 1 * speed / 5000);
             yield return new WaitForSeconds(0.02f);
         }
+    }
+
+    IEnumerator Explosion()
+    {
+        visibleExplosion.SetActive(true);
+        yield return new WaitForSeconds(1);
+        Deactivate();
     }
 }

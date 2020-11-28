@@ -28,28 +28,28 @@ public class WyattSkills : PlayerSkills
 
     protected override void Whack(bool keyDown)
     {
-        if (weapons[currActiveWeaponIndex].gameObject.activeSelf)
+        if (weapons[currActiveWeaponIndex].gameObject.activeSelf && keyDown)
         {
             TargetCollider targeter = weapons[currActiveWeaponIndex].GetComponent<TargetCollider>();
 
+            targeter.RefreshList();
             for (int i = 0; i < targeter.targets.Count; i++)
             {
-                //Debug.Log("Hit!");
-
                 //Deals damage. 'If' statement checks death
                 if (targeter.targets[i].gameObject.GetComponent<MonsterStats>() != null)
                     PlayerStats.AddMana(2, 10);
-                if (targeter.targets[i].gameObject.GetComponent<MonsterStats>().TakeDamage(stats.getDamage()))
+                if (targeter.targets[i].gameObject.GetComponent<MonsterStats>().TakeDamage(stats.GetDamage()))
                     targeter.targets.Remove(targeter.targets[i]);
                 else if (weapons[currActiveWeaponIndex].currEnchant != null)
                 {
-                    // if checks if enchantment is spent
-                    if (weapons[currActiveWeaponIndex].currEnchant.UseEnchantment(targeter.targets[i].gameObject.GetComponent<MonsterStats>()))
-                        weapons[currActiveWeaponIndex].currEnchant = null;
+                    weapons[currActiveWeaponIndex].currEnchant.UseEnchantment(targeter.targets[i].gameObject.GetComponent<MonsterStats>());
                     if (!targeter.targets[i].gameObject.activeSelf)
                         targeter.targets.Remove(targeter.targets[i]);
                 }
             }
+
+            if (weapons[currActiveWeaponIndex].currEnchant != null && weapons[currActiveWeaponIndex].currEnchant.ConsumeCharge())
+                weapons[currActiveWeaponIndex].currEnchant = null;
         }
     }
     protected override void Secondary(bool keyDown)
@@ -76,6 +76,7 @@ public class WyattSkills : PlayerSkills
         if (Input.GetKey(Inputs.defense))
             transform.localScale *= 2;
         defending = false;
-        HUD.SetActive(false);
+        if (HUD != null)
+            HUD.SetActive(false);
     }
 }
