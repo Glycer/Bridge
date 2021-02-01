@@ -4,6 +4,8 @@ using UnityEngine.Animations;
 
 public class CamControl : MonoBehaviour
 {
+    public bool locked;
+
     public float tumbleSpeed;
     public float lookSpeed;
 
@@ -21,10 +23,6 @@ public class CamControl : MonoBehaviour
     CamZoom camZoom;
     public bool isAiming;
 
-    public bool pitchIsLocked = false;
-    bool lookUpLocked = false;
-    bool lookDownLocked = false;
-
     Vector3 basePos;
     Vector3 aimingPos;
     Vector3 interPos;
@@ -34,7 +32,6 @@ public class CamControl : MonoBehaviour
 
     private void Start()
     {
-
         camZoom = GetComponent<CamZoom>();
 
         basePos = offset.localPosition;
@@ -43,62 +40,76 @@ public class CamControl : MonoBehaviour
 
         focusPlayerPos = focusTarget.position;
         focusAimPos = new Vector3(0.3f, 0.5f, 1);
-
-        StartCoroutine(PitchLock());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isAiming)
+        if (!locked)
         {
-            playerMotion.Turn(Inputs.camHAxis);
-            if (!lookDownLocked && !lookUpLocked)
-                turn.RotateAround(turn.position, turn.right, Input.GetAxis(Inputs.camVAxis) * tumbleSpeed * Time.deltaTime);
-            //characterMotion.LookVertical(Inputs.camVAxis);
-            //focusTarget.Translate(0, Input.GetAxis(Inputs.camVAxis) * lookSpeed * Time.deltaTime, 0);
+            if (isAiming)
+            {
+                playerMotion.Turn(Inputs.camHAxis, 2);
+                turn.RotateAround(turn.position, turn.right, GetCamSpeed());
+                //characterMotion.LookVertical(Inputs.camVAxis);
+                //focusTarget.Translate(0, Input.GetAxis(Inputs.camVAxis) * lookSpeed * Time.deltaTime, 0);
+            }
+            else
+            {
+                if (Input.GetAxis(Inputs.playerHAxis) != 0 || Input.GetAxis(Inputs.playerVAxis) != 0)
+                    characterMotion.RotateCharacter();
+
+                turn.RotateAround(turn.position, Vector3.up, Input.GetAxis(Inputs.camHAxis) * tumbleSpeed * Time.deltaTime);
+                turn.RotateAround(turn.position, turn.right, GetCamSpeed());
+            }
         }
+    }
+    float GetCamSpeed()
+    {
+        // Gets a multiple to keep the camera from moving too far upwards or downwards
+        float CamSlowFactor;
+
+        if (turn.eulerAngles.x < 310 && turn.eulerAngles.x > 180 && -Input.GetAxis(Inputs.camVAxis) < 0)
+            CamSlowFactor = 1 - ((turn.eulerAngles.x - 310) / -10);
+        else if (turn.eulerAngles.x > 50 && turn.eulerAngles.x < 180 && -Input.GetAxis(Inputs.camVAxis) > 0)
+            CamSlowFactor = 1 - ((turn.eulerAngles.x - 50) / 10);
         else
-        {
-            turn.RotateAround(turn.position, Vector3.up, -Input.GetAxis(Inputs.camHAxis) * tumbleSpeed * Time.deltaTime);
-            if (!lookDownLocked && !lookUpLocked)
-                turn.RotateAround(turn.position, turn.right, Input.GetAxis(Inputs.camVAxis) * tumbleSpeed * Time.deltaTime);
-        }
+            CamSlowFactor = 1;
+
+        float CamSpeed = -Input.GetAxis(Inputs.camVAxis) * tumbleSpeed * Time.deltaTime * CamSlowFactor;
+        // Hard lock on speed to keep the camera tumbling where it should not
+        if (CamSpeed < 50 && CamSpeed > -50)
+            return CamSpeed;
+        else if (CamSpeed > 50)
+            return 50;
+        else
+            return -50;
     }
 
     public void Aim(bool _isAiming)
     {
-        isAiming = _isAiming;
+        if (!locked)
+        {
+            isAiming = _isAiming;
 
-        crosshair.SetActive(_isAiming);
-        camZoom.ToggleLook(_isAiming);
+            crosshair.SetActive(_isAiming);
+            camZoom.ToggleLook(_isAiming);
 
-        if (_isAiming)
-            camZoom.ZoomTo(aimingPos, focusAimPos);
-        else
-            camZoom.ZoomTo(interPos, focusPlayerPos);
+            // Turns to face camera
+            characterMotion.ResetRotation();
+
+            if (_isAiming)
+            {
+                playerMotion.SetDirection();
+                camZoom.ZoomTo(aimingPos, focusAimPos);
+            }
+            else
+                camZoom.ZoomTo(interPos, focusPlayerPos);
+        }
     }
 
-    IEnumerator PitchLock()
+    public void RotatePlayer(Quaternion newRotation)
     {
-        string vertical = Inputs.camVAxis;
-
-        while (true)
-        {
-            if (cam.rotation.eulerAngles.x > 75 && cam.rotation.eulerAngles.x < 90)
-                lookUpLocked = true;
-            if (cam.rotation.eulerAngles.x > 270 && cam.rotation.eulerAngles.x < 285)
-                lookDownLocked = true;
-
-            if (!pitchIsLocked)
-            {
-                if (lookUpLocked && Input.GetAxis(vertical) < 0)
-                    lookUpLocked = false;
-                else if (lookDownLocked && Input.GetAxis(vertical) > 0)
-                    lookDownLocked = false;
-            }
-
-            yield return new WaitForSeconds(.05f);
-        }
+        turn.transform.rotation *= newRotation;
     }
 }

@@ -10,7 +10,8 @@ public class CamLockOn : MonoBehaviour
     //The current enemy to lock onto
     public Transform lockTarget;
 
-    public LookAtConstraint playerLook;
+    public RotationConstraint playerLook;
+    public LookAtConstraint focusLook;
     
     bool isLockedOn = false;
 
@@ -68,14 +69,14 @@ public class CamLockOn : MonoBehaviour
         Transform _targeter = target.sourceTransform;
 
         isLockedOn = _isLocked;
-        camControl.pitchIsLocked = _isLocked;
 
-        camControl.enabled = !_isLocked;
+        camControl.locked = _isLocked;
 
-        player.weight = _isLocked ? 0 : 1;
-        target.weight = _isLocked ? 1 : 0;
+        player.weight = _isLocked ? 0.5f : 1;
+        target.weight = _isLocked ? 0.5f : 0;
 
-        playerLook.constraintActive = _isLocked;
+        //playerLook.constraintActive = _isLocked;
+        focusLook.constraintActive = _isLocked;
 
         look.SetSource(0, player);
         look.SetSource(1, target);

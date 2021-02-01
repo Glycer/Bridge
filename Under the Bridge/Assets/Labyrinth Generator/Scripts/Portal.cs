@@ -44,7 +44,8 @@ public class Portal : MonoBehaviour {
             player.parent = parent;
 
             //Position works, commented out rotation is buggy.
-            player.rotation = destination.transform.rotation;
+            if (player.GetComponent<PlayerMotion>() != null)
+                player.GetComponent<PlayerMotion>().RotatePlayer(destination.transform.rotation);
 
             SetCams(connectedLevel);
         }

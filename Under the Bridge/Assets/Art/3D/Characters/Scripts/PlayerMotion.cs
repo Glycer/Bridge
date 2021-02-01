@@ -26,16 +26,17 @@ public class PlayerMotion : MonoBehaviour {
 
     string vertical = Inputs.playerVAxis;
     string horizontal = Inputs.playerHAxis;
-    string strafe = Inputs.playerStrafeAxis;
 
     public UIManager UI;
+
+    public CamControl camControl;
 
     // Use this for initialization
     void Start()
     {
         PlayerStats.UI = UI;
         rigid = GetComponent<Rigidbody>();
-        characterMotion = GetComponent<CharacterMotion>();
+        characterMotion = GetComponentInChildren<CharacterMotion>();
         animControl = GetComponent<CharacterAnimControl>();
         horizontalMotionLocked = false;
         currSpeed = walkSpeed;
@@ -46,11 +47,12 @@ public class PlayerMotion : MonoBehaviour {
     {
         if (!motionLocked)
         {
-            Turn(Inputs.playerHAxis);
-
             if (!horizontalMotionLocked)
             {
-                transform.Translate(Input.GetAxis(strafe) * currSpeed * Time.deltaTime,
+                if (Input.GetAxis(horizontal) != 0 || Input.GetAxis(vertical) != 0)
+                    SetDirection();
+
+                transform.Translate(Input.GetAxis(horizontal) * currSpeed * Time.deltaTime,
                     0,
                     Input.GetAxis(vertical) * currSpeed * Time.deltaTime);
             }
@@ -71,9 +73,23 @@ public class PlayerMotion : MonoBehaviour {
         }
     }
 
-    public void Turn(string axis)
+    public void SetDirection()
     {
-        transform.Rotate(0, Input.GetAxis(axis) * turnSpeed * Time.deltaTime, 0);
+        transform.localRotation *= Quaternion.Euler(0, camControl.turn.localRotation.eulerAngles.y, 0);
+        camControl.turn.localRotation = Quaternion.Euler(camControl.turn.localRotation.eulerAngles.x, 0, camControl.turn.localRotation.eulerAngles.z);
+    }
+
+    public void Turn(string axis, float turnMultiplier = 1)
+    {
+        transform.Rotate(0, Input.GetAxis(axis) * turnSpeed * Time.deltaTime * turnMultiplier, 0);
+    }
+
+    // Used by portals
+    public void RotatePlayer(Quaternion newRotation)
+    {
+        transform.localRotation = newRotation * Quaternion.Inverse(characterMotion.transform.localRotation);
+        //camControl.RotatePlayer(newRotation);
+        //characterMotion.RotateCharacter();
     }
 
     // Detects collisions to prevent phasing
@@ -95,7 +111,7 @@ public class PlayerMotion : MonoBehaviour {
     {
         for (int i = 0; i < 5; i++)
         {
-            transform.Translate(Input.GetAxis(strafe) * currSpeed * Time.deltaTime * -1,
+            transform.Translate(Input.GetAxis(horizontal) * currSpeed * Time.deltaTime * -1,
             0,
             Input.GetAxis(vertical) * currSpeed * Time.deltaTime * -1);
             yield return new WaitForSeconds(.01f);

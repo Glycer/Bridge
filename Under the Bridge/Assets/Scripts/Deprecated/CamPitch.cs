@@ -16,6 +16,7 @@ public class CamPitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Used");
         if (transform.rotation.eulerAngles.x > 75 && transform.rotation.eulerAngles.x < 90)
             lookUpLocked = true;
         if (transform.rotation.eulerAngles.x > 270 && transform.rotation.eulerAngles.x < 285)

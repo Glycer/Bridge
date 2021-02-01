@@ -19,7 +19,7 @@ public class CharacterAnimControl : MonoBehaviour
     {
         if (!anim.GetBool("isJumping"))
         {
-            if (Input.GetAxis(Inputs.playerHAxis) != 0 || Input.GetAxis(Inputs.playerVAxis) != 0 || Input.GetAxis(Inputs.playerStrafeAxis) != 0)
+            if (Input.GetAxis(Inputs.playerHAxis) != 0 || Input.GetAxis(Inputs.playerVAxis) != 0) //|| Input.GetAxis(Inputs.playerStrafeAxis) != 0)
                 if (Input.GetKey(Inputs.sprint))
                     ToggleState("isRunning");
                 else

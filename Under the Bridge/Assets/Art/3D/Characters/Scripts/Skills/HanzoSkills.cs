@@ -99,9 +99,9 @@ public class HanzoSkills : PlayerSkills
     IEnumerator Dodge()
     {
         Vector3 direction = new Vector3(0, 0, 0);
-        if (Input.GetAxis(Inputs.playerStrafeAxis) < 0)
+        if (Input.GetAxis(Inputs.playerHAxis) < 0)
             direction += new Vector3(-0.6f, 0, 0);
-        else if (Input.GetAxis(Inputs.playerStrafeAxis) > 0)
+        else if (Input.GetAxis(Inputs.playerHAxis) > 0)
             direction += new Vector3(0.6f, 0, 0);
         else if (Input.GetAxis(Inputs.playerVAxis) < 0)
             direction += new Vector3(0, 0, -0.6f);
