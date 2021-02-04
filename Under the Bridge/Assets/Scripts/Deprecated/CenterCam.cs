@@ -14,10 +14,10 @@ public class CenterCam : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(Inputs.centerCam))
+        /*if (Input.GetKeyDown(Inputs.centerCam))
         {
             resetRotation();
-        }
+        }*/
     }
 
     void resetRotation()

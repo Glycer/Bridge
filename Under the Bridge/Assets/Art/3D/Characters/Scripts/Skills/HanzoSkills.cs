@@ -21,6 +21,7 @@ public class HanzoSkills : PlayerSkills
     // Start is called before the first frame update
     void Awake()
     {
+        dodging = false;
         currComboIndex = 0;
         currAttack = null;
         currActiveWeaponIndex = 0;
@@ -32,53 +33,42 @@ public class HanzoSkills : PlayerSkills
     protected override void Whack(bool keyDown)
     {
         if (keyDown)
-        {
-            if (currComboIndex >= combo.Length || combo[currComboIndex] == null || comboExpired)
-                currComboIndex = 0;
-            if (combo[currComboIndex] != null && currAttack != null && currAttack.queueReady)
-            {
-                currAttack.QueueSwing(combo[currComboIndex]);
-                currAttack = combo[currComboIndex];
-                currComboIndex++;
-            }
-            if (awaitingAttack)
-            {
-                if (currAttack != null)
-                    currAttack.StopTimer();
-                currAttack = combo[currComboIndex];
-                combo[currComboIndex].Swing();
-                currComboIndex++;
-            }
-        }
+            Attack(combo);
     }
     protected override void Secondary(bool keyDown)
     {
         if (keyDown)
+            Attack(alternateCombo);
+    }
+    void Attack(HanzoAttack[] currCombo)
+    {
+        if (!dodging)
         {
-            if (currComboIndex >= alternateCombo.Length || alternateCombo[currComboIndex] == null || comboExpired)
+            if (currComboIndex >= currCombo.Length || currCombo[currComboIndex] == null || comboExpired)
                 currComboIndex = 0;
-            if (alternateCombo[currComboIndex] != null && currAttack != null && currAttack.queueReady)
+            if (currCombo[currComboIndex] != null && currAttack != null && currAttack.queueReady)
             {
-                currAttack.QueueSwing(alternateCombo[currComboIndex]);
-                currAttack = alternateCombo[currComboIndex];
+                currAttack.QueueSwing(currCombo[currComboIndex]);
+                currAttack = currCombo[currComboIndex];
                 currComboIndex++;
             }
             if (awaitingAttack)
             {
                 if (currAttack != null)
                     currAttack.StopTimer();
-                currAttack = alternateCombo[currComboIndex];
-                alternateCombo[currComboIndex].Swing();
+                currAttack = currCombo[currComboIndex];
+                currCombo[currComboIndex].Swing();
                 currComboIndex++;
             }
         }
     }
+
     protected override void Defense(bool keyDown)
     {
-        if (keyDown && motion.motionLocked == false)
+        if (keyDown && !motion.motionLocked)
         {
             dodging = true;
-            motion.motionLocked = true;
+            LockPlayerMotion(0.25f);
             dodge = StartCoroutine(Dodge());
         }
     }
@@ -94,24 +84,17 @@ public class HanzoSkills : PlayerSkills
         currAttack = null;
         if (HUD != null)
             HUD.SetActive(false);
+        // Unlocks motion
+        ReleaseMotionLock();
     }
 
     IEnumerator Dodge()
     {
-        Vector3 direction = new Vector3(0, 0, 0);
-        if (Input.GetAxis(Inputs.playerHAxis) < 0)
-            direction += new Vector3(-0.6f, 0, 0);
-        else if (Input.GetAxis(Inputs.playerHAxis) > 0)
-            direction += new Vector3(0.6f, 0, 0);
-        else if (Input.GetAxis(Inputs.playerVAxis) < 0)
-            direction += new Vector3(0, 0, -0.6f);
-        else
-            direction += new Vector3(0, 0, 0.6f);
-
-
+        Vector3 direction = charMotion.transform.TransformVector(new Vector3(0, 0, 1));
+        direction *= 0.6f;
         for (int i = 0; i < 5; i++)
         {
-            motion.transform.Translate(direction);
+            motion.transform.Translate(direction, Space.World);
             yield return new WaitForSeconds(0.01f);
         }
         dodging = false;

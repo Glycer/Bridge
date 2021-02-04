@@ -85,11 +85,14 @@ public class PlayerMotion : MonoBehaviour {
     }
 
     // Used by portals
-    public void RotatePlayer(Quaternion newRotation)
+    public void OrientPlayer(Quaternion newRotation)
     {
         transform.localRotation = newRotation * Quaternion.Inverse(characterMotion.transform.localRotation);
-        //camControl.RotatePlayer(newRotation);
-        //characterMotion.RotateCharacter();
+    }
+    // Used for lock on attack
+    public void FaceEnemy()
+    {
+        characterMotion.SetRotation(camControl.focusTarget.localRotation.eulerAngles.y);
     }
 
     // Detects collisions to prevent phasing

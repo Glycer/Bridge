@@ -7,6 +7,8 @@ public class CharacterMotion : MonoBehaviour
     public Transform head;
     public float speed;
 
+    public bool rotationLocked;
+
     public void LookHorizontal(string inputAxis)
     {
         head.Rotate(0, Input.GetAxis(inputAxis) * speed * Time.deltaTime, 0);
@@ -53,5 +55,9 @@ public class CharacterMotion : MonoBehaviour
     public void ResetRotation()
     {
         transform.localRotation = Quaternion.identity;
+    }
+    public void SetRotation(float direction)
+    {
+        transform.localRotation = Quaternion.Euler(0, direction, 0);
     }
 }

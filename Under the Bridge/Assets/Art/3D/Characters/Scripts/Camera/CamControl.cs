@@ -4,6 +4,8 @@ using UnityEngine.Animations;
 
 public class CamControl : MonoBehaviour
 {
+    public UIManager UI;
+
     public bool locked;
 
     public float tumbleSpeed;
@@ -16,6 +18,9 @@ public class CamControl : MonoBehaviour
 
     public PlayerMotion playerMotion;
     public CharacterMotion characterMotion;
+
+    public CamLockOn lockOn;
+    Coroutine lockOnRotation;
     public GameObject crosshair;
     
     public LookAtConstraint camLook;
@@ -56,25 +61,22 @@ public class CamControl : MonoBehaviour
             }
             else
             {
-                if (Input.GetAxis(Inputs.playerHAxis) != 0 || Input.GetAxis(Inputs.playerVAxis) != 0)
+                if ((Input.GetAxis(Inputs.playerHAxis) != 0 || Input.GetAxis(Inputs.playerVAxis) != 0) && !characterMotion.rotationLocked)
                     characterMotion.RotateCharacter();
 
                 turn.RotateAround(turn.position, Vector3.up, Input.GetAxis(Inputs.camHAxis) * tumbleSpeed * Time.deltaTime);
                 turn.RotateAround(turn.position, turn.right, GetCamSpeed());
             }
         }
+        else
+        {
+            if ((Input.GetAxis(Inputs.playerHAxis) != 0 || Input.GetAxis(Inputs.playerVAxis) != 0) && !characterMotion.rotationLocked)
+                characterMotion.RotateCharacter();
+        }
     }
     float GetCamSpeed()
     {
-        // Gets a multiple to keep the camera from moving too far upwards or downwards
-        float CamSlowFactor;
-
-        if (turn.eulerAngles.x < 310 && turn.eulerAngles.x > 180 && -Input.GetAxis(Inputs.camVAxis) < 0)
-            CamSlowFactor = 1 - ((turn.eulerAngles.x - 310) / -10);
-        else if (turn.eulerAngles.x > 50 && turn.eulerAngles.x < 180 && -Input.GetAxis(Inputs.camVAxis) > 0)
-            CamSlowFactor = 1 - ((turn.eulerAngles.x - 50) / 10);
-        else
-            CamSlowFactor = 1;
+        float CamSlowFactor = GetCamSlowFactor();
 
         float CamSpeed = -Input.GetAxis(Inputs.camVAxis) * tumbleSpeed * Time.deltaTime * CamSlowFactor;
         // Hard lock on speed to keep the camera tumbling where it should not
@@ -85,31 +87,78 @@ public class CamControl : MonoBehaviour
         else
             return -50;
     }
+    float GetCamSlowFactor()
+    {
+        // Gets a multiple to keep the camera from moving too far upwards or downwards
+        if (turn.eulerAngles.x < 310 && turn.eulerAngles.x > 180 && Input.GetAxis(Inputs.camVAxis) > 0)
+            return 1 - ((turn.eulerAngles.x - 310) / -10);
+        else if (turn.eulerAngles.x > 50 && turn.eulerAngles.x < 180 && Input.GetAxis(Inputs.camVAxis) < 0)
+            return 1 - ((turn.eulerAngles.x - 50) / 10);
+        else
+            return 1;
+    }
 
     public void Aim(bool _isAiming)
     {
-        if (!locked)
+        if (locked)
+            lockOn.ToggleLook(false);
+
+        isAiming = _isAiming;
+
+        crosshair.SetActive(_isAiming);
+        camZoom.ToggleLook(_isAiming);
+
+        // Turns to face camera
+        characterMotion.ResetRotation();
+
+        if (_isAiming)
         {
-            isAiming = _isAiming;
-
-            crosshair.SetActive(_isAiming);
-            camZoom.ToggleLook(_isAiming);
-
-            // Turns to face camera
-            characterMotion.ResetRotation();
-
-            if (_isAiming)
-            {
-                playerMotion.SetDirection();
-                camZoom.ZoomTo(aimingPos, focusAimPos);
-            }
-            else
-                camZoom.ZoomTo(interPos, focusPlayerPos);
+            playerMotion.SetDirection();
+            camZoom.ZoomTo(aimingPos, focusAimPos);
         }
+        else
+            camZoom.ZoomTo(interPos, focusPlayerPos);
     }
 
-    public void RotatePlayer(Quaternion newRotation)
+    public void StartLockOnRotation()
     {
-        turn.transform.rotation *= newRotation;
+        UI.ActivateReticule(true);
+        lockOnRotation = StartCoroutine(LockOnAutoRotate());
+    }
+    public void StopLockOnRotation()
+    {
+        UI.ActivateReticule(false);
+        if (lockOnRotation != null)
+            StopCoroutine(lockOnRotation);
+    }
+    IEnumerator LockOnAutoRotate()
+    {
+        float xDistance;
+        float yDistance;
+        while (true)
+        {
+            yDistance = focusTarget.eulerAngles.y - turn.eulerAngles.y;
+            if (yDistance > 180)
+                yDistance -= 360;
+            else if (yDistance < -180)
+                yDistance += 360;
+            xDistance = focusTarget.eulerAngles.x - turn.eulerAngles.x;
+            if (xDistance > 180)
+                xDistance -= 360;
+            else if (xDistance < -180)
+                xDistance += 360;
+
+            if (xDistance > 70 || xDistance < -70)
+                xDistance *= 2;
+            if (yDistance > 70 || yDistance < -70)
+                yDistance *= 2;
+
+            turn.RotateAround(turn.position, Vector3.up, yDistance / 30);
+            turn.RotateAround(turn.position, turn.right, GetCamSlowFactor() * xDistance / 30);
+
+            UI.TrackTarget(new Vector3(yDistance * 8, xDistance * 8 + 30, 0));
+
+            yield return new WaitForSeconds(0.02f);
+        }
     }
 }

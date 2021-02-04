@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
     public Text clearButtonText;
     public Placement placement;
 
+    public Transform targetReticule;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,8 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(Inputs.menu))
+            Cursor.lockState = Cursor.lockState == CursorLockMode.None ? CursorLockMode.Locked : CursorLockMode.None;
         if (Input.GetKeyDown(Inputs.inventory))
             inventoryDisplay.SetActive(!inventoryDisplay.activeSelf);
         if (Input.GetKeyDown(Inputs.townView))
@@ -76,5 +80,17 @@ public class UIManager : MonoBehaviour
         placeButton.SetActive(!placeButton.activeSelf);
         clearButtonText.text = (clearButtonText.text == "Clear" ? "Back" : "Clear");
         
+    }
+
+    public void ActivateReticule(bool activateReticule)
+    {
+        if (activateReticule)
+            targetReticule.gameObject.SetActive(true);
+        else
+            targetReticule.gameObject.SetActive(false);
+    }
+    public void TrackTarget(Vector3 newPosition)
+    {
+        targetReticule.localPosition = newPosition;
     }
 }

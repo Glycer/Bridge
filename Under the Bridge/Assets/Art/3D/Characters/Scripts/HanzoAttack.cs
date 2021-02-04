@@ -50,6 +50,7 @@ public class HanzoAttack : MonoBehaviour
     }
     IEnumerator SwingTimer()
     {
+        skills.LockPlayerMotion(swingDuration);
         yield return new WaitForSeconds(swingDuration - WAIT_FOR_ATTACK);
         if (weapon.currEnchant != null && !weapon.currEnchant.GetCharge())
                 weapon.currEnchant = null;

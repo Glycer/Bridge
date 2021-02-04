@@ -8,8 +8,6 @@ public static class Inputs
     public static string camHAxis = "Mouse X"; /*"CamHorizontal";*/
     public static string camVAxis = "Mouse Y"; /*"CamVertical";*/
 
-    public static KeyCode centerCam = KeyCode.C;
-
     public static KeyCode lockOn = KeyCode.Return;
     public static KeyCode lockOff = KeyCode.Backspace;
 

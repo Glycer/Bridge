@@ -5,44 +5,40 @@ using UnityEngine.Animations;
 public class CamLockOn : MonoBehaviour
 {
     public CamControl camControl;
-    public TargetCollider targetCollider;
+    public TargetCollider lockOnCollider;
+    public TargetCollider lockOffCollider;
 
     //The current enemy to lock onto
     public Transform lockTarget;
 
-    public RotationConstraint playerLook;
     public LookAtConstraint focusLook;
     
     bool isLockedOn = false;
 
-    LookAtConstraint look;
-    ConstraintSource player;
-    ConstraintSource target;
-
-    // for postioning the camera for lock on
-    Coroutine orient;
+    public Transform playerLocation;
+    public Transform targetLocation;
 
     int index = 0;
 
     private void Start()
     {
-        look = GetComponent<LookAtConstraint>();
-
-        player = look.GetSource(0);
-        target = look.GetSource(1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(Inputs.lockOn) && targetCollider.targets.Count > 0)
+        if (Input.GetKeyDown(Inputs.lockOn) && lockOnCollider.targets.Count > 0)
+        {
+            if (camControl.isAiming)
+                camControl.Aim(false);
             ToggleLook(true);
+        }
 
         if (Input.GetKeyDown(Inputs.lockOff))
             ToggleLook(false);
 
         // Delock when target gets out of range
-        if (lockTarget != null && !targetCollider.targets.Contains(lockTarget.GetComponent<Collider>()))
+        if (lockTarget != null && !lockOffCollider.targets.Contains(lockTarget.GetComponent<Collider>()))
             ToggleLook(false);
 
         // Delock when target dies
@@ -50,48 +46,36 @@ public class CamLockOn : MonoBehaviour
             ToggleLook(false);
     }
 
-    void ToggleLook(bool _isLocked)
+    public void ToggleLook(bool _isLocked)
     {
-        if (index >= targetCollider.targets.Count)
+        lockOnCollider.RefreshList();
+        if (index >= lockOnCollider.targets.Count)
             index = 0;
-
-        if (isLockedOn != _isLocked && _isLocked == true)
-        {
-            float duration = .1f;
-
-            if (orient != null)
-                StopCoroutine(orient);
-
-            orient = StartCoroutine(Interpolater.InterpolateLocalRotation(camControl.turn, Quaternion.Euler(10, 0, 0), duration));
-        }
-
-        //The camera aim target object
-        Transform _targeter = target.sourceTransform;
 
         isLockedOn = _isLocked;
 
+        if (_isLocked != camControl.locked)
+        {
+            if (_isLocked)
+                camControl.StartLockOnRotation();
+            else
+                camControl.StopLockOnRotation();
+        }
         camControl.locked = _isLocked;
 
-        player.weight = _isLocked ? 0.5f : 1;
-        target.weight = _isLocked ? 0.5f : 0;
-
-        //playerLook.constraintActive = _isLocked;
         focusLook.constraintActive = _isLocked;
 
-        look.SetSource(0, player);
-        look.SetSource(1, target);
-
-        if (targetCollider.targets.Count == 0)
+        if (lockOnCollider.targets.Count == 0)
             return;
 
         if (_isLocked)
-            lockTarget = targetCollider.targets[index].transform;
+            lockTarget = lockOnCollider.targets[index].transform;
         else
             lockTarget = null;
 
-        _targeter.parent = _isLocked ? lockTarget : player.sourceTransform;
-        _targeter.localPosition = Vector3.zero;
-        _targeter.localRotation = new Quaternion(0, 0, 0, 0);
+        targetLocation.parent = _isLocked ? lockTarget : playerLocation;
+        targetLocation.localPosition = Vector3.zero;
+        targetLocation.localRotation = new Quaternion(0, 0, 0, 0);
 
         index++;
     }
