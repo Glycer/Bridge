@@ -1,0 +1,20 @@
+TUTORIAL DUNGEON
+----------------
+	AESTHETIC
+Dark Woods + Underground
+
+	ENEMIES
+Bunny-like creature (Mischief)
+Origami crane
+Clockwork scorpion
+maybe 1-2 other things
+
+	LEVELS
+Completion time should be around 5-10 minutes
+Completion time for the full dungeon should be around 30 minutes
+
+	BLUEPRINTS
+Simple house
+Road
+Tree
+Street Lamp

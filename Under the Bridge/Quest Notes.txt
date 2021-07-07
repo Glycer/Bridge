@@ -1,0 +1,22 @@
+OBJECTIVES
+Find lost item
+
+REWARDS
+Blueprint
+Item
+Resource
+
+SOCIAL
+CREATE GROUP (Club, Team, Cult*)
+DISBAND GROUP
+CREATE ORGANIZATION (School, Charity, Military*, Prison*)
+CREATE RIVALRY (Individual, Group)
+FAME (Pop Star, Guru)
+INFAMY (Legendary Thief, Vash the Stampede, Abuser*, Serial Killer*)
+OPEN SHOP (Inn, Bakery, Sweet Shop, Bar*)
+CRIME COMMITTED* (Theft, Assault, Defamation, Murder, Arson)
+
+*Mature content. Package all mature content into an age-restricted DLC.
+
+QUESTLINES
+Court Case

@@ -4,8 +4,12 @@ using UnityEngine;
 
 public static class PersonalityLogic
 {
-    public enum Attitude { Agreeable, Afraid, Awed, Confrontational, Confused, Detached, Snide, Sympathetic, Whimsical };
+    public enum Attitude { Agreeable, Awed, Confrontational, Confused, Detached, Fearful, Snide, Sympathetic, Whimsical };
     public enum Structure { Direct, Roundabout, Vague, Speculative };
+
+    public static readonly string[] relationships = new string[] {
+        "acquaintance", "boss", "child", "friend", "idol", "parental", "rival", "sibling", "student", "teacher"
+    };
 
     public static Attitude[] attitudes = new Attitude[] {
         Attitude.Agreeable, Attitude.Confrontational
