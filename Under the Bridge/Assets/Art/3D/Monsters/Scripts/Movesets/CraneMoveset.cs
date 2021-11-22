@@ -20,7 +20,7 @@ public class CraneMoveset : EnemyMotion
             StopCoroutine(turn);
 
         //move = StartCoroutine(ForwardMotion());
-        turn = StartCoroutine(LookRotation(playerDirection.transform.rotation));
+        turn = StartCoroutine(LookRotation(playerDirection.transform.rotation, 0.02f));
         attack = StartCoroutine(Attack());
     }
 
@@ -29,7 +29,7 @@ public class CraneMoveset : EnemyMotion
     {
         while (true)
         {
-            turn = StartCoroutine(LookRotation(Quaternion.Euler(0, Random.Range(0, 360), 0)));
+            turn = StartCoroutine(LookRotation(Quaternion.Euler(0, Random.Range(0, 360), 0), 0.1f));
             yield return new WaitForSeconds(Random.Range(1, 1.5f));
             StopCoroutine(turn);
             move = StartCoroutine(ForwardMotion());

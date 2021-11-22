@@ -10,8 +10,9 @@ public class PlayerSkills : MonoBehaviour
     public CharacterMotion charMotion;
     public UIManager UI;
     public GameObject HUD;
-    public bool defending;
+    //public bool defending;
     public bool dodging;
+    public bool sprinting;
 
     static Coroutine motionLock;
     static Coroutine rotationLock;
@@ -51,9 +52,9 @@ public class PlayerSkills : MonoBehaviour
         }
 
         if (Input.GetKeyDown(Inputs.sprint))
-            Sprint(true);
+            Run(true);
         if (Input.GetKeyUp(Inputs.sprint))
-            Sprint(false);
+            Run(false);
     }
 
     // Turns player when attacking and locked on
@@ -118,12 +119,15 @@ public class PlayerSkills : MonoBehaviour
             abilities[abilityIndex].UseAbility(keyDown);
     }
 
-    void Sprint(bool keyDown)
+    void Run(bool keyDown)
     {
-        if (keyDown)
-            motion.currSpeed = motion.runSpeed;
-        else
-            motion.currSpeed = motion.walkSpeed;
+        if (!sprinting)
+        {
+            if (keyDown)
+                motion.currSpeed = motion.runSpeed;
+            else
+                motion.currSpeed = motion.walkSpeed;
+        }
     }
 
     public void EnableChar()

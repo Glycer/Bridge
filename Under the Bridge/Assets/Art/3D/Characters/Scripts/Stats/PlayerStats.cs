@@ -11,6 +11,8 @@ public class PlayerStats : MonoBehaviour
     static float playerHealth;
     static int[] playerMaxMana;
     static float[] playerMana;
+    // Used by Wyatt
+    static public bool defending;
 
     // Start is called before the first frame update
     void Start()
@@ -27,14 +29,18 @@ public class PlayerStats : MonoBehaviour
     }
 
     // Use negative to heal
-    static public void TakeDamage(int damage)
+    static public void TakeDamage(int damage, bool blockable = false)
     {
-        playerHealth -= damage;
-        if (playerHealth > playerMaxHealth)
-            playerHealth = playerMaxHealth;
-        if (playerHealth < 0)
-            playerHealth = 0;
-        UI.AdjustStatus(0, playerHealth / playerMaxHealth);
+        // Ignore if blockable and defending
+        if (!(blockable && defending))
+        {
+            playerHealth -= damage;
+            if (playerHealth > playerMaxHealth)
+                playerHealth = playerMaxHealth;
+            if (playerHealth < 0)
+                playerHealth = 0;
+            UI.AdjustStatus(0, playerHealth / playerMaxHealth);
+        }
     }
     // 0 is blood, 1 is water, 2 is light, use negative amount to subtract
     static public void AddMana(int manaIndex, int amount)

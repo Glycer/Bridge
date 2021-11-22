@@ -41,7 +41,7 @@ public class EnemyMotion : MonoBehaviour
             StopCoroutine(turn);
 
         move = StartCoroutine(ForwardMotion());
-        turn = StartCoroutine(LookRotation(playerDirection.transform.rotation));
+        turn = StartCoroutine(LookRotation(Quaternion.Euler(0, playerDirection.playerInterest.transform.eulerAngles.y, 0), 0.02f));
 
         moveSpeed = stats.runSpeed;
         animControl.ToggleState("isRunning");
@@ -66,7 +66,7 @@ public class EnemyMotion : MonoBehaviour
     {
         while (true)
         {
-            turn = StartCoroutine(LookRotation(Quaternion.Euler(0, Random.Range(0, 360), 0)));
+            turn = StartCoroutine(LookRotation(Quaternion.Euler(0, Random.Range(0, 360), 0), 0.1f));
             yield return new WaitForSeconds(Random.Range(1, 1.5f));
             StopCoroutine(turn);
             move = StartCoroutine(ForwardMotion());
@@ -90,13 +90,13 @@ public class EnemyMotion : MonoBehaviour
     }
 
     // Turns enemy
-    protected IEnumerator LookRotation(Quaternion toGo)
+    protected IEnumerator LookRotation(Quaternion toGo, float speed)
     {
         while (true)
         {
-            TurnAround(0.1f, toGo);
+            TurnAround(speed, toGo);
 
-            toGo = playerDirection.transform.rotation;
+            toGo = Quaternion.Euler(0, playerDirection.playerInterest.transform.eulerAngles.y, 0);
             yield return new WaitForSeconds(0.1f);
         }
     }

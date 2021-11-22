@@ -51,11 +51,15 @@ MonoBehaviour:
   weapons:
   - {fileID: 3231513402358163361}
   motion: {fileID: 0}
+  charMotion: {fileID: 0}
   UI: {fileID: 0}
   HUD: {fileID: 0}
   defending: 0
   dodging: 0
+  sprinting: 0
+  camControl: {fileID: 0}
   waterPush: {fileID: 7775620938047625449}
+  sprintSpeed: 0
 --- !u!95 &7603622011511013290
 Animator:
   serializedVersion: 3
@@ -121,7 +125,6 @@ MonoBehaviour:
   abilityImage: {fileID: 21300000, guid: 2c637987509949f41a55aa0e53ab0a58, type: 3}
   manaCost: 000000000000000000000000
   weapon: {fileID: 0}
-  enchant: {fileID: 0}
   charAnim: {fileID: 7603622011511013290}
   fxAnim: {fileID: 8067781037156391301}
 --- !u!1 &1501163212770800264
@@ -5197,6 +5200,7 @@ MonoBehaviour:
   enemiesInProjectileRange: {fileID: 5789488764114887019}
   launchPosition: {fileID: 1230215018216166650}
   projectile: {fileID: 7836289738300773965}
+  lockOn: {fileID: 0}
   attackLocked: 0
 --- !u!114 &7836289738300773965
 MonoBehaviour:
@@ -5210,7 +5214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9dbdfcc588da144823c717eac9e176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 5972051014697057700, guid: 88110511b8e211f439c162c38d574ab8,
+  projectile: {fileID: -4103261511069769476, guid: 88110511b8e211f439c162c38d574ab8,
     type: 3}
 --- !u!1 &8767157333663110578
 GameObject:

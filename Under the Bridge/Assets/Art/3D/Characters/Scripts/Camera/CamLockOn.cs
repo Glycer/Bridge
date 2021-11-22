@@ -20,6 +20,8 @@ public class CamLockOn : MonoBehaviour
 
     int index = 0;
 
+    public ParentConstraint wyattHandgunConstraint;
+
     private void Start()
     {
     }
@@ -49,6 +51,7 @@ public class CamLockOn : MonoBehaviour
     public void ToggleLook(bool _isLocked)
     {
         lockOnCollider.RefreshList();
+        lockOffCollider.RefreshList();
         if (index >= lockOnCollider.targets.Count)
             index = 0;
 
@@ -60,6 +63,15 @@ public class CamLockOn : MonoBehaviour
                 camControl.StartLockOnRotation();
             else
                 camControl.StopLockOnRotation();
+
+            // Probably temp code to change Wyatt weapon orientation to face enemy
+            ConstraintSource source;
+            source = wyattHandgunConstraint.GetSource(0);
+            source.weight = _isLocked ? 0 : 1;
+            wyattHandgunConstraint.SetSource(0, source);
+            source = wyattHandgunConstraint.GetSource(1);
+            source.weight = _isLocked ? 1 : 0;
+            wyattHandgunConstraint.SetSource(1, source);
         }
         camControl.locked = _isLocked;
 

@@ -21,7 +21,7 @@ public class EnemyLockOn : MonoBehaviour
         {
             if (playerScan.target != null && foundPlayer == false)
             {
-                transform.LookAt(playerScan.target.transform.position);
+                playerInterest.transform.LookAt(playerScan.target.transform.position);
                 foundPlayer = true;
                 if (!motion.isPursuing)
                 {
@@ -30,7 +30,7 @@ public class EnemyLockOn : MonoBehaviour
             }
             else if (foundPlayer == true && playerInterest.target != null)
             {
-                transform.LookAt(playerInterest.target.transform.position);
+                playerInterest.transform.LookAt(playerInterest.target.transform.position);
             }
             else if (foundPlayer == true && playerInterest.target == null)
             {
