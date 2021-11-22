@@ -14,6 +14,10 @@ public class WyattSkills : PlayerSkills
 
     public CamControl aim;
 
+    bool aiming;
+    // TEMP DEFENSE DISPLAY, TODO: remove
+    public GameObject cover;
+
     // TODO: Temp code used until runtime ability setting is implemented
     public Ability blinkShot;
     public Ability damageEnchant;
@@ -24,18 +28,20 @@ public class WyattSkills : PlayerSkills
         abilities = new Ability[4];
         abilities[0] = blinkShot;
         abilities[1] = damageEnchant;
+        aiming = false;
     }
 
     protected override void Whack(bool keyDown)
     {
-        if (weapons[currActiveWeaponIndex].gameObject.activeSelf && keyDown)
+        // Cannot attack while blocking
+        if (weapons[currActiveWeaponIndex].gameObject.activeSelf && keyDown && !PlayerStats.defending)
         {
-            TargetCollider targeter = weapons[currActiveWeaponIndex].GetComponent<TargetCollider>();
+            TargetCollider targeter = weapons[currActiveWeaponIndex].GetComponentInChildren<TargetCollider>();
 
             targeter.RefreshList();
             for (int i = 0; i < targeter.targets.Count; i++)
             {
-                //Deals damage. 'If' statement checks death
+                // Deals damage. 'if' statement checks death
                 if (targeter.targets[i].gameObject.GetComponent<MonsterStats>() != null)
                     PlayerStats.AddMana(2, 10);
                 if (targeter.targets[i].gameObject.GetComponent<MonsterStats>().TakeDamage(stats.GetDamage()))
@@ -54,29 +60,44 @@ public class WyattSkills : PlayerSkills
     }
     protected override void Secondary(bool keyDown)
     {
-        if (Input.GetKeyDown(Inputs.secondary))
-            aim.Aim(true);
-        if (Input.GetKeyUp(Inputs.secondary))
+        // Cannot aim while blocking
+        if (Input.GetKeyDown(Inputs.secondary) && !PlayerStats.defending)
+        {
+            aim.Aim(true, weapons[currActiveWeaponIndex].GetComponentInChildren<TargetCollider>().GetComponent<CapsuleCollider>());
+            aiming = true;
+        }
+        if (Input.GetKeyUp(Inputs.secondary) && aiming)
+        {
             aim.Aim(false);
+            aiming = false;
+        }
     }
     protected override void Defense(bool keyDown)
     {
-        defending = keyDown;
+        // Cannot cover while aiming
         // TODO: currently is a placeholder for cover animation
-        if (keyDown)
-            transform.localScale /= 2;
+        if (keyDown && !Input.GetKey(Inputs.secondary))
+        {
+            PlayerStats.defending = true;
+            cover.SetActive(true);
+        }
         else
-            transform.localScale *= 2;
+        {
+            PlayerStats.defending = false;
+            cover.SetActive(false);
+        }
     }
 
     private void OnDisable()
     {
         if (aim.isAiming)
             aim.Aim(false);
+        // Decover if covering
         if (Input.GetKey(Inputs.defense))
-            transform.localScale *= 2;
-        defending = false;
+            cover.SetActive(false);
+        PlayerStats.defending = false;
         if (HUD != null)
             HUD.SetActive(false);
+        ReleaseMotionLock();
     }
 }

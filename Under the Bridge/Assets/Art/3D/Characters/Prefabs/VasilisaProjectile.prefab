@@ -158,8 +158,10 @@ MonoBehaviour:
   scale: 1
   speed: 500
   ttl: 20
+  autoDetonate: 0
   rotationSpeed: 50
   targetDirection: {fileID: 6940913626983418984}
   aoe: {fileID: 0}
+  visibleExplosion: {fileID: 0}
   manaIndex: 1
   manaFill: 20

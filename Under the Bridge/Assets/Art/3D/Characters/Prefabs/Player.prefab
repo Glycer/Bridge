@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4495749858981604785}
   - component: {fileID: 6932860373157870541}
   - component: {fileID: 323597444506276083}
-  m_Layer: 10
+  m_Layer: 17
   m_Name: LockOff Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,6 +904,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 394958670955285980, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_Sources.Array.data[0].sourceTransform
+      value: 
+      objectReference: {fileID: 8564776771164957525}
+    - target: {fileID: 394958670955285980, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_IsLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 394958670955285980, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_IsContraintActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 424777902195403884, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
         type: 3}
       propertyPath: remoteCooldownObject
@@ -918,6 +933,96 @@ PrefabInstance:
         type: 3}
       propertyPath: remoteCooldownObject
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059024946486282430, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059024946486282430, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059024946486282430, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059024946486282430, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059024946486282430, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059024946486282430, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_Sources.Array.data[1].sourceTransform
+      value: 
+      objectReference: {fileID: 4205317726044221475}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].z
+      value: -0.13000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_IsContraintActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_TranslationAtRest.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_TranslationAtRest.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[1].y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[1].z
+      value: -0.13000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_RotationOffsets.Array.data[0].x
+      value: -89.96574
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_RotationOffsets.Array.data[1].x
+      value: -89.96574
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535747723321058743, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_IsLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672790777401971341, guid: f3b8a6c4d7b67584f95ff29ffaaf5365,
+        type: 3}
+      propertyPath: m_IsLocked
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3b8a6c4d7b67584f95ff29ffaaf5365, type: 3}

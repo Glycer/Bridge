@@ -19,7 +19,7 @@ public class MischiefMoveset : EnemyMotion
             StopCoroutine(turn);
 
         move = StartCoroutine(ForwardMotion());
-        turn = StartCoroutine(LookRotation(playerDirection.transform.rotation));
+        turn = StartCoroutine(LookRotation(playerDirection.transform.rotation, 0.02f));
         attack = StartCoroutine(Attack());
 
         moveSpeed = stats.runSpeed;
@@ -53,7 +53,7 @@ public class MischiefMoveset : EnemyMotion
 
     IEnumerator Leap(float distance)
     {
-        Vector3 forward = (transform.forward * distance / 24) + new Vector3(0, 0.1f, 0);
+        Vector3 forward = (transform.TransformVector(0, 0, 1) * distance / 24) + new Vector3(0, 0.1f, 0);
         for (int i = 0; i < 20; i++)
         {
             transform.position += forward;
@@ -68,7 +68,7 @@ public class MischiefMoveset : EnemyMotion
             StopCoroutine(turn);
 
         yield return new WaitForSeconds(1);
-        Vector3 forward = (transform.forward * distance / 10) + new Vector3(0, 0.1f, 0);
+        Vector3 forward = (transform.TransformVector(0, 0, 1) * distance / 10) + new Vector3(0, 0.1f, 0);
         for (int i = 0; i < 10; i++)
         {
             transform.position += forward;
@@ -77,7 +77,7 @@ public class MischiefMoveset : EnemyMotion
         aoe.Attack();
         yield return new WaitForSeconds(1.5f);
         move = StartCoroutine(ForwardMotion());
-        turn = StartCoroutine(LookRotation(playerDirection.transform.rotation));
+        turn = StartCoroutine(LookRotation(playerDirection.transform.rotation, 0.02f));
     }
 
     public override void Halt()

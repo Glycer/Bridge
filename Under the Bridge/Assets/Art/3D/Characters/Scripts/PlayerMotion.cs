@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using UnityEngine;
 
 public class PlayerMotion : MonoBehaviour {
@@ -31,6 +32,10 @@ public class PlayerMotion : MonoBehaviour {
 
     public CamControl camControl;
 
+    // Used by Update for keyboard motion
+    float horizontalDirection;
+    float verticalDirection;
+
     // Use this for initialization
     void Start()
     {
@@ -52,9 +57,15 @@ public class PlayerMotion : MonoBehaviour {
                 if (Input.GetAxis(horizontal) != 0 || Input.GetAxis(vertical) != 0)
                     SetDirection();
 
-                transform.Translate(Input.GetAxis(horizontal) * currSpeed * Time.deltaTime,
+                // Prevents axes from being added together
+                horizontalDirection = Input.GetAxis(horizontal);
+                verticalDirection = Input.GetAxis(vertical);
+                horizontalDirection /= Math.Abs(Input.GetAxis(vertical)) + 1;
+                verticalDirection /= Math.Abs(Input.GetAxis(horizontal)) + 1;
+
+                transform.Translate(horizontalDirection * currSpeed * Time.deltaTime,
                     0,
-                    Input.GetAxis(vertical) * currSpeed * Time.deltaTime);
+                    verticalDirection * currSpeed * Time.deltaTime);
             }
 
             if (!verticalMotionLocked)

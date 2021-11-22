@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     public float scale;
     public float speed;
     public int ttl;
+    // If false, projectile dissapears on expire. If true, projectile detonates on expire.
+    public bool autoDetonate;
     // For tracking, 100 rotationSpeed is instantaneous
     public float rotationSpeed;
     public Transform targetDirection;
@@ -20,7 +22,15 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<PlayerMotion>() && aoe == null)
+        if (collision.gameObject.layer != this.gameObject.layer)
+            Detonate(collision);
+    }
+    protected virtual void Detonate(Collision collision = null)
+    {
+        // autoDetonate has served its purpose
+        autoDetonate = false;
+
+        if (collision != null && collision.gameObject.GetComponent<PlayerMotion>() && aoe == null)
             PlayerStats.TakeDamage(strength);
         if (aoe != null)
         {
@@ -40,10 +50,14 @@ public class Projectile : MonoBehaviour
 
     public void Deactivate()
     {
-        if (this != null)
+        // autoDetonate will trigger if it exists and Detonate has not triggered
+        if (autoDetonate)
+            Detonate();
+        else if (this != null)
             Destroy(gameObject);
     }
 
+    // Used for tracking projectiles
     public void StartTracking(GameObject target)
     {
         StartCoroutine(Track(target));
@@ -60,6 +74,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    // Makes projectile explode
     IEnumerator Explosion()
     {
         visibleExplosion.SetActive(true);

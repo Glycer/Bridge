@@ -281,6 +281,7 @@ MonoBehaviour:
   scale: 1
   speed: 50
   ttl: 20
+  autoDetonate: 0
   rotationSpeed: 1
   targetDirection: {fileID: 6502620450732504236}
   aoe: {fileID: 1238536068066803061}

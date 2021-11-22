@@ -20,7 +20,7 @@ public class MonsterStats : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public bool TakeDamage(int damage)
+    public virtual bool TakeDamage(int damage)
     {
         hitPoints -= damage;
 

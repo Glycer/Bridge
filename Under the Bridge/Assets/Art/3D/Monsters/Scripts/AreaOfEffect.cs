@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Used with tethered monster areas
 public class AreaOfEffect : MonoBehaviour
 {
     PlayerMotion player;

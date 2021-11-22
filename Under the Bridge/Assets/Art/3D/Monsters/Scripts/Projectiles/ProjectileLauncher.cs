@@ -3,16 +3,17 @@ using UnityEngine;
 
 public class ProjectileLauncher : MonoBehaviour
 {
-    public GameObject projectile;
+    public Projectile projectile;
 
     private void Start()
     {
         //StartCoroutine(BLARGH());
     }
 
+    // TODO: Fix tracking parameter, it should be a projectile variable
     public void Launch(Vector3 position, Vector3 direction, bool tracking = false, GameObject targetDirection = null)
     {
-        GameObject shot = Instantiate(projectile);
+        GameObject shot = Instantiate(projectile.gameObject);
 
         Projectile _projectile = shot.GetComponent<Projectile>();
 
@@ -21,7 +22,7 @@ public class ProjectileLauncher : MonoBehaviour
         _projectile.Activate();
 
         if (!tracking)
-            _projectile.GetComponent<Rigidbody>().AddForce(_projectile.transform.forward * 100);
+            _projectile.GetComponent<Rigidbody>().AddForce(_projectile.transform.forward * 100 * projectile.speed);
         else
             _projectile.StartTracking(targetDirection);
     }

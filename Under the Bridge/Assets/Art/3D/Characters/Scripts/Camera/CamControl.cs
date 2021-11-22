@@ -18,6 +18,9 @@ public class CamControl : MonoBehaviour
 
     public PlayerMotion playerMotion;
     public CharacterMotion characterMotion;
+    // Collider follows camera and must be adjusted during aim,
+    // will probably want to be replaced with a better solution in the future
+    CapsuleCollider currWyattCollider;
 
     public CamLockOn lockOn;
     Coroutine lockOnRotation;
@@ -45,6 +48,8 @@ public class CamControl : MonoBehaviour
 
         focusPlayerPos = focusTarget.position;
         focusAimPos = new Vector3(0.3f, 0.5f, 1);
+
+        currWyattCollider = null;
     }
 
     // Update is called once per frame
@@ -98,8 +103,10 @@ public class CamControl : MonoBehaviour
             return 1;
     }
 
-    public void Aim(bool _isAiming)
+    public void Aim(bool _isAiming, CapsuleCollider collider = null)
     {
+        if (collider != null)
+            currWyattCollider = collider;
         if (locked)
             lockOn.ToggleLook(false);
 
@@ -115,9 +122,13 @@ public class CamControl : MonoBehaviour
         {
             playerMotion.SetDirection();
             camZoom.ZoomTo(aimingPos, focusAimPos);
+            currWyattCollider.center = new Vector3(currWyattCollider.center.x, -1.5f, currWyattCollider.center.z);
         }
         else
+        {
             camZoom.ZoomTo(interPos, focusPlayerPos);
+            currWyattCollider.center = new Vector3(currWyattCollider.center.x, -2.5f, currWyattCollider.center.z);
+        }
     }
 
     public void StartLockOnRotation()

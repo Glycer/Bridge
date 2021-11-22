@@ -8,6 +8,7 @@ public class VasilisaStaff : Weapon
     public TargetCollider enemiesInProjectileRange;
     public Transform launchPosition;
     public ProjectileLauncher projectile;
+    public CamLockOn lockOn;
 
     public bool attackLocked;
 
@@ -20,10 +21,14 @@ public class VasilisaStaff : Weapon
     {
         if (!attackLocked)
         {
-            // Add a branch for lock on
             enemiesInProjectileRange.RefreshList();
-            if (enemiesInProjectileRange.targets.Count != 0)
+            // Fires at locked on target if locked on
+            if (lockOn.camControl.locked)
+                projectile.Launch(launchPosition.position, launchPosition.rotation.eulerAngles, true, lockOn.targetLocation.gameObject);
+            // Fires at random nearby enemy otherwise
+            else if (enemiesInProjectileRange.targets.Count != 0)
             {
+                enemiesInProjectileRange.RefreshList();
                 GameObject enemy = enemiesInProjectileRange.targets[Random.Range(0, enemiesInProjectileRange.targets.Count)].gameObject;
                 projectile.Launch(launchPosition.position, launchPosition.rotation.eulerAngles, true, enemy);
             }
@@ -43,8 +48,11 @@ public class VasilisaStaff : Weapon
     {
         foreach (Collider enemy in enemiesInPushRange.targets)
         {
-            enemiesInPushRange.transform.LookAt(enemy.transform);
-            enemy.gameObject.GetComponent<Rigidbody>().AddForce(enemiesInPushRange.transform.forward * 500);
+            if (enemy.gameObject.GetComponent<Rigidbody>() != null)
+            {
+                enemiesInPushRange.transform.LookAt(enemy.transform);
+                enemy.gameObject.GetComponent<Rigidbody>().AddForce(enemiesInPushRange.transform.forward * 500);
+            }
         }
     }
 }
