@@ -4,10 +4,12 @@ TUTORIAL DUNGEON
 Dark Woods + Underground
 
 	ENEMIES
-Bunny-like creature (Mischief)
+Bunny-like creature	Mischief
 Origami crane
 Clockwork scorpion
-maybe 1-2 other things
+Windy leaf lionfish
+Mini fighter jet (fire)
+Dark dinosaur (raptor?)
 
 	LEVELS
 Completion time should be around 5-10 minutes
