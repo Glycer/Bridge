@@ -7,5 +7,23 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HanzoOverride
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: a6cf6918308d4c44a9c932b5112c787d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 1d2354e0c1520244388e96509015e906, type: 3}
+    m_OverrideClip: {fileID: -3100369314251171874, guid: 0acea8ee9d7cfb3489dc247d77228b48,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400010, guid: 1d2354e0c1520244388e96509015e906, type: 3}
+    m_OverrideClip: {fileID: -4673345105164794925, guid: 0acea8ee9d7cfb3489dc247d77228b48,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400012, guid: 1d2354e0c1520244388e96509015e906, type: 3}
+    m_OverrideClip: {fileID: -4712104046758411098, guid: 0acea8ee9d7cfb3489dc247d77228b48,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400002, guid: 1d2354e0c1520244388e96509015e906, type: 3}
+    m_OverrideClip: {fileID: -8916091829647824925, guid: 0acea8ee9d7cfb3489dc247d77228b48,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400004, guid: 1d2354e0c1520244388e96509015e906, type: 3}
+    m_OverrideClip: {fileID: 5522812681064789136, guid: 0acea8ee9d7cfb3489dc247d77228b48,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400008, guid: 1d2354e0c1520244388e96509015e906, type: 3}
+    m_OverrideClip: {fileID: 2667949614841947897, guid: 0acea8ee9d7cfb3489dc247d77228b48,
+      type: 3}
