@@ -9,15 +9,21 @@ AnimatorOverrideController:
   m_Name: VasilisaOverride
   m_Controller: {fileID: 9100000, guid: 6b1384b5d0cf0da4e90fce9b3f61b7d9, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400002, guid: 1d2354e0c1520244388e96509015e906, type: 3}
-    m_OverrideClip: {fileID: 7400000, guid: 6a7cc32fcf7a2a74eab3e66d4814458e, type: 2}
   - m_OriginalClip: {fileID: 7400008, guid: 1d2354e0c1520244388e96509015e906, type: 3}
-    m_OverrideClip: {fileID: 7400006, guid: df81c386adac4004f9a8a97ea916720c, type: 3}
-  - m_OriginalClip: {fileID: 7400004, guid: 1d2354e0c1520244388e96509015e906, type: 3}
-    m_OverrideClip: {fileID: 7400000, guid: 6a7cc32fcf7a2a74eab3e66d4814458e, type: 2}
+    m_OverrideClip: {fileID: 2667949614841947897, guid: eab145df879beae4fb452abcaf2ba43c,
+      type: 3}
   - m_OriginalClip: {fileID: 7400012, guid: 1d2354e0c1520244388e96509015e906, type: 3}
-    m_OverrideClip: {fileID: 7400000, guid: 6a7cc32fcf7a2a74eab3e66d4814458e, type: 2}
+    m_OverrideClip: {fileID: -4712104046758411098, guid: eab145df879beae4fb452abcaf2ba43c,
+      type: 3}
   - m_OriginalClip: {fileID: 7400000, guid: 1d2354e0c1520244388e96509015e906, type: 3}
-    m_OverrideClip: {fileID: 7400000, guid: 6a7cc32fcf7a2a74eab3e66d4814458e, type: 2}
+    m_OverrideClip: {fileID: -3100369314251171874, guid: eab145df879beae4fb452abcaf2ba43c,
+      type: 3}
   - m_OriginalClip: {fileID: 7400010, guid: 1d2354e0c1520244388e96509015e906, type: 3}
-    m_OverrideClip: {fileID: 7400000, guid: 6a7cc32fcf7a2a74eab3e66d4814458e, type: 2}
+    m_OverrideClip: {fileID: -4673345105164794925, guid: eab145df879beae4fb452abcaf2ba43c,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400002, guid: 1d2354e0c1520244388e96509015e906, type: 3}
+    m_OverrideClip: {fileID: -8916091829647824925, guid: eab145df879beae4fb452abcaf2ba43c,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400004, guid: 1d2354e0c1520244388e96509015e906, type: 3}
+    m_OverrideClip: {fileID: 5522812681064789136, guid: eab145df879beae4fb452abcaf2ba43c,
+      type: 3}

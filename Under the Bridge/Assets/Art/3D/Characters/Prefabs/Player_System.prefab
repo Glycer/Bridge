@@ -84,7 +84,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8933869559182080917}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 370491977d984de4fa93fefd80b23cf5, type: 3}
   m_Controller: {fileID: 9100000, guid: 922f961a541f3c848b94c19c965a98e9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -544,6 +544,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsContraintActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549961504932530484, guid: 1ba2a276b16d69e419fcbf46f17df797,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4654463789332575052, guid: 1ba2a276b16d69e419fcbf46f17df797,
         type: 3}

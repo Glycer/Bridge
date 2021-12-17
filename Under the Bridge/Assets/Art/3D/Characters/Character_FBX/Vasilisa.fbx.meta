@@ -1,289 +1,38 @@
 fileFormatVersion: 2
-guid: df81c386adac4004f9a8a97ea916720c
+guid: eab145df879beae4fb452abcaf2ba43c
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Cloth
-    100002: //RootNode
-    100004: Vasilisa
-    100006: ArmPV.L
-    100008: ArmPV.L_end
-    100010: ArmPV.R
-    100012: ArmPV.R_end
-    100014: COGBone
-    100016: FingerMiddleBone01.L
-    100018: FingerMiddleBone01.R
-    100020: FingerMiddleBone02.L
-    100022: FingerMiddleBone02.R
-    100024: FingerMiddleBone03.L
-    100026: FingerMiddleBone03.L_end
-    100028: FingerMiddleBone03.R
-    100030: FingerMiddleBone03.R_end
-    100032: FingerMiddleCtrl.L
-    100034: FingerMiddleCtrl.L_end
-    100036: FingerMiddleCtrl.R
-    100038: FingerMiddleCtrl.R_end
-    100040: FingerMiddlePV.L
-    100042: FingerMiddlePV.L_end
-    100044: FingerMiddlePV.R
-    100046: FingerMiddlePV.R_end
-    100048: FingerPinkyBone01.L
-    100050: FingerPinkyBone01.R
-    100052: FingerPinkyBone02.L
-    100054: FingerPinkyBone02.R
-    100056: FingerPinkyBone03.L
-    100058: FingerPinkyBone03.L_end
-    100060: FingerPinkyBone03.R
-    100062: FingerPinkyBone03.R_end
-    100064: FingerPinkyCtrl.L
-    100066: FingerPinkyCtrl.L_end
-    100068: FingerPinkyCtrl.R
-    100070: FingerPinkyCtrl.R_end
-    100072: FingerPinkyPV.L
-    100074: FingerPinkyPV.L_end
-    100076: FingerPinkyPV.R
-    100078: FingerPinkyPV.R_end
-    100080: FingerPointerBone01.L
-    100082: FingerPointerBone01.R
-    100084: FingerPointerBone02.L
-    100086: FingerPointerBone02.R
-    100088: FingerPointerBone03.L
-    100090: FingerPointerBone03.L_end
-    100092: FingerPointerBone03.R
-    100094: FingerPointerBone03.R_end
-    100096: FingerPointerCtrl.L
-    100098: FingerPointerCtrl.L_end
-    100100: FingerPointerCtrl.R
-    100102: FingerPointerCtrl.R_end
-    100104: FingerPointerPV.L
-    100106: FingerPointerPV.L_end
-    100108: FingerPointerPV.R
-    100110: FingerPointerPV.R_end
-    100112: FingerThumbBone01.L
-    100114: FingerThumbBone01.R
-    100116: FingerThumbBone02.L
-    100118: FingerThumbBone02.R
-    100120: FingerThumbBone03.L
-    100122: FingerThumbBone03.L_end
-    100124: FingerThumbBone03.R
-    100126: FingerThumbBone03.R_end
-    100128: FingerThumbCtrl.L
-    100130: FingerThumbCtrl.L_end
-    100132: FingerThumbCtrl.R
-    100134: FingerThumbCtrl.R_end
-    100136: FingerThumbPV.L
-    100138: FingerThumbPV.L_end
-    100140: FingerThumbPV.R
-    100142: FingerThumbPV.R_end
-    100144: FootBone01.L
-    100146: FootBone01.L_end
-    100148: FootBone01.R
-    100150: FootBone01.R_end
-    100152: FootBone02.L
-    100154: FootBone02.L_end
-    100156: FootBone02.R
-    100158: FootBone02.R_end
-    100160: FootCtrl01.L
-    100162: FootCtrl01.R
-    100164: FootCtrl02.L
-    100166: FootCtrl02.R
-    100168: FootCtrl03.L
-    100170: FootCtrl03.R
-    100172: ForearmBone.L
-    100174: ForearmBone.L_end
-    100176: ForearmBone.R
-    100178: ForearmBone.R_end
-    100180: HandBone.L
-    100182: HandBone.R
-    100184: HandCtrl.L
-    100186: HandCtrl.R
-    100188: HeadBone
-    100190: HeadBone_end
-    100192: HipBone
-    100194: LegPV.L
-    100196: LegPV.L_end
-    100198: LegPV.R
-    100200: LegPV.R_end
-    100202: NeckBone
-    100204: Rig
-    100206: ScarfBone01
-    100208: ScarfBone02
-    100210: ScarfBone02_end
-    100212: ShawlBone01.L
-    100214: ShawlBone01.R
-    100216: ShawlBone02.L
-    100218: ShawlBone02.L_end
-    100220: ShawlBone02.R
-    100222: ShawlBone02.R_end
-    100224: ShinBone.L
-    100226: ShinBone.L_end
-    100228: ShinBone.R
-    100230: ShinBone.R_end
-    100232: ShoulderBone.L
-    100234: ShoulderBone.R
-    100236: SkirtBone.B
-    100238: SkirtBone.B_end
-    100240: SkirtBone.F
-    100242: SkirtBone.F_end
-    100244: SkirtBone.L
-    100246: SkirtBone.L_end
-    100248: SkirtBone.R
-    100250: SkirtBone.R_end
-    100252: SpineBone01
-    100254: SpineBone02
-    100256: ThighBone.L
-    100258: ThighBone.R
-    100260: TransformBone
-    400000: Cloth
-    400002: //RootNode
-    400004: Vasilisa
-    400006: ArmPV.L
-    400008: ArmPV.L_end
-    400010: ArmPV.R
-    400012: ArmPV.R_end
-    400014: COGBone
-    400016: FingerMiddleBone01.L
-    400018: FingerMiddleBone01.R
-    400020: FingerMiddleBone02.L
-    400022: FingerMiddleBone02.R
-    400024: FingerMiddleBone03.L
-    400026: FingerMiddleBone03.L_end
-    400028: FingerMiddleBone03.R
-    400030: FingerMiddleBone03.R_end
-    400032: FingerMiddleCtrl.L
-    400034: FingerMiddleCtrl.L_end
-    400036: FingerMiddleCtrl.R
-    400038: FingerMiddleCtrl.R_end
-    400040: FingerMiddlePV.L
-    400042: FingerMiddlePV.L_end
-    400044: FingerMiddlePV.R
-    400046: FingerMiddlePV.R_end
-    400048: FingerPinkyBone01.L
-    400050: FingerPinkyBone01.R
-    400052: FingerPinkyBone02.L
-    400054: FingerPinkyBone02.R
-    400056: FingerPinkyBone03.L
-    400058: FingerPinkyBone03.L_end
-    400060: FingerPinkyBone03.R
-    400062: FingerPinkyBone03.R_end
-    400064: FingerPinkyCtrl.L
-    400066: FingerPinkyCtrl.L_end
-    400068: FingerPinkyCtrl.R
-    400070: FingerPinkyCtrl.R_end
-    400072: FingerPinkyPV.L
-    400074: FingerPinkyPV.L_end
-    400076: FingerPinkyPV.R
-    400078: FingerPinkyPV.R_end
-    400080: FingerPointerBone01.L
-    400082: FingerPointerBone01.R
-    400084: FingerPointerBone02.L
-    400086: FingerPointerBone02.R
-    400088: FingerPointerBone03.L
-    400090: FingerPointerBone03.L_end
-    400092: FingerPointerBone03.R
-    400094: FingerPointerBone03.R_end
-    400096: FingerPointerCtrl.L
-    400098: FingerPointerCtrl.L_end
-    400100: FingerPointerCtrl.R
-    400102: FingerPointerCtrl.R_end
-    400104: FingerPointerPV.L
-    400106: FingerPointerPV.L_end
-    400108: FingerPointerPV.R
-    400110: FingerPointerPV.R_end
-    400112: FingerThumbBone01.L
-    400114: FingerThumbBone01.R
-    400116: FingerThumbBone02.L
-    400118: FingerThumbBone02.R
-    400120: FingerThumbBone03.L
-    400122: FingerThumbBone03.L_end
-    400124: FingerThumbBone03.R
-    400126: FingerThumbBone03.R_end
-    400128: FingerThumbCtrl.L
-    400130: FingerThumbCtrl.L_end
-    400132: FingerThumbCtrl.R
-    400134: FingerThumbCtrl.R_end
-    400136: FingerThumbPV.L
-    400138: FingerThumbPV.L_end
-    400140: FingerThumbPV.R
-    400142: FingerThumbPV.R_end
-    400144: FootBone01.L
-    400146: FootBone01.L_end
-    400148: FootBone01.R
-    400150: FootBone01.R_end
-    400152: FootBone02.L
-    400154: FootBone02.L_end
-    400156: FootBone02.R
-    400158: FootBone02.R_end
-    400160: FootCtrl01.L
-    400162: FootCtrl01.R
-    400164: FootCtrl02.L
-    400166: FootCtrl02.R
-    400168: FootCtrl03.L
-    400170: FootCtrl03.R
-    400172: ForearmBone.L
-    400174: ForearmBone.L_end
-    400176: ForearmBone.R
-    400178: ForearmBone.R_end
-    400180: HandBone.L
-    400182: HandBone.R
-    400184: HandCtrl.L
-    400186: HandCtrl.R
-    400188: HeadBone
-    400190: HeadBone_end
-    400192: HipBone
-    400194: LegPV.L
-    400196: LegPV.L_end
-    400198: LegPV.R
-    400200: LegPV.R_end
-    400202: NeckBone
-    400204: Rig
-    400206: ScarfBone01
-    400208: ScarfBone02
-    400210: ScarfBone02_end
-    400212: ShawlBone01.L
-    400214: ShawlBone01.R
-    400216: ShawlBone02.L
-    400218: ShawlBone02.L_end
-    400220: ShawlBone02.R
-    400222: ShawlBone02.R_end
-    400224: ShinBone.L
-    400226: ShinBone.L_end
-    400228: ShinBone.R
-    400230: ShinBone.R_end
-    400232: ShoulderBone.L
-    400234: ShoulderBone.R
-    400236: SkirtBone.B
-    400238: SkirtBone.B_end
-    400240: SkirtBone.F
-    400242: SkirtBone.F_end
-    400244: SkirtBone.L
-    400246: SkirtBone.L_end
-    400248: SkirtBone.R
-    400250: SkirtBone.R_end
-    400252: SpineBone01
-    400254: SpineBone02
-    400256: ThighBone.L
-    400258: ThighBone.R
-    400260: TransformBone
-    2100000: Head
-    2100002: Body
-    2300000: Cloth
-    2300002: Vasilisa
-    3300000: Cloth
-    3300002: Vasilisa
-    4300000: Cloth
-    4300002: Vasilisa
-    7400000: T-Pose
-    7400002: T-Pose
-    7400004: Rig|Idle_L_Lib
-    7400006: Walk
-    7400008: Rig|Jump_L_Lib
-    7400010: Walk
-    9500000: //RootNode
-    13700000: Vasilisa
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -7264356326966739861
+    second: Rig|Walk
+  - first:
+      74: 9109354097771279830
+    second: Rig|T-Pose
+  - first:
+      74: -8312538846858333772
+    second: T-Pose
+  - first:
+      74: -3100369314251171874
+    second: Idle
+  - first:
+      74: 2667949614841947897
+    second: Walk
+  - first:
+      74: -8916091829647824925
+    second: JumpLift
+  - first:
+      74: -4673345105164794925
+    second: JumpHang
+  - first:
+      74: -4712104046758411098
+    second: JumpLand
+  - first:
+      74: 5522812681064789136
+    second: Run
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -301,7 +50,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -311,7 +60,8 @@ ModelImporter:
     clipAnimations:
     - serializedVersion: 16
       name: T-Pose
-      takeName: Rig|RigAction
+      takeName: T-Pose
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -338,9 +88,155 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: Walk
-      takeName: Rig|RigAction
-      firstFrame: 1
+      takeName: Walk
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpLift
+      takeName: Jump
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 8
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpHang
+      takeName: Jump
+      internalID: 0
+      firstFrame: 8
+      lastFrame: 128
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpLand
+      takeName: Jump
+      internalID: 0
+      firstFrame: 128
+      lastFrame: 136
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Run
+      internalID: 0
+      firstFrame: 0
       lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
@@ -365,32 +261,35 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 1
-    importBlendShapes: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 0
     importCameras: 0
     importLights: 0
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -399,10 +298,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -412,13 +311,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
