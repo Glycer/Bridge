@@ -1,80 +1,14 @@
 fileFormatVersion: 2
-guid: 03afe366a761f714bbcde635181a17bd
+guid: 2376cd3436387764091b4565d415b2b0
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      1: 100000
-    second: Armature
+      74: 1504323170648330228
+    second: Armature|CombatIdle
   - first:
-      1: 100002
-    second: //RootNode
-  - first:
-      1: 100004
-    second: Crane
-  - first:
-      1: 100006
-    second: TransformBone
-  - first:
-      1: 100008
-    second: TransformBone_end
-  - first:
-      1: 100010
-    second: Wing.L
-  - first:
-      1: 100012
-    second: Wing.L_end
-  - first:
-      1: 100014
-    second: Wing.R
-  - first:
-      1: 100016
-    second: Wing.R_end
-  - first:
-      4: 400000
-    second: Armature
-  - first:
-      4: 400002
-    second: //RootNode
-  - first:
-      4: 400004
-    second: Crane
-  - first:
-      4: 400006
-    second: TransformBone
-  - first:
-      4: 400008
-    second: TransformBone_end
-  - first:
-      4: 400010
-    second: Wing.L
-  - first:
-      4: 400012
-    second: Wing.L_end
-  - first:
-      4: 400014
-    second: Wing.R
-  - first:
-      4: 400016
-    second: Wing.R_end
-  - first:
-      21: 2100000
-    second: No Name
-  - first:
-      43: 4300000
-    second: Crane
-  - first:
-      74: 7400000
-    second: Fly
-  - first:
-      74: 7400002
-    second: Idle
-  - first:
-      95: 9500000
-    second: //RootNode
-  - first:
-      137: 13700000
-    second: Crane
+      74: 786504323170427181
+    second: Armature|T-Pose
   externalObjects: {}
   materials:
     materialImportMode: 0
@@ -104,11 +38,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Fly
-      takeName: Armature|Fly
+      name: Armature|CombatIdle
+      takeName: Armature|CombatIdle
       internalID: 0
       firstFrame: 0
-      lastFrame: 20
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -133,19 +67,19 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
-      takeName: Armature|Idle
+      name: Armature|T-Pose
+      takeName: Armature|T-Pose
       internalID: 0
       firstFrame: 0
-      lastFrame: 100
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -161,10 +95,10 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.25
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -173,7 +107,7 @@ ModelImporter:
     importBlendShapes: 0
     importCameras: 0
     importLights: 0
-    fileIdsGeneration: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -211,7 +145,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.25
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
