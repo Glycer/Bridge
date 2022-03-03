@@ -8,6 +8,7 @@ public class SubMonsterStats : MonsterStats
     public MonsterStats parentStats;
 
     // TODO: add defense modifier
+    // TODO: keep weak points from allowing multiple hits at once
     public override bool TakeDamage(int damage)
     {
         return parentStats.TakeDamage(damage);

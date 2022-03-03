@@ -8,9 +8,9 @@ public class EnemyMotion : MonoBehaviour
     public EnemyLockOn playerDirection;
 
     protected float moveSpeed;
-    int turnSpeed;
+    float turnSpeed;
 
-    Coroutine look;
+    protected Coroutine facePlayer;
     protected Coroutine move;
     protected Coroutine turn;
     protected Coroutine patrol;
@@ -41,7 +41,7 @@ public class EnemyMotion : MonoBehaviour
             StopCoroutine(turn);
 
         move = StartCoroutine(ForwardMotion());
-        turn = StartCoroutine(LookRotation(Quaternion.Euler(0, playerDirection.playerInterest.transform.eulerAngles.y, 0), 0.02f));
+        facePlayer = StartCoroutine(LookRotation(0.02f, Quaternion.Euler(0, playerDirection.playerInterest.transform.eulerAngles.y, 0)));
 
         moveSpeed = stats.runSpeed;
         animControl.ToggleState("isRunning");
@@ -56,6 +56,8 @@ public class EnemyMotion : MonoBehaviour
             StopCoroutine(move);
         if (turn != null)
             StopCoroutine(turn);
+        if (facePlayer != null)
+            StopCoroutine(facePlayer);
 
         isPursuing = false;
         patrol = StartCoroutine(Patrol());
@@ -66,7 +68,7 @@ public class EnemyMotion : MonoBehaviour
     {
         while (true)
         {
-            turn = StartCoroutine(LookRotation(Quaternion.Euler(0, Random.Range(0, 360), 0), 0.1f));
+            TurnAround(2.2f, Quaternion.Euler(0, Random.Range(0, 360), 0));
             yield return new WaitForSeconds(Random.Range(1, 1.5f));
             StopCoroutine(turn);
             move = StartCoroutine(ForwardMotion());
@@ -89,8 +91,8 @@ public class EnemyMotion : MonoBehaviour
         }
     }
 
-    // Turns enemy
-    protected IEnumerator LookRotation(Quaternion toGo, float speed)
+    // Turns enemy to face player
+    protected IEnumerator LookRotation(float speed, Quaternion toGo)
     {
         while (true)
         {
@@ -100,15 +102,15 @@ public class EnemyMotion : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-
-    void TurnAround(float baseTurnSpeed, Quaternion toLook)
+    // Turns enemy
+    protected void TurnAround(float baseTurnSpeed, Quaternion toLook)
     {
         float duration = baseTurnSpeed / turnSpeed;
 
-        if (look != null)
-            StopCoroutine(look);
+        if (turn != null)
+            StopCoroutine(turn);
 
-        look = StartCoroutine(Interpolater.InterpolateLocalRotation(transform, toLook, duration));
+        turn = StartCoroutine(Interpolater.InterpolateLocalRotation(transform, toLook, duration));
     }
 
     public void HorizontalCollision()

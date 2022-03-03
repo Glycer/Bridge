@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 5211932507861707256}
   - component: {fileID: 8960276441560232858}
   - component: {fileID: 6363419785096064460}
+  - component: {fileID: 3040718634497375713}
   m_Layer: 15
   m_Name: Tail
   m_TagString: Untagged
@@ -277,6 +278,26 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &3040718634497375713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415467963143692683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d189e801a7aba0942876983130009da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 0
+  strength: 0
+  walkSpeed: 0
+  runSpeed: 0
+  turnSpeed: 0
+  lootType: 0
+  lootNum: 0
+  parentStats: {fileID: 796424731772571119}
 --- !u!1 &5865714242603040467
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +311,7 @@ GameObject:
   - component: {fileID: 7990738538415570879}
   - component: {fileID: 8657692845028868958}
   - component: {fileID: 8595064353963993572}
-  m_Layer: 15
+  m_Layer: 20
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +418,7 @@ GameObject:
   - component: {fileID: 3318144360822565825}
   - component: {fileID: 4759555551870505873}
   - component: {fileID: 7525035914391992292}
-  m_Layer: 15
+  m_Layer: 18
   m_Name: Sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +485,7 @@ GameObject:
   - component: {fileID: 3960508328739293050}
   - component: {fileID: 1317634341047987102}
   - component: {fileID: 4043060096121505106}
-  m_Layer: 15
+  m_Layer: 18
   m_Name: InterestRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +545,7 @@ GameObject:
   - component: {fileID: 3549711262770532500}
   - component: {fileID: 8854470055207559712}
   - component: {fileID: 9200799449470181738}
-  m_Layer: 15
+  m_Layer: 20
   m_Name: Blast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
