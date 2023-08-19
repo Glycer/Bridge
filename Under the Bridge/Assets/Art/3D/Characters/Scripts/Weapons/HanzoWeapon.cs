@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class HanzoWeapon : Weapon
 {
+    public HanzoWeaponCollider[] colliders;
+    // TODO: Combos should likely be made private once runtime customization is implemented
+    public HanzoAttack[] combo;
     public static int currStrength;
     public static int currManaFill;
 
-    void OnTriggerEnter(Collider collider)
+    public void SetWeaponActive(bool isActive)
     {
-        PlayerStats.AddMana(0, currManaFill);
-        if (collider.gameObject.GetComponent<MonsterStats>())
-            collider.gameObject.GetComponent<MonsterStats>().TakeDamage(currStrength);
-        if (currEnchant != null)
-            currEnchant.UseEnchantment();
+        foreach (HanzoWeaponCollider collider in colliders)
+        {
+            collider.SetWeaponActive(isActive);
+        }
+    }
+
+    public HanzoAttack[] GetCombo()
+    {
+        return combo;
     }
 }

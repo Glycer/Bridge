@@ -4,7 +4,7 @@ using UnityEngine.Animations;
 
 public class CamControl : MonoBehaviour
 {
-    public UIManager UI;
+    public TargetingHUD targetingHUD;
 
     public bool locked;
 
@@ -13,14 +13,11 @@ public class CamControl : MonoBehaviour
 
     public Transform turn;
     public Transform offset;
-    public Transform cam;
+    public Camera cam;
     public Transform focusTarget;
 
     public PlayerMotion playerMotion;
     public CharacterMotion characterMotion;
-    // Collider follows camera and must be adjusted during aim,
-    // will probably want to be replaced with a better solution in the future
-    CapsuleCollider currWyattCollider;
 
     public CamLockOn lockOn;
     Coroutine lockOnRotation;
@@ -28,54 +25,27 @@ public class CamControl : MonoBehaviour
     
     public LookAtConstraint camLook;
 
-    CamZoom camZoom;
-    public bool isAiming;
+    const float LOOK_DELAY = 0.02f;
 
-    Vector3 basePos;
-    Vector3 aimingPos;
-    Vector3 interPos;
-
-    Vector3 focusPlayerPos;
-    Vector3 focusAimPos;
-
-    private void Start()
-    {
-        camZoom = GetComponent<CamZoom>();
-
-        basePos = offset.localPosition;
-        aimingPos = new Vector3(.3f, -.1f, -.5f);
-        interPos = basePos;
-
-        focusPlayerPos = focusTarget.position;
-        focusAimPos = new Vector3(0.3f, 0.5f, 1);
-
-        currWyattCollider = null;
-    }
+    const float Y_LIMIT = 65;
+    const float MAX_CAM_SPEED = 50;
 
     // Update is called once per frame
     void Update()
     {
         if (!locked)
         {
-            if (isAiming)
-            {
-                playerMotion.Turn(Inputs.camHAxis, 2);
-                turn.RotateAround(turn.position, turn.right, GetCamSpeed());
-                //characterMotion.LookVertical(Inputs.camVAxis);
-                //focusTarget.Translate(0, Input.GetAxis(Inputs.camVAxis) * lookSpeed * Time.deltaTime, 0);
-            }
-            else
-            {
-                if ((Input.GetAxis(Inputs.playerHAxis) != 0 || Input.GetAxis(Inputs.playerVAxis) != 0) && !characterMotion.rotationLocked)
-                    characterMotion.RotateCharacter();
+            if ((Input.GetAxis(Inputs.playerHAxis) != 0 || Input.GetAxis(Inputs.playerVAxis) != 0) && !PlayerMotion.MotionLocked())
+                characterMotion.RotateCharacter();
 
+            if (Inputs.camHAxis != "0")
                 turn.RotateAround(turn.position, Vector3.up, Input.GetAxis(Inputs.camHAxis) * tumbleSpeed * Time.deltaTime);
+            if (Inputs.camVAxis != "0")
                 turn.RotateAround(turn.position, turn.right, GetCamSpeed());
-            }
         }
         else
         {
-            if ((Input.GetAxis(Inputs.playerHAxis) != 0 || Input.GetAxis(Inputs.playerVAxis) != 0) && !characterMotion.rotationLocked)
+            if ((Input.GetAxis(Inputs.playerHAxis) != 0 || Input.GetAxis(Inputs.playerVAxis) != 0) && !PlayerMotion.MotionLocked())
                 characterMotion.RotateCharacter();
         }
     }
@@ -85,60 +55,30 @@ public class CamControl : MonoBehaviour
 
         float CamSpeed = -Input.GetAxis(Inputs.camVAxis) * tumbleSpeed * Time.deltaTime * CamSlowFactor;
         // Hard lock on speed to keep the camera tumbling where it should not
-        if (CamSpeed < 50 && CamSpeed > -50)
+        if (CamSpeed < MAX_CAM_SPEED && CamSpeed > -MAX_CAM_SPEED)
             return CamSpeed;
-        else if (CamSpeed > 50)
-            return 50;
+        else if (CamSpeed > MAX_CAM_SPEED)
+            return MAX_CAM_SPEED;
         else
-            return -50;
+            return -MAX_CAM_SPEED;
     }
     float GetCamSlowFactor()
     {
         // Gets a multiple to keep the camera from moving too far upwards or downwards
-        if (turn.eulerAngles.x < 310 && turn.eulerAngles.x > 180 && Input.GetAxis(Inputs.camVAxis) > 0)
-            return 1 - ((turn.eulerAngles.x - 310) / -10);
-        else if (turn.eulerAngles.x > 50 && turn.eulerAngles.x < 180 && Input.GetAxis(Inputs.camVAxis) < 0)
-            return 1 - ((turn.eulerAngles.x - 50) / 10);
+        if (turn.eulerAngles.x < (360 - Y_LIMIT) && turn.eulerAngles.x > 180 && Input.GetAxis(Inputs.camVAxis) > 0)
+            return 1 - ((turn.eulerAngles.x - (360 - Y_LIMIT)) / -10);
+        else if (turn.eulerAngles.x > Y_LIMIT && turn.eulerAngles.x < 180 && Input.GetAxis(Inputs.camVAxis) < 0)
+            return 1 - ((turn.eulerAngles.x - Y_LIMIT) / 10);
         else
             return 1;
     }
 
-    public void Aim(bool _isAiming, CapsuleCollider collider = null)
-    {
-        if (collider != null)
-            currWyattCollider = collider;
-        if (locked)
-            lockOn.ToggleLook(false);
-
-        isAiming = _isAiming;
-
-        crosshair.SetActive(_isAiming);
-        camZoom.ToggleLook(_isAiming);
-
-        // Turns to face camera
-        characterMotion.ResetRotation();
-
-        if (_isAiming)
-        {
-            playerMotion.SetDirection();
-            camZoom.ZoomTo(aimingPos, focusAimPos);
-            currWyattCollider.center = new Vector3(currWyattCollider.center.x, -1.5f, currWyattCollider.center.z);
-        }
-        else
-        {
-            camZoom.ZoomTo(interPos, focusPlayerPos);
-            currWyattCollider.center = new Vector3(currWyattCollider.center.x, -2.5f, currWyattCollider.center.z);
-        }
-    }
-
     public void StartLockOnRotation()
     {
-        UI.ActivateReticule(true);
         lockOnRotation = StartCoroutine(LockOnAutoRotate());
     }
     public void StopLockOnRotation()
     {
-        UI.ActivateReticule(false);
         if (lockOnRotation != null)
             StopCoroutine(lockOnRotation);
     }
@@ -146,6 +86,7 @@ public class CamControl : MonoBehaviour
     {
         float xDistance;
         float yDistance;
+
         while (true)
         {
             yDistance = focusTarget.eulerAngles.y - turn.eulerAngles.y;
@@ -167,9 +108,16 @@ public class CamControl : MonoBehaviour
             turn.RotateAround(turn.position, Vector3.up, yDistance / 30);
             turn.RotateAround(turn.position, turn.right, GetCamSlowFactor() * xDistance / 30);
 
-            UI.TrackTarget(new Vector3(yDistance * 8, xDistance * 8 + 30, 0));
+            targetingHUD.TrackTarget(cam.WorldToScreenPoint(lockOn.targetLocation.position));
 
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(LOOK_DELAY);
+
+            // Delock when target gets out of range
+            if (!lockOn.lockOffCollider.targets.Contains(lockOn.lockTarget.GetComponent<Collider>()))
+                lockOn.ToggleLook(false);
+            // Relock when target dies
+            else if (!lockOn.lockTarget.gameObject.activeSelf)
+                lockOn.ToggleLook(true);
         }
     }
 }

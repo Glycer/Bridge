@@ -7,7 +7,12 @@ public class CharacterMotion : MonoBehaviour
     public Transform head;
     public float speed;
 
-    public bool rotationLocked;
+    static bool rotationLocked;
+
+    void Start()
+    {
+        rotationLocked = false;
+    }
 
     public void LookHorizontal(string inputAxis)
     {
@@ -59,5 +64,14 @@ public class CharacterMotion : MonoBehaviour
     public void SetRotation(float direction)
     {
         transform.localRotation = Quaternion.Euler(0, direction, 0);
+    }
+
+    static public void LockRotation(bool lockRotation)
+    {
+        rotationLocked = lockRotation;
+    }
+    static public bool RotationLocked()
+    {
+        return rotationLocked;
     }
 }

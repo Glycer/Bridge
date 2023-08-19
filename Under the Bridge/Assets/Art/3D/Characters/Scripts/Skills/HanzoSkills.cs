@@ -6,39 +6,31 @@ public class HanzoSkills : PlayerSkills
 {
     Coroutine dodge;
 
-    // TODO: Combos should likely be made private once runtime customization is implemented
-    public HanzoAttack[] combo;
-    public HanzoAttack[] alternateCombo;
+    public HanzoWeapon[] weapons;
     int currComboIndex;
-    public bool awaitingAttack;
+    // bool indicates whether any attacks are active
+    bool awaitingAttack;
     public bool comboExpired;
     HanzoAttack currAttack;
 
     // TODO: Temp code used until runtime ability setting is implemented
-    public Ability vampiricStrike;
     public Ability vampireBite;
 
     // Start is called before the first frame update
     void Awake()
     {
+        awaitingAttack = true;
         dodging = false;
         currComboIndex = 0;
         currAttack = null;
         currActiveWeaponIndex = 0;
-        abilities = new Ability[4];
-        abilities[0] = vampiricStrike;
-        abilities[1] = vampireBite;
+        secondaries = weapons[currActiveWeaponIndex].GetSecondaries();
     }
 
-    protected override void Whack(bool keyDown)
+    protected override void Attack(bool keyDown)
     {
         if (keyDown)
-            Attack(combo);
-    }
-    protected override void Secondary(bool keyDown)
-    {
-        if (keyDown)
-            Attack(alternateCombo);
+            Attack(weapons[currActiveWeaponIndex].GetCombo());
     }
     void Attack(HanzoAttack[] currCombo)
     {
@@ -62,10 +54,30 @@ public class HanzoSkills : PlayerSkills
             }
         }
     }
-
+    protected override void Secondary(int secondaryIndex)
+    {
+        if ((!dodging || awaitingAttack) && secondaries.Length > secondaryIndex)
+        {
+            if (currAttack != null && currAttack.queueReady)
+            {
+                // Reset combo
+                currComboIndex = 0;
+                currAttack.QueueSwing(secondaries[secondaryIndex].GetHanzoAttack());
+                currAttack = secondaries[secondaryIndex].GetHanzoAttack();
+            }
+            else if (awaitingAttack)
+            {
+                currComboIndex = 0;
+                if (currAttack != null)
+                    currAttack.StopTimer();
+                currAttack = secondaries[secondaryIndex].GetHanzoAttack();
+                secondaries[secondaryIndex].GetHanzoAttack().Swing();
+            }
+        }
+    }
     protected override void Defense(bool keyDown)
     {
-        if (keyDown && !motion.motionLocked)
+        if (keyDown && !PlayerMotion.MotionLocked())
         {
             dodging = true;
             LockPlayerMotion(0.25f);
@@ -73,10 +85,21 @@ public class HanzoSkills : PlayerSkills
         }
     }
 
+    protected override void SwitchWeapon(int weaponIndex)
+    {
+        // Switch weapon when attack is finished
+        if (awaitingAttack)
+        {
+            weapons[currActiveWeaponIndex].gameObject.SetActive(false);
+            currActiveWeaponIndex = weaponIndex;
+            weapons[currActiveWeaponIndex].gameObject.SetActive(true);
+            secondaries = weapons[currActiveWeaponIndex].GetSecondaries();
+        }
+    }
+
     private void OnDisable()
     {
         dodging = false;
-        motion.motionLocked = false;
         dodge = null;
         awaitingAttack = true;
         comboExpired = false;
@@ -84,8 +107,12 @@ public class HanzoSkills : PlayerSkills
         currAttack = null;
         if (HUD != null)
             HUD.SetActive(false);
-        // Unlocks motion
-        ReleaseMotionLock();
+    }
+
+    public void SetAwaiting(bool isAwaiting)
+    {
+        awaitingAttack = isAwaiting;
+        weapons[currActiveWeaponIndex].SetWeaponActive(!isAwaiting);
     }
 
     IEnumerator Dodge()
@@ -100,6 +127,6 @@ public class HanzoSkills : PlayerSkills
         dodging = false;
         // Brief vulnerability period if dodge is poorly timed
         yield return new WaitForSeconds(0.2f);
-        motion.motionLocked = false;
+        PlayerMotion.LockMotion(false);
     }
 }

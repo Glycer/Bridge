@@ -75,7 +75,7 @@ public class Projectile : MonoBehaviour
     }
 
     // Makes projectile explode
-    IEnumerator Explosion()
+    protected IEnumerator Explosion()
     {
         visibleExplosion.SetActive(true);
         yield return new WaitForSeconds(1);

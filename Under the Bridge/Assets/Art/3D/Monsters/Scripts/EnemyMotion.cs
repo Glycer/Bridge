@@ -9,6 +9,7 @@ public class EnemyMotion : MonoBehaviour
 
     protected float moveSpeed;
     float turnSpeed;
+    const float BASE_TURN_SPEED = 100;
 
     protected Coroutine facePlayer;
     protected Coroutine move;
@@ -41,7 +42,7 @@ public class EnemyMotion : MonoBehaviour
             StopCoroutine(turn);
 
         move = StartCoroutine(ForwardMotion());
-        facePlayer = StartCoroutine(LookRotation(0.02f, Quaternion.Euler(0, playerDirection.playerInterest.transform.eulerAngles.y, 0)));
+        facePlayer = StartCoroutine(LookRotation(Quaternion.Euler(0, playerDirection.playerInterest.transform.eulerAngles.y, 0)));
 
         moveSpeed = stats.runSpeed;
         animControl.ToggleState("isRunning");
@@ -68,9 +69,10 @@ public class EnemyMotion : MonoBehaviour
     {
         while (true)
         {
-            TurnAround(2.2f, Quaternion.Euler(0, Random.Range(0, 360), 0));
+            TurnAround(Quaternion.Euler(0, Random.Range(0, 360), 0));
             yield return new WaitForSeconds(Random.Range(1, 1.5f));
-            StopCoroutine(turn);
+            if (turn != null)
+                StopCoroutine(turn);
             move = StartCoroutine(ForwardMotion());
             animControl.ToggleState("isWalking");
             yield return new WaitForSeconds(Random.Range(2, 4));
@@ -92,25 +94,27 @@ public class EnemyMotion : MonoBehaviour
     }
 
     // Turns enemy to face player
-    protected IEnumerator LookRotation(float speed, Quaternion toGo)
+    protected IEnumerator LookRotation(Quaternion toGo, int speedModifier = 1)
     {
         while (true)
         {
-            TurnAround(speed, toGo);
+            TurnAround(toGo, speedModifier);
 
             toGo = Quaternion.Euler(0, playerDirection.playerInterest.transform.eulerAngles.y, 0);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.025f);
         }
     }
     // Turns enemy
-    protected void TurnAround(float baseTurnSpeed, Quaternion toLook)
+    protected void TurnAround(Quaternion toLook, float speedmodifier = 1)
     {
-        float duration = baseTurnSpeed / turnSpeed;
+        // duration = distance over speed over modifier
+        float duration = System.Math.Abs(transform.eulerAngles.y - toLook.eulerAngles.y) / BASE_TURN_SPEED / turnSpeed / speedmodifier;
 
         if (turn != null)
             StopCoroutine(turn);
 
-        turn = StartCoroutine(Interpolater.InterpolateLocalRotation(transform, toLook, duration));
+        if (duration != 0)
+            turn = StartCoroutine(Interpolater.InterpolateLocalRotation(transform, toLook, duration));
     }
 
     public void HorizontalCollision()

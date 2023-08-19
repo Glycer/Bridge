@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour
     static int playerMaxHealth = 100;
     static float playerHealth;
     static int[] playerMaxMana;
-    static float[] playerMana;
+    static int[] playerMana;
     // Used by Wyatt
     static public bool defending;
 
@@ -22,7 +22,7 @@ public class PlayerStats : MonoBehaviour
         playerMaxMana[0] = 100;
         playerMaxMana[1] = 100;
         playerMaxMana[2] = 100;
-        playerMana = new float[3];
+        playerMana = new int[3];
         playerMana[0] = 0;
         playerMana[1] = 0;
         playerMana[2] = 0;
@@ -42,6 +42,10 @@ public class PlayerStats : MonoBehaviour
             UI.AdjustStatus(0, playerHealth / playerMaxHealth);
         }
     }
+    static public bool HealthFull()
+    {
+        return playerHealth == playerMaxHealth;
+    }
     // 0 is blood, 1 is water, 2 is light, use negative amount to subtract
     static public void AddMana(int manaIndex, int amount)
     {
@@ -50,7 +54,7 @@ public class PlayerStats : MonoBehaviour
             playerMana[manaIndex] = playerMaxMana[manaIndex];
         if (playerMana[manaIndex] < 0)
             playerMana[manaIndex] = 0;
-        UI.AdjustStatus(manaIndex + 1, playerMana[manaIndex] / playerMaxMana[manaIndex]);
+        UI.AdjustStatus(manaIndex + 1, (float)playerMana[manaIndex] / playerMaxMana[manaIndex]);
     }
     static public bool CheckMana(int[] manaCost)
     {
@@ -67,5 +71,18 @@ public class PlayerStats : MonoBehaviour
         UI.AdjustStatus(1, playerMana[0] / playerMaxMana[0]);
         UI.AdjustStatus(2, playerMana[1] / playerMaxMana[1]);
         UI.AdjustStatus(3, playerMana[2] / playerMaxMana[2]);
+    }
+    static public void EmptyMana()
+    {
+        playerMana[0] = 0;
+        playerMana[1] = 0;
+        playerMana[2] = 0;
+        UI.AdjustStatus(1, playerMana[0] / playerMaxMana[0]);
+        UI.AdjustStatus(2, playerMana[1] / playerMaxMana[1]);
+        UI.AdjustStatus(3, playerMana[2] / playerMaxMana[2]);
+    }
+    static public int GetMana(int manaIndex)
+    {
+        return playerMana[manaIndex];
     }
 }

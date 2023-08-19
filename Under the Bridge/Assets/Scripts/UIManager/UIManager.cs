@@ -17,7 +17,13 @@ public class UIManager : MonoBehaviour
     public Text clearButtonText;
     public Placement placement;
 
-    public Transform targetReticule;
+    // 0, Wyatt. 1, Vasilisa. 2, Hanzo.
+    public GameObject[] characterHUDs;
+
+    // Wyatt elements
+    public GameObject reloadElements;
+    public RectTransform reloadBar;
+    public Text ammoCountDisplay;
 
     // Start is called before the first frame update
     void Start()
@@ -41,13 +47,13 @@ public class UIManager : MonoBehaviour
     {
         statusBars.AdjustBar(statusIndex, percentage);
     }
-    public void AdjustAbilityDisplay(int abilityIndex, Ability ability)
+    public void AdjustAbilityDisplay(int abilityIndex, Sprite abilityImage)
     {
-        if (ability != null)
+        if (abilityImage != null)
         {
             if (!abilities[abilityIndex].gameObject.activeSelf)
                 abilities[abilityIndex].gameObject.SetActive(true);
-            abilities[abilityIndex].sprite = ability.abilityImage;
+            abilities[abilityIndex].sprite = abilityImage;
         }
         else
             abilities[abilityIndex].gameObject.SetActive(false);
@@ -82,15 +88,28 @@ public class UIManager : MonoBehaviour
         
     }
 
-    public void ActivateReticule(bool activateReticule)
+    public void SwitchCharacter(int characterIndex)
     {
-        if (activateReticule)
-            targetReticule.gameObject.SetActive(true);
-        else
-            targetReticule.gameObject.SetActive(false);
+        for (int i = 0; i < characterHUDs.Length; i++)
+        {
+            characterHUDs[i].SetActive(i == characterIndex);
+        }
     }
-    public void TrackTarget(Vector3 newPosition)
+
+    // Wyatt HUD
+    public void SetReloadBar(float reloadProgress)
     {
-        targetReticule.localPosition = newPosition;
+        if (reloadProgress == 0)
+            reloadElements.SetActive(false);
+        else
+        {
+            if (!reloadElements.activeSelf)
+                reloadElements.SetActive(true);
+            reloadBar.sizeDelta = new Vector2(reloadProgress, 1);
+        }
+    }
+    public void SetAmmoDisplay(int ammoCount)
+    {
+        ammoCountDisplay.text = ammoCount > 0 ? ammoCount.ToString() : "";
     }
 }

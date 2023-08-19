@@ -137,6 +137,7 @@ MonoBehaviour:
   walkSpeed: 1
   runSpeed: 1
   turnSpeed: 1
+  weight: 0
   lootType: 2
   lootNum: 5
 --- !u!1 &1129906442387350390
@@ -270,7 +271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9dbdfcc588da144823c717eac9e176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectile: {fileID: 4357481139282027580, guid: 61d6b776121042841abc4d5b7c866b22,
+    type: 3}
 --- !u!1 &3509295063371657976
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9dbdfcc588da144823c717eac9e176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectile: {fileID: 4202841993814322007, guid: 1d9e9e5c1613a3142b56bb08d8a8fd2a,
+    type: 3}
 --- !u!1 &8351416762156333887
 GameObject:
   m_ObjectHideFlags: 0

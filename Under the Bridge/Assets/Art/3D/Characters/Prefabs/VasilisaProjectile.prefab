@@ -165,3 +165,4 @@ MonoBehaviour:
   visibleExplosion: {fileID: 0}
   manaIndex: 1
   manaFill: 20
+  blastRadius: {fileID: 0}

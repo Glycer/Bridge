@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerSkills : MonoBehaviour
 {
-    public Weapon[] weapons;
+    //public Weapon[] weapons;
     protected int currActiveWeaponIndex;
     public PlayerMotion motion;
     public CharacterMotion charMotion;
@@ -13,6 +13,8 @@ public class PlayerSkills : MonoBehaviour
     //public bool defending;
     public bool dodging;
     public bool sprinting;
+
+    bool usingSecondary;
 
     static Coroutine motionLock;
     static Coroutine rotationLock;
@@ -23,91 +25,124 @@ public class PlayerSkills : MonoBehaviour
     // For lock on player orientation
     public CamControl camControl;
 
-    protected Ability[] abilities;
+    public Ability[] abilities;
     KeyCode[] abilityArray = new KeyCode[] { Inputs.ability1, Inputs.ability2, Inputs.ability3, Inputs.ability4 };
+    protected SecondaryAttack[] secondaries;
+
+    const int MAX_ABILITIES = 4;
 
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(Inputs.whack) || Input.GetKeyDown(Inputs.secondary)) && camControl.locked)
-            TurnToFaceEnemy();
-        if (Input.GetKeyDown(Inputs.whack))
-            Whack(true);
-        if (Input.GetKeyUp(Inputs.whack))
-            Whack(false);
-        if (Input.GetKeyDown(Inputs.secondary))
-            Secondary(true);
-        if (Input.GetKeyUp(Inputs.secondary))
-            Secondary(false);
-        if (Input.GetKeyDown(Inputs.defense))
-            Defense(true);
+        if (!PlayerMotion.MotionLocked())
+        {
+            if ((Input.GetKeyDown(Inputs.whack) || Input.GetKeyDown(Inputs.secondary)) && camControl.locked)
+                TurnToFaceEnemy();
+            if (Input.GetKeyDown(Inputs.whack))
+                Attack(true);
+            if (Input.GetKeyUp(Inputs.whack))
+                Attack(false);
+            // Use secondary
+            if (usingSecondary)
+            {
+                for (int i = 0; i < abilityArray.Length; i++)
+                {
+                    if (Input.GetKeyDown(abilityArray[i]))
+                        Secondary(i);
+                }
+            }
+            // Use ability
+            else
+            {
+                for (int i = 0; i < abilityArray.Length; i++)
+                {
+                    if (Input.GetKeyDown(abilityArray[i]))
+                        Ability(i, true);
+                    if (Input.GetKeyUp(abilityArray[i]))
+                        Ability(i, false);
+                }
+            }
+            // Switch weapon
+            if (Input.GetKeyDown(Inputs.weapon1))
+                SwitchWeapon(0);
+            if (Input.GetKeyDown(Inputs.weapon2))
+                SwitchWeapon(1);
+            if (Input.GetKeyDown(Inputs.weapon3))
+                SwitchWeapon(2);
+
+            if (Input.GetKeyDown(Inputs.defense))
+                Defense(true);
+            if (Input.GetKeyDown(Inputs.sprint))
+                Run(true);
+        }
         if (Input.GetKeyUp(Inputs.defense))
             Defense(false);
-        for (int i = 0; i < abilityArray.Length; i++)
-        {
-            if (Input.GetKeyDown(abilityArray[i]))
-                Ability(i, true);
-            if (Input.GetKeyUp(abilityArray[i]))
-                Ability(i, false);
-        }
-
-        if (Input.GetKeyDown(Inputs.sprint))
-            Run(true);
         if (Input.GetKeyUp(Inputs.sprint))
             Run(false);
+
+        if (Input.GetKeyDown(Inputs.secondary))
+            DisplaySecondary(true);
+        if (Input.GetKeyUp(Inputs.secondary))
+            DisplaySecondary(false);
     }
 
     // Turns player when attacking and locked on
     protected virtual void TurnToFaceEnemy()
     {
         motion.FaceEnemy();
-        LockCharacterRotation();
     }
-    // Locks character rotation, overrides existing lock
-    protected void LockCharacterRotation(float waitTime = DEFAULT_LOCK_TIME)
-    {
-        if (rotationLock != null)
-            rotationLock = null;
-        charMotion.rotationLocked = true;
-        rotationLock = StartCoroutine(RotationLock(waitTime));
-    }
-    // Locks character rotation and player motion, overrides both locks
+    // Locks player motion
     public void LockPlayerMotion(float waitTime = DEFAULT_LOCK_TIME)
     {
         if (motionLock != null)
             motionLock = null;
-        if (rotationLock != null)
-            rotationLock = null;
-        motion.motionLocked = true;
-        charMotion.rotationLocked = true;
-        rotationLock = StartCoroutine(RotationLock(waitTime));
+        PlayerMotion.LockMotion(true);
         motionLock = StartCoroutine(MotionLock(waitTime));
-    }
-    protected IEnumerator RotationLock(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-        charMotion.rotationLocked = false;
     }
     protected IEnumerator MotionLock(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        motion.motionLocked = false;
+        PlayerMotion.LockMotion(false);
     }
     // Used when character is switched
     protected void ReleaseMotionLock()
     {
         if (motionLock != null)
             motionLock = null;
-        if (rotationLock != null)
-            rotationLock = null;
-        motion.motionLocked = false;
-        charMotion.rotationLocked = false;
+        PlayerMotion.LockMotion(false);
     }
 
-    protected virtual void Whack(bool keyDown)
+    protected virtual void Attack(bool keyDown)
     {
     }
-    protected virtual void Secondary(bool keyDown)
+    void DisplaySecondary(bool keyDown)
+    {
+        usingSecondary = keyDown;
+
+        // Switch abilities to secondary abilities
+        if (keyDown)
+        {
+            for (int i = 0; i < MAX_ABILITIES; i++)
+            {
+                if (i < secondaries.Length && secondaries[i] != null)
+                    UI.AdjustAbilityDisplay(i, secondaries[i].abilityImage);
+                else
+                    UI.AdjustAbilityDisplay(i, null);
+            }
+        }
+        // Switch to normal abilities
+        else
+        {
+            for (int i = 0; i < abilities.Length; i++)
+            {
+                if (abilities[i] != null)
+                    UI.AdjustAbilityDisplay(i, abilities[i].abilityImage);
+                else
+                    UI.AdjustAbilityDisplay(i, null);
+            }
+        }
+    }
+    protected virtual void Secondary(int secondaryIndex)
     {
     }
     protected virtual void Defense(bool keyDown)
@@ -115,8 +150,12 @@ public class PlayerSkills : MonoBehaviour
     }
     void Ability(int abilityIndex, bool keyDown)
     {
-        if (abilities[abilityIndex] != null && PlayerStats.CheckMana(abilities[abilityIndex].manaCost))
+        if (!PlayerMotion.MotionLocked() && abilities[abilityIndex] != null && PlayerStats.CheckMana(abilities[abilityIndex].manaCost))
             abilities[abilityIndex].UseAbility(keyDown);
+    }
+
+    protected virtual void SwitchWeapon(int weaponIndex)
+    {
     }
 
     void Run(bool keyDown)
@@ -132,10 +171,12 @@ public class PlayerSkills : MonoBehaviour
 
     public void EnableChar()
     {
+        usingSecondary = false;
+
         for (int i = 0; i < abilities.Length; i++)
         {
             if (abilities[i] != null)
-                UI.AdjustAbilityDisplay(i, abilities[i]);
+                UI.AdjustAbilityDisplay(i, abilities[i].abilityImage);
             else
                 UI.AdjustAbilityDisplay(i, null);
         }

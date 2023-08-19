@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public SecondaryAttack[] secondaries;
     // int weaponStrength
-    public Enchantment currEnchant;
 
-    public virtual void Primary()
+    public virtual void Attack(bool keyDown)
     {
 
     }
-    public virtual void Secondary()
+    public virtual void Secondary(int secondaryIndex)
     {
 
+    }
+
+    public SecondaryAttack[] GetSecondaries()
+    {
+        return secondaries;
     }
 }

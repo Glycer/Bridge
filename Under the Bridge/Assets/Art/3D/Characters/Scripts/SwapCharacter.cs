@@ -11,10 +11,13 @@ public class SwapCharacter : MonoBehaviour
 
     public List<GameObject> characters;
 
+    public UIManager uiManager;
+
     // Disengage aim when swap
     public CamControl cameraAim;
 
     CharacterAnimControl animControl;
+    static bool swapLocked;
 
     KeyCode[] cArray = new KeyCode[] { Inputs.swapIn1, Inputs.swapIn2, Inputs.swapIn3 };
 
@@ -25,14 +28,18 @@ public class SwapCharacter : MonoBehaviour
 
         Swap(characters[initCharacterIndex]);
         animControl.enabled = true;
+        swapLocked = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         for (int i = 0; i < cArray.Length; i++)
-            if (Input.GetKeyDown(cArray[i]))
+            if (Input.GetKeyDown(cArray[i]) && !PlayerMotion.MotionLocked() && !swapLocked)
+            {
                 Swap(characters[i]);
+                uiManager.SwitchCharacter(i);
+            }
     }
 
     void Swap(GameObject c)
@@ -47,5 +54,10 @@ public class SwapCharacter : MonoBehaviour
         activeChar = c;
         animControl.anim = c.GetComponent<Animator>();
         animControl.enabled = (c != characters[2]);
+    }
+
+    public static void LockSwap(bool isLocked)
+    {
+        swapLocked = isLocked;
     }
 }

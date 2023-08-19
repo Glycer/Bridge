@@ -15,6 +15,10 @@ public static class Inputs
     public static KeyCode swapIn2 = KeyCode.Alpha2;
     public static KeyCode swapIn3 = KeyCode.Alpha3;
 
+    public static KeyCode weapon1 = KeyCode.Alpha4;
+    public static KeyCode weapon2 = KeyCode.Alpha5;
+    public static KeyCode weapon3 = KeyCode.Alpha6;
+
     public static KeyCode jump = KeyCode.Space;
     public static KeyCode sprint = KeyCode.LeftShift;
 

@@ -20,7 +20,7 @@ public class ScorpionMoveset : EnemyMotion
             StopCoroutine(turn);
 
         move = StartCoroutine(ForwardMotion());
-        facePlayer = StartCoroutine(LookRotation(0.02f, playerDirection.transform.rotation));
+        facePlayer = StartCoroutine(LookRotation(playerDirection.transform.rotation));
         attack = StartCoroutine(Attack());
 
         moveSpeed = stats.runSpeed;
@@ -61,20 +61,27 @@ public class ScorpionMoveset : EnemyMotion
 
     IEnumerator Blast()
     {
-        blast.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2);
-        blast.gameObject.SetActive(false);
-
+        // Halt motion
         if (move != null)
             StopCoroutine(move);
         if (turn != null)
             StopCoroutine(turn);
 
+        blast.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2);
+        blast.gameObject.SetActive(false);
+
         move = StartCoroutine(ForwardMotion());
-        facePlayer = StartCoroutine(LookRotation(0.02f, playerDirection.transform.rotation));
+        facePlayer = StartCoroutine(LookRotation(playerDirection.transform.rotation));
     }
     IEnumerator Laser()
     {
+        // Halt motion
+        if (move != null)
+            StopCoroutine(move);
+        if (turn != null)
+            StopCoroutine(turn);
+
         laser.gameObject.SetActive(true);
         for (float i = 0; i < 240; i++)
         {
@@ -84,13 +91,8 @@ public class ScorpionMoveset : EnemyMotion
         tail.transform.localEulerAngles = Vector3.zero;
         laser.gameObject.SetActive(false);
 
-        if (move != null)
-            StopCoroutine(move);
-        if (turn != null)
-            StopCoroutine(turn);
-
         move = StartCoroutine(ForwardMotion());
-        facePlayer = StartCoroutine(LookRotation(0.02f, playerDirection.transform.rotation));
+        facePlayer = StartCoroutine(LookRotation(playerDirection.transform.rotation));
     }
 
     public override void Halt()

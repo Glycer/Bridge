@@ -5,7 +5,7 @@ using UnityEngine;
 public class CamPitch : MonoBehaviour
 {
     public float speed;
-    public WyattHandgun handgun;
+    public WyattWeapon handgun;
 
     string vertical = Inputs.camVAxis;
 

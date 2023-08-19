@@ -30,7 +30,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5255047248343514265}
   m_Father: {fileID: 5266437661153566567}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -98,9 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camControl: {fileID: 3295515365943710022}
-  targetCollider: {fileID: 0}
+  lockOnCollider: {fileID: 0}
+  lockOffCollider: {fileID: 0}
   lockTarget: {fileID: 0}
-  playerLook: {fileID: 0}
+  focusLook: {fileID: 0}
+  playerLocation: {fileID: 0}
+  targetLocation: {fileID: 0}
+  gunColliderRoot: {fileID: 6444065764597972444}
 --- !u!1183024399 &5264984086977145251
 LookAtConstraint:
   m_ObjectHideFlags: 0
@@ -149,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5266437660797028518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1361418808607625520}
@@ -194,18 +199,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022e497c80388fd4895c5a3c44bf7e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetingHUD: {fileID: 0}
+  locked: 0
   tumbleSpeed: 100
   lookSpeed: 5
   turn: {fileID: 1361418808607625520}
   offset: {fileID: 5266437661153566567}
-  cam: {fileID: 5262328694099018199}
+  cam: {fileID: 5287058470935831323}
   focusTarget: {fileID: 0}
   playerMotion: {fileID: 0}
   characterMotion: {fileID: 0}
+  lockOn: {fileID: 0}
   crosshair: {fileID: 0}
   camLook: {fileID: 5264984086977145251}
   isAiming: 0
-  pitchIsLocked: 0
 --- !u!114 &2376285340658847952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,13 +249,63 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5266437661153566566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5262328694099018199}
   m_Father: {fileID: 1361418808607625520}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6444065764597972444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5255047248343514265}
+  - component: {fileID: 7192372262136202246}
+  m_Layer: 10
+  m_Name: WyattGunColliderRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5255047248343514265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444065764597972444}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5262328694099018199}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1183024399 &7192372262136202246
+LookAtConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444065764597972444}
+  m_Enabled: 1
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_Roll: 0
+  m_WorldUpObject: {fileID: 0}
+  m_UseUpObject: 0
+  m_IsContraintActive: 0
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
 --- !u!1 &8612232051961399599
 GameObject:
   m_ObjectHideFlags: 0

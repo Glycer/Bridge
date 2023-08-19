@@ -19,7 +19,7 @@ public class MischiefMoveset : EnemyMotion
             StopCoroutine(turn);
 
         move = StartCoroutine(ForwardMotion());
-        facePlayer = StartCoroutine(LookRotation(0.02f, playerDirection.transform.rotation));
+        facePlayer = StartCoroutine(LookRotation(playerDirection.transform.rotation));
         attack = StartCoroutine(Attack());
 
         moveSpeed = stats.runSpeed;
@@ -77,7 +77,7 @@ public class MischiefMoveset : EnemyMotion
         aoe.Attack();
         yield return new WaitForSeconds(1.5f);
         move = StartCoroutine(ForwardMotion());
-        facePlayer = StartCoroutine(LookRotation(0.02f, playerDirection.transform.rotation));
+        facePlayer = StartCoroutine(LookRotation(playerDirection.transform.rotation));
     }
 
     public override void Halt()

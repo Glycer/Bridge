@@ -32,10 +32,8 @@ public class HanzoAttack : MonoBehaviour
     {
         HanzoWeapon.currStrength = strength;
         HanzoWeapon.currManaFill = manaFill;
-        if (weapon.currEnchant != null)
-            weapon.currEnchant.ConsumeCharge();
 
-        skills.awaitingAttack = false;
+        skills.SetAwaiting(false);
         skills.comboExpired = false;
         if (timer != null)
             StopCoroutine(timer);
@@ -52,8 +50,6 @@ public class HanzoAttack : MonoBehaviour
     {
         skills.LockPlayerMotion(swingDuration);
         yield return new WaitForSeconds(swingDuration - WAIT_FOR_ATTACK);
-        if (weapon.currEnchant != null && !weapon.currEnchant.GetCharge())
-                weapon.currEnchant = null;
 
         queueReady = true;
         yield return new WaitForSeconds(WAIT_FOR_ATTACK);
@@ -66,7 +62,7 @@ public class HanzoAttack : MonoBehaviour
         }
         else
         {
-            skills.awaitingAttack = true;
+            skills.SetAwaiting(true);
 
             yield return new WaitForSeconds(1);
             skills.comboExpired = true;

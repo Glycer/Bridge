@@ -18,6 +18,15 @@ public class TargetCollider : MonoBehaviour
         }
     }
 
+    public void DealDamage(int damage)
+    {
+        foreach (Collider target in targets)
+        {
+            if (target.GetComponent<MonsterStats>())
+                target.GetComponent<MonsterStats>().TakeDamage(damage);
+        }
+    }
+
     void OnTriggerEnter(Collider col)
     {
         targets.Add(col);

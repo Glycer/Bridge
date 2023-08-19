@@ -8,6 +8,8 @@ public class CamLockOn : MonoBehaviour
     public TargetCollider lockOnCollider;
     public TargetCollider lockOffCollider;
 
+    public TargetingHUD targetingHUD;
+
     //The current enemy to lock onto
     public Transform lockTarget;
 
@@ -18,33 +20,16 @@ public class CamLockOn : MonoBehaviour
     public Transform playerLocation;
     public Transform targetLocation;
 
+    public GameObject gunColliderRoot;
+
     int index = 0;
-
-    public ParentConstraint wyattHandgunConstraint;
-
-    private void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(Inputs.lockOn) && lockOnCollider.targets.Count > 0)
-        {
-            if (camControl.isAiming)
-                camControl.Aim(false);
             ToggleLook(true);
-        }
-
-        if (Input.GetKeyDown(Inputs.lockOff))
-            ToggleLook(false);
-
-        // Delock when target gets out of range
-        if (lockTarget != null && !lockOffCollider.targets.Contains(lockTarget.GetComponent<Collider>()))
-            ToggleLook(false);
-
-        // Delock when target dies
-        if (lockTarget != null && !lockTarget.gameObject.activeSelf)
+        else if (Input.GetKeyDown(Inputs.lockOff))
             ToggleLook(false);
     }
 
@@ -52,43 +37,66 @@ public class CamLockOn : MonoBehaviour
     {
         lockOnCollider.RefreshList();
         lockOffCollider.RefreshList();
-        if (index >= lockOnCollider.targets.Count)
-            index = 0;
-
-        isLockedOn = _isLocked;
-
-        if (_isLocked != camControl.locked)
+        if (lockOnCollider.targets.Count != 0)
         {
+            if (index >= lockOnCollider.targets.Count)
+                index = 0;
+
+            isLockedOn = _isLocked;
+
             if (_isLocked)
-                camControl.StartLockOnRotation();
+            {
+                lockTarget = lockOnCollider.targets[index].transform;
+                targetingHUD.ActivateTargeting(true, lockTarget);
+                gunColliderRoot.GetComponent<LookAtConstraint>().constraintActive = true;
+            }
             else
-                camControl.StopLockOnRotation();
+            {
+                lockTarget = null;
+                targetingHUD.ActivateTargeting(false, lockTarget);
+                gunColliderRoot.GetComponent<LookAtConstraint>().constraintActive = false;
+                gunColliderRoot.transform.localRotation = Quaternion.identity;
+            }
 
-            // Probably temp code to change Wyatt weapon orientation to face enemy
-            ConstraintSource source;
-            source = wyattHandgunConstraint.GetSource(0);
-            source.weight = _isLocked ? 0 : 1;
-            wyattHandgunConstraint.SetSource(0, source);
-            source = wyattHandgunConstraint.GetSource(1);
-            source.weight = _isLocked ? 1 : 0;
-            wyattHandgunConstraint.SetSource(1, source);
+            if (_isLocked != camControl.locked)
+            {
+                if (_isLocked)
+                    camControl.StartLockOnRotation();
+                else
+                    camControl.StopLockOnRotation();
+            }
+            camControl.locked = _isLocked;
+
+            focusLook.constraintActive = _isLocked;
+
+            targetLocation.parent = _isLocked ? lockTarget : playerLocation;
+            targetLocation.localPosition = Vector3.zero;
+            targetLocation.localRotation = new Quaternion(0, 0, 0, 0);
+
+            index++;
         }
-        camControl.locked = _isLocked;
-
-        focusLook.constraintActive = _isLocked;
-
-        if (lockOnCollider.targets.Count == 0)
-            return;
-
-        if (_isLocked)
-            lockTarget = lockOnCollider.targets[index].transform;
+        // Delock if no targets remain
         else
+        {
+            isLockedOn = false;
+            camControl.locked = false;
+            camControl.StopLockOnRotation();
             lockTarget = null;
-
-        targetLocation.parent = _isLocked ? lockTarget : playerLocation;
-        targetLocation.localPosition = Vector3.zero;
-        targetLocation.localRotation = new Quaternion(0, 0, 0, 0);
-
-        index++;
+            targetingHUD.ActivateTargeting(false, lockTarget);
+            gunColliderRoot.GetComponent<LookAtConstraint>().constraintActive = false;
+            gunColliderRoot.transform.localRotation = Quaternion.identity;
+            focusLook.constraintActive = false;
+            targetLocation.parent = playerLocation;
+            targetLocation.localPosition = Vector3.zero;
+            targetLocation.localRotation = new Quaternion(0, 0, 0, 0);
+        }
+    }
+    public bool IsLockedOn()
+    {
+        return isLockedOn;
+    }
+    public Transform GetTarget()
+    {
+        return lockTarget;
     }
 }

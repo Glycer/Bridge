@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class VasilisaSkills : PlayerSkills
 {
+    public VasilisaWeapon[] weapons;
     // TODO: Temp code used until runtime ability setting is implemented
     public Ability waterPush;
+    public SecondaryAttack magicMissile;
+    public SecondaryAttack fireball;
+    public SecondaryAttack fireblast;
+    public SecondaryAttack arcaneRay;
     public float sprintSpeed;
     // Start is called before the first frame update
     void Awake()
@@ -13,19 +18,16 @@ public class VasilisaSkills : PlayerSkills
         sprintSpeed = motion.runSpeed * 1.5f;
         sprinting = false;
         currActiveWeaponIndex = 0;
-        abilities = new Ability[4];
-        abilities[0] = waterPush;
+        secondaries = weapons[currActiveWeaponIndex].GetSecondaries();
     }
 
-    protected override void Whack(bool keyDown)
+    protected override void Attack(bool keyDown)
     {
-        if (keyDown)
-            weapons[currActiveWeaponIndex].Primary();
+        weapons[currActiveWeaponIndex].Attack(keyDown);
     }
-    protected override void Secondary(bool keyDown)
+    protected override void Secondary(int secondaryIndex)
     {
-        if (keyDown)
-            weapons[currActiveWeaponIndex].Secondary();
+        weapons[currActiveWeaponIndex].Secondary(secondaryIndex);
     }
     protected override void Defense(bool keyDown)
     {
@@ -44,6 +46,17 @@ public class VasilisaSkills : PlayerSkills
         }
     }
 
+    protected override void SwitchWeapon(int weaponIndex)
+    {
+        if (!weapons[currActiveWeaponIndex].AttackLocked())
+        {
+            weapons[currActiveWeaponIndex].gameObject.SetActive(false);
+            currActiveWeaponIndex = weaponIndex;
+            weapons[currActiveWeaponIndex].gameObject.SetActive(true);
+            secondaries = weapons[currActiveWeaponIndex].GetSecondaries();
+        }
+    }
+
     private void OnDisable()
     {
         if (sprinting)
@@ -54,6 +67,5 @@ public class VasilisaSkills : PlayerSkills
                 motion.currSpeed = motion.walkSpeed;
             sprinting = false;
         }
-        ReleaseMotionLock();
     }
 }

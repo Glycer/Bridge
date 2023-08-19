@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using System;
 using UnityEngine;
 
@@ -8,12 +9,14 @@ public class PlayerMotion : MonoBehaviour {
     public float walkSpeed;
     public float runSpeed;
     public float turnSpeed;
+    public static float speedPenalty;
+    public static Dictionary<string, float> speedPenaltyLog;
 
     // phasing protection
     bool horizontalMotionLocked;
     bool verticalMotionLocked;
-    // dodge lock
-    public bool motionLocked;
+    // general action lock
+    static bool motionLocked;
 
     //public float turnSpeed;
     public float jumpForce;
@@ -45,6 +48,9 @@ public class PlayerMotion : MonoBehaviour {
         animControl = GetComponent<CharacterAnimControl>();
         horizontalMotionLocked = false;
         currSpeed = walkSpeed;
+        speedPenalty = 0;
+        speedPenaltyLog = new Dictionary<string, float>();
+        motionLocked = false;
     }
 
     // Update is called once per frame
@@ -63,24 +69,56 @@ public class PlayerMotion : MonoBehaviour {
                 horizontalDirection /= Math.Abs(Input.GetAxis(vertical)) + 1;
                 verticalDirection /= Math.Abs(Input.GetAxis(horizontal)) + 1;
 
-                transform.Translate(horizontalDirection * currSpeed * Time.deltaTime,
+                transform.Translate(horizontalDirection * currSpeed * (1 - speedPenalty) * Time.deltaTime,
                     0,
-                    verticalDirection * currSpeed * Time.deltaTime);
+                    verticalDirection * currSpeed * (1 - speedPenalty) * Time.deltaTime);
             }
 
-            if (!verticalMotionLocked)
-            {
-                if (Input.GetKeyDown(Inputs.jump) /*&& jumpCount < MAX_JUMP*/)
-                {
-                    rigid.velocity = Vector3.zero;
-                    rigid.AddForce(transform.up * jumpForce);
+            if (Input.GetKeyDown(Inputs.jump) /*&& jumpCount < MAX_JUMP*/)
+                Jump();
+        }
+    }
 
-                    if (animControl.enabled)
-                        animControl.Jump(!(jumpCount == 0));
+    // Returns true if jump can be executed
+    public bool Jump(float jumpModifier = 1)
+    {
+        if (!verticalMotionLocked && !motionLocked)
+        {
+            rigid.velocity = Vector3.zero;
+            rigid.AddForce(transform.up * jumpForce * jumpModifier);
 
-                    jumpCount++;
-                }
-            }
+            if (animControl.enabled)
+                animControl.Jump(!(jumpCount == 0));
+
+            jumpCount++;
+
+            return true;
+        }
+        return false;
+    }
+
+    public static void LockMotion(bool lockMotion)
+    {
+        motionLocked = lockMotion;
+    }
+    public static bool MotionLocked()
+    {
+        return motionLocked;
+    }
+
+    public static void AddSpeedPenalty(string key, float value)
+    {
+        if (speedPenaltyLog.ContainsKey(key))
+            speedPenalty -= speedPenaltyLog[key];
+        speedPenaltyLog[key] = value;
+        speedPenalty += value;
+    }
+    public static void RemoveSpeedPenalty(string key)
+    {
+        if (speedPenaltyLog.ContainsKey(key))
+        {
+            speedPenalty -= speedPenaltyLog[key];
+            speedPenaltyLog.Remove(key);
         }
     }
 
